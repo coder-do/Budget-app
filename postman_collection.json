@@ -1,0 +1,143 @@
+{
+    "info": {
+        "_postman_id": "55d948a2-02fc-4d7e-ab81-d4969c8f04ca",
+        "name": "Budget App Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Basic get",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            },
+            "response": [
+                {
+                    "name": "Basic get",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "html",
+                    "header": [
+                        {
+                            "key": "X-Powered-By",
+                            "value": "Express"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "text/html; charset=utf-8"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "12"
+                        },
+                        {
+                            "key": "ETag",
+                            "value": "W/\"c-3UQkmaRIn08BdyaqjcV8ADOxZVY\""
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Wed, 02 Mar 2022 05:58:00 GMT"
+                        },
+                        {
+                            "key": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "key": "Keep-Alive",
+                            "value": "timeout=5"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "Get Response"
+                }
+            ]
+        },
+        {
+            "name": "Basic  post",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            },
+            "response": [
+                {
+                    "name": "Basic  post",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "html",
+                    "header": [
+                        {
+                            "key": "X-Powered-By",
+                            "value": "Express"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "text/html; charset=utf-8"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "13"
+                        },
+                        {
+                            "key": "ETag",
+                            "value": "W/\"d-ELKaMF4ShlRf0jGNMB4jS8gBviA\""
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Wed, 02 Mar 2022 05:58:14 GMT"
+                        },
+                        {
+                            "key": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "key": "Keep-Alive",
+                            "value": "timeout=5"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "Post Response"
+                }
+            ]
+        }
+    ]
+}

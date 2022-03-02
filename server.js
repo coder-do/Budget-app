@@ -1,11 +1,9 @@
 const express = require('express');
+const homeRouter = require('./routes/home')
 const app = express()
 
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    console.log(req.params.name);
-    res.send('Hello')
-})
+app.use('/', homeRouter)
 
 app.listen(3000)
