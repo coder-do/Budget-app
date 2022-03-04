@@ -7,7 +7,7 @@ const login = (req, res) => {
             user.password === userData.password);
 
         if (newUser.length === 0) {
-            throw new Error('Username of password is incorrect')
+            throw new Error('Username or password is incorrect')
         }
 
         res.status(200).json({ message: 'Login completed', data: newUser })

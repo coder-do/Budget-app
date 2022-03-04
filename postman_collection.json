@@ -6,7 +6,7 @@
     },
     "item": [
         {
-            "name": "Users api",
+            "name": "Users API",
             "item": [
                 {
                     "name": "Get user by id",
@@ -144,7 +144,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Mike\",\r\n    \"age\": 30,\r\n    \"isAdmin\": false\r\n}",
+                            "raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Mike\",\r\n    \"password\": \"mike\",\r\n    \"age\": 30,\r\n    \"isAdmin\": false\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -171,7 +171,7 @@
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Mike\",\r\n    \"age\": 30,\r\n    \"isAdmin\": false\r\n}",
+                                    "raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Mike\",\r\n    \"password\": \"mike\",\r\n    \"age\": 30,\r\n    \"isAdmin\": false\r\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -212,7 +212,7 @@
                                 },
                                 {
                                     "key": "Date",
-                                    "value": "Thu, 03 Mar 2022 06:23:44 GMT"
+                                    "value": "Fri, 04 Mar 2022 07:42:32 GMT"
                                 },
                                 {
                                     "key": "Connection",
@@ -271,7 +271,7 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "http://localhost:3000/users/2",
+                                    "raw": "http://localhost:3000/users/3",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -279,7 +279,7 @@
                                     "port": "3000",
                                     "path": [
                                         "users",
-                                        "2"
+                                        "3"
                                     ]
                                 }
                             },
@@ -297,15 +297,15 @@
                                 },
                                 {
                                     "key": "Content-Length",
-                                    "value": "109"
+                                    "value": "121"
                                 },
                                 {
                                     "key": "ETag",
-                                    "value": "W/\"6d-Za+2O+VgNjt9hyPN5JAhBm+R6Ws\""
+                                    "value": "W/\"79-H/G2cqq/5FN5qeZqwwi4ak3apKM\""
                                 },
                                 {
                                     "key": "Date",
-                                    "value": "Thu, 03 Mar 2022 06:42:28 GMT"
+                                    "value": "Fri, 04 Mar 2022 07:43:28 GMT"
                                 },
                                 {
                                     "key": "Connection",
@@ -317,7 +317,7 @@
                                 }
                             ],
                             "cookie": [],
-                            "body": "{\n    \"message\": \"User data updated succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 2,\n            \"name\": \"Montgomery\",\n            \"age\": 50,\n            \"isAdmin\": false\n        }\n    ]\n}"
+                            "body": "{\n    \"message\": \"User data updated succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 3,\n            \"name\": \"Meruzh\",\n            \"password\": \"123\",\n            \"age\": 25,\n            \"isAdmin\": true\n        }\n    ]\n}"
                         },
                         {
                             "name": "Update 2 fields",
@@ -435,15 +435,15 @@
                                 },
                                 {
                                     "key": "Content-Length",
-                                    "value": "100"
+                                    "value": "118"
                                 },
                                 {
                                     "key": "ETag",
-                                    "value": "W/\"64-AmRwVVZDFCm3SL/BR+RqSgWW2bY\""
+                                    "value": "W/\"76-HQm8XSylLIc1VNs5zlfXgTpG7rM\""
                                 },
                                 {
                                     "key": "Date",
-                                    "value": "Thu, 03 Mar 2022 07:14:03 GMT"
+                                    "value": "Fri, 04 Mar 2022 07:43:59 GMT"
                                 },
                                 {
                                     "key": "Connection",
@@ -455,14 +455,14 @@
                                 }
                             ],
                             "cookie": [],
-                            "body": "{\n    \"message\": \"User removed succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 5,\n            \"name\": \"Lawson\",\n            \"age\": 16,\n            \"isAdmin\": false\n        }\n    ]\n}"
+                            "body": "{\n    \"message\": \"User removed succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 5,\n            \"name\": \"Lawson\",\n            \"password\": \"4321\",\n            \"age\": 16,\n            \"isAdmin\": false\n        }\n    ]\n}"
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "Auth api",
+            "name": "Auth API",
             "item": [
                 {
                     "name": "Login",
@@ -471,7 +471,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"name\": \"Meruzh\",\r\n    \"password\": \"12345678\",\r\n    \"isAdmin\": \"false\"\r\n}",
+                            "raw": "{\r\n    \"name\": \"Whitley\",\r\n    \"password\": \"12345\"\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -493,13 +493,13 @@
                     },
                     "response": [
                         {
-                            "name": "Login",
+                            "name": "Login example",
                             "originalRequest": {
                                 "method": "POST",
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n    \"name\": \"Meruzh\",\r\n    \"password\": \"12345678\",\r\n    \"isAdmin\": \"false\"\r\n}",
+                                    "raw": "{\r\n    \"name\": \"Whitley\",\r\n    \"password\": \"12345\"\r\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -533,15 +533,15 @@
                                 },
                                 {
                                     "key": "Content-Length",
-                                    "value": "94"
+                                    "value": "108"
                                 },
                                 {
                                     "key": "ETag",
-                                    "value": "W/\"5e-oMBZwjU8nO9hwRdsn3VRTGRi+sQ\""
+                                    "value": "W/\"6c-D2Ll6KNzsXSRzKHgu0ulgbpTQLA\""
                                 },
                                 {
                                     "key": "Date",
-                                    "value": "Fri, 04 Mar 2022 06:44:44 GMT"
+                                    "value": "Fri, 04 Mar 2022 07:49:33 GMT"
                                 },
                                 {
                                     "key": "Connection",
@@ -553,7 +553,70 @@
                                 }
                             ],
                             "cookie": [],
-                            "body": "{\n    \"message\": \"Login completed\",\n    \"data\": {\n        \"name\": \"Meruzh\",\n        \"password\": \"12345678\",\n        \"isAdmin\": \"false\"\n    }\n}"
+                            "body": "{\n    \"message\": \"Login completed\",\n    \"data\": [\n        {\n            \"id\": 0,\n            \"name\": \"Whitley\",\n            \"password\": \"12345\",\n            \"age\": 19,\n            \"isAdmin\": false\n        }\n    ]\n}"
+                        },
+                        {
+                            "name": "Login fail when incorrect password",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"name\": \"Whitley\",\r\n    \"password\": \"123425\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/auth/login",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "auth",
+                                        "login"
+                                    ]
+                                }
+                            },
+                            "status": "Not Found",
+                            "code": 404,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"3e-YG2eTufoVY9J0Yn/Rl7GBaSr2XY\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Fri, 04 Mar 2022 07:50:13 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Error!\",\n    \"err\": \"Username of password is incorrect\"\n}"
                         }
                     ]
                 },
@@ -629,6 +692,183 @@
                             ],
                             "cookie": [],
                             "body": "{\n    \"message\": \"Logout completed\"\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FAQ's API",
+            "item": [
+                {
+                    "name": "Get all FAQ's",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/faq/questions",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "faq",
+                                "questions"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "All FAQ's",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/faq/questions",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "faq",
+                                        "questions"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "839"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"347-vLm2lzZWRREzd1WVARyrgulmyVQ\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Fri, 04 Mar 2022 09:08:39 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "[\n    {\n        \"id\": 1,\n        \"question\": \"Who is this application for?\",\n        \"answer\": \"Budget planning application is for adults who care about their financial state, want to know where they spend money\"\n    },\n    {\n        \"id\": 2,\n        \"question\": \"What allows us this kind of app?\",\n        \"answer\": \"Budget Planning App is a web-application that allows you to: keep track of income and expenses in the context of various categories, set limits for expenses and get notifications when you spend too much, generate different types of reports with detailed cost analytics, organize the accounting of savings, store electronic copies of financial documents.\"\n    },\n    {\n        \"id\": 3,\n        \"question\": \"Is there implemented login functioanlity?\",\n        \"answer\": \"Yes, of course ^_^\"\n    },\n    {\n        \"id\": 4,\n        \"question\": \"Can I generate administrator`s reports?\",\n        \"answer\": \"Yes\"\n    },\n    {\n        \"id\": 5,\n        \"question\": \"Can we set limits for expenses?\",\n        \"answer\": \"Yes\"\n    }\n]"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update FAQ content",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"question\": \"Is there implemented login functioanlity?\",\r\n    \"answer\": \"Sorry, but I don't know\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/faq/questions/update/3",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "faq",
+                                "questions",
+                                "update",
+                                "3"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Update FAQ content",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"question\": \"Is there implemented login functioanlity?\",\r\n    \"answer\": \"Sorry, but I don't know\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/faq/questions/update/3",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "faq",
+                                        "questions",
+                                        "update",
+                                        "3"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "29"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"1d-RxzVmScdyJwqB+h6/xp7rLJ+htM\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Fri, 04 Mar 2022 09:19:28 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"FAQ was updated\"\n}"
                         }
                     ]
                 }
