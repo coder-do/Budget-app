@@ -6,81 +6,11 @@
     },
     "item": [
         {
-            "name": "Get user by id",
-            "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                    "raw": "http://localhost:3000/users/1",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "3000",
-                    "path": [
-                        "users",
-                        "1"
-                    ]
-                }
-            },
-            "response": [
+            "name": "Users api",
+            "item": [
                 {
-                    "name": "Basic get",
-                    "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:3000/users/4",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "3000",
-                            "path": [
-                                "users",
-                                "4"
-                            ]
-                        }
-                    },
-                    "status": "OK",
-                    "code": 200,
-                    "_postman_previewlanguage": "json",
-                    "header": [
-                        {
-                            "key": "X-Powered-By",
-                            "value": "Express"
-                        },
-                        {
-                            "key": "Content-Type",
-                            "value": "application/json; charset=utf-8"
-                        },
-                        {
-                            "key": "Content-Length",
-                            "value": "49"
-                        },
-                        {
-                            "key": "ETag",
-                            "value": "W/\"31-bmOdJOs6VX8rO/7g0xZyYU34dvk\""
-                        },
-                        {
-                            "key": "Date",
-                            "value": "Thu, 03 Mar 2022 06:08:22 GMT"
-                        },
-                        {
-                            "key": "Connection",
-                            "value": "keep-alive"
-                        },
-                        {
-                            "key": "Keep-Alive",
-                            "value": "timeout=5"
-                        }
-                    ],
-                    "cookie": [],
-                    "body": "[\n    {\n        \"id\": 4,\n        \"name\": \"Burke\",\n        \"age\": 23,\n        \"isAdmin\": true\n    }\n]"
-                },
-                {
-                    "name": "Basic get",
-                    "originalRequest": {
+                    "name": "Get user by id",
+                    "request": {
                         "method": "GET",
                         "header": [],
                         "url": {
@@ -96,74 +26,120 @@
                             ]
                         }
                     },
-                    "status": "OK",
-                    "code": 200,
-                    "_postman_previewlanguage": "json",
-                    "header": [
+                    "response": [
                         {
-                            "key": "X-Powered-By",
-                            "value": "Express"
+                            "name": "Basic get",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/users/4",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "users",
+                                        "4"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "49"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"31-bmOdJOs6VX8rO/7g0xZyYU34dvk\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 03 Mar 2022 06:08:22 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "[\n    {\n        \"id\": 4,\n        \"name\": \"Burke\",\n        \"age\": 23,\n        \"isAdmin\": true\n    }\n]"
                         },
                         {
-                            "key": "Content-Type",
-                            "value": "application/json; charset=utf-8"
-                        },
-                        {
-                            "key": "Content-Length",
-                            "value": "48"
-                        },
-                        {
-                            "key": "ETag",
-                            "value": "W/\"30-BxLt8L/w6+yviAzZNHBVVDHNQww\""
-                        },
-                        {
-                            "key": "Date",
-                            "value": "Thu, 03 Mar 2022 06:08:39 GMT"
-                        },
-                        {
-                            "key": "Connection",
-                            "value": "keep-alive"
-                        },
-                        {
-                            "key": "Keep-Alive",
-                            "value": "timeout=5"
+                            "name": "Basic get",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/users/1",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "users",
+                                        "1"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "48"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"30-BxLt8L/w6+yviAzZNHBVVDHNQww\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 03 Mar 2022 06:08:39 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Todd\",\n        \"age\": 22,\n        \"isAdmin\": true\n    }\n]"
                         }
-                    ],
-                    "cookie": [],
-                    "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Todd\",\n        \"age\": 22,\n        \"isAdmin\": true\n    }\n]"
-                }
-            ]
-        },
-        {
-            "name": "Add new user",
-            "request": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Mike\",\r\n    \"age\": 30,\r\n    \"isAdmin\": false\r\n}",
-                    "options": {
-                        "raw": {
-                            "language": "json"
-                        }
-                    }
-                },
-                "url": {
-                    "raw": "http://localhost:3000/users",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "3000",
-                    "path": [
-                        "users"
                     ]
-                }
-            },
-            "response": [
+                },
                 {
                     "name": "Add new user",
-                    "originalRequest": {
+                    "request": {
                         "method": "POST",
                         "header": [],
                         "body": {
@@ -187,75 +163,74 @@
                             ]
                         }
                     },
-                    "status": "OK",
-                    "code": 200,
-                    "_postman_previewlanguage": "json",
-                    "header": [
+                    "response": [
                         {
-                            "key": "X-Powered-By",
-                            "value": "Express"
-                        },
-                        {
-                            "key": "Content-Type",
-                            "value": "application/json; charset=utf-8"
-                        },
-                        {
-                            "key": "Content-Length",
-                            "value": "40"
-                        },
-                        {
-                            "key": "ETag",
-                            "value": "W/\"28-b63ll/nqmmlCc+TUAY6BExRaw7g\""
-                        },
-                        {
-                            "key": "Date",
-                            "value": "Thu, 03 Mar 2022 06:23:44 GMT"
-                        },
-                        {
-                            "key": "Connection",
-                            "value": "keep-alive"
-                        },
-                        {
-                            "key": "Keep-Alive",
-                            "value": "timeout=5"
+                            "name": "Add new user",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Mike\",\r\n    \"age\": 30,\r\n    \"isAdmin\": false\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/users",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "users"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "40"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"28-b63ll/nqmmlCc+TUAY6BExRaw7g\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 03 Mar 2022 06:23:44 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"New user added succesfully\"\n}"
                         }
-                    ],
-                    "cookie": [],
-                    "body": "{\n    \"message\": \"New user added succesfully\"\n}"
-                }
-            ]
-        },
-        {
-            "name": "Update user by id",
-            "request": {
-                "method": "PUT",
-                "header": [],
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\r\n    \"name\": \"Meruzh\"\r\n}",
-                    "options": {
-                        "raw": {
-                            "language": "json"
-                        }
-                    }
-                },
-                "url": {
-                    "raw": "http://localhost:3000/users/3",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "3000",
-                    "path": [
-                        "users",
-                        "3"
                     ]
-                }
-            },
-            "response": [
+                },
                 {
-                    "name": "Update 1 field",
-                    "originalRequest": {
+                    "name": "Update user by id",
+                    "request": {
                         "method": "PUT",
                         "header": [],
                         "body": {
@@ -268,7 +243,7 @@
                             }
                         },
                         "url": {
-                            "raw": "http://localhost:3000/users/2",
+                            "raw": "http://localhost:3000/users/3",
                             "protocol": "http",
                             "host": [
                                 "localhost"
@@ -276,133 +251,142 @@
                             "port": "3000",
                             "path": [
                                 "users",
-                                "2"
+                                "3"
                             ]
                         }
                     },
-                    "status": "OK",
-                    "code": 200,
-                    "_postman_previewlanguage": "json",
-                    "header": [
+                    "response": [
                         {
-                            "key": "X-Powered-By",
-                            "value": "Express"
+                            "name": "Update 1 field",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"name\": \"Meruzh\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/users/2",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "users",
+                                        "2"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "109"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"6d-Za+2O+VgNjt9hyPN5JAhBm+R6Ws\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 03 Mar 2022 06:42:28 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"User data updated succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 2,\n            \"name\": \"Montgomery\",\n            \"age\": 50,\n            \"isAdmin\": false\n        }\n    ]\n}"
                         },
                         {
-                            "key": "Content-Type",
-                            "value": "application/json; charset=utf-8"
-                        },
-                        {
-                            "key": "Content-Length",
-                            "value": "109"
-                        },
-                        {
-                            "key": "ETag",
-                            "value": "W/\"6d-Za+2O+VgNjt9hyPN5JAhBm+R6Ws\""
-                        },
-                        {
-                            "key": "Date",
-                            "value": "Thu, 03 Mar 2022 06:42:28 GMT"
-                        },
-                        {
-                            "key": "Connection",
-                            "value": "keep-alive"
-                        },
-                        {
-                            "key": "Keep-Alive",
-                            "value": "timeout=5"
+                            "name": "Update 2 fields",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"name\": \"Mike\",\r\n    \"age\": 80\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/users/5",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "users",
+                                        "5"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "103"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"67-XLYSiRHmogZguFI1wmp8pczOnpI\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 03 Mar 2022 06:43:26 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"User data updated succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 5,\n            \"name\": \"Mike\",\n            \"age\": 80,\n            \"isAdmin\": false\n        }\n    ]\n}"
                         }
-                    ],
-                    "cookie": [],
-                    "body": "{\n    \"message\": \"User data updated succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 2,\n            \"name\": \"Montgomery\",\n            \"age\": 50,\n            \"isAdmin\": false\n        }\n    ]\n}"
+                    ]
                 },
                 {
-                    "name": "Update 2 fields",
-                    "originalRequest": {
-                        "method": "PUT",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\r\n    \"name\": \"Mike\",\r\n    \"age\": 80\r\n}",
-                            "options": {
-                                "raw": {
-                                    "language": "json"
-                                }
-                            }
-                        },
-                        "url": {
-                            "raw": "http://localhost:3000/users/5",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "3000",
-                            "path": [
-                                "users",
-                                "5"
-                            ]
-                        }
-                    },
-                    "status": "OK",
-                    "code": 200,
-                    "_postman_previewlanguage": "json",
-                    "header": [
-                        {
-                            "key": "X-Powered-By",
-                            "value": "Express"
-                        },
-                        {
-                            "key": "Content-Type",
-                            "value": "application/json; charset=utf-8"
-                        },
-                        {
-                            "key": "Content-Length",
-                            "value": "103"
-                        },
-                        {
-                            "key": "ETag",
-                            "value": "W/\"67-XLYSiRHmogZguFI1wmp8pczOnpI\""
-                        },
-                        {
-                            "key": "Date",
-                            "value": "Thu, 03 Mar 2022 06:43:26 GMT"
-                        },
-                        {
-                            "key": "Connection",
-                            "value": "keep-alive"
-                        },
-                        {
-                            "key": "Keep-Alive",
-                            "value": "timeout=5"
-                        }
-                    ],
-                    "cookie": [],
-                    "body": "{\n    \"message\": \"User data updated succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 5,\n            \"name\": \"Mike\",\n            \"age\": 80,\n            \"isAdmin\": false\n        }\n    ]\n}"
-                }
-            ]
-        },
-        {
-            "name": "Delete user by id",
-            "request": {
-                "method": "DELETE",
-                "header": [],
-                "url": {
-                    "raw": "http://localhost:3000/users/5",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "3000",
-                    "path": [
-                        "users",
-                        "5"
-                    ]
-                }
-            },
-            "response": [
-                {
-                    "name": "Delete 5",
-                    "originalRequest": {
+                    "name": "Delete user by id",
+                    "request": {
                         "method": "DELETE",
                         "header": [],
                         "url": {
@@ -418,41 +402,235 @@
                             ]
                         }
                     },
-                    "status": "OK",
-                    "code": 200,
-                    "_postman_previewlanguage": "json",
-                    "header": [
+                    "response": [
                         {
-                            "key": "X-Powered-By",
-                            "value": "Express"
-                        },
-                        {
-                            "key": "Content-Type",
-                            "value": "application/json; charset=utf-8"
-                        },
-                        {
-                            "key": "Content-Length",
-                            "value": "100"
-                        },
-                        {
-                            "key": "ETag",
-                            "value": "W/\"64-AmRwVVZDFCm3SL/BR+RqSgWW2bY\""
-                        },
-                        {
-                            "key": "Date",
-                            "value": "Thu, 03 Mar 2022 07:14:03 GMT"
-                        },
-                        {
-                            "key": "Connection",
-                            "value": "keep-alive"
-                        },
-                        {
-                            "key": "Keep-Alive",
-                            "value": "timeout=5"
+                            "name": "Delete 5",
+                            "originalRequest": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/users/5",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "users",
+                                        "5"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"64-AmRwVVZDFCm3SL/BR+RqSgWW2bY\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Thu, 03 Mar 2022 07:14:03 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"User removed succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 5,\n            \"name\": \"Lawson\",\n            \"age\": 16,\n            \"isAdmin\": false\n        }\n    ]\n}"
                         }
-                    ],
-                    "cookie": [],
-                    "body": "{\n    \"message\": \"User removed succesfully\",\n    \"newUser\": [\n        {\n            \"id\": 5,\n            \"name\": \"Lawson\",\n            \"age\": 16,\n            \"isAdmin\": false\n        }\n    ]\n}"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Auth api",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"name\": \"Meruzh\",\r\n    \"password\": \"12345678\",\r\n    \"isAdmin\": \"false\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/auth/login",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Login",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"name\": \"Meruzh\",\r\n    \"password\": \"12345678\",\r\n    \"isAdmin\": \"false\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/auth/login",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "auth",
+                                        "login"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "94"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"5e-oMBZwjU8nO9hwRdsn3VRTGRi+sQ\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Fri, 04 Mar 2022 06:44:44 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Login completed\",\n    \"data\": {\n        \"name\": \"Meruzh\",\n        \"password\": \"12345678\",\n        \"isAdmin\": \"false\"\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/auth/logout",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "auth",
+                                "logout"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Logout",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/auth/logout",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "auth",
+                                        "logout"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "30"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"1e-fPZg5vqNQHiopxqn+nt/LF+8cqc\""
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Fri, 04 Mar 2022 06:45:28 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Logout completed\"\n}"
+                        }
+                    ]
                 }
             ]
         }
