@@ -20,7 +20,7 @@ const updateFAQ = (req, res) => {
                 item.answer = faqData.answer;
             }
         })
-        console.log(questions);
+
         res.status(200).json({ message: 'FAQ was updated' })
     } catch (e) {
         res.status(404).json({ message: 'Error!', err: e.message })
