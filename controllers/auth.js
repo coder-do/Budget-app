@@ -1,23 +1,42 @@
-import { users } from '../data/users.js';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { getUserByEmail } from '../utils/loginHelpers.js';
 
 const login = (req, res) => {
     try {
-        const userData = req.body;
-        const newUser = users.filter(user => user.name === userData.name &&
-            user.password === userData.password);
+        const { email, password } = req.body;
 
-        if (newUser.length === 0) {
-            throw new Error('Username or password is incorrect')
+        const token = jwt.sign(
+            { email, password },
+            process.env.JWT_SECRET,
+            { expiresIn: process.env.JWT_EXPIRES_IN }
+        );
+
+        const user = getUserByEmail(email);
+
+        if (user && bcrypt.compareSync(password, user.password)) {
+            req.session.user = user;
+            req.session.role = user.role;
+            req.session.token = `Bearer ${token}`
+            return req.session.save(() => {
+                res.status(200).json({
+                    message: 'Login completed',
+                    data: user,
+                    session: req.session
+                });
+            });
+        } else {
+            res.status(404).json({ message: 'Not found! Try again.' });
         }
-
-        res.status(200).json({ message: 'Login completed', data: newUser })
     } catch (e) {
-        res.status(404).json({ message: 'Error!', err: e.message })
+        res.json({ message: 'Error!', err: e.message });
     }
 }
 
 const logout = (req, res) => {
-    res.status(200).json({ message: 'Logout completed' })
+    return req.session.destroy(() => {
+        res.status(200).json({ message: 'Logout completed!' });
+    })
 }
 
 export { login, logout }
