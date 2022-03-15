@@ -1,5 +1,6 @@
 import cors from 'cors';
 import express from 'express'
+import mongoose from 'mongoose';
 import passport from 'passport';
 import session from 'express-session';
 import faqRouter from './routes/faq.js';
@@ -23,11 +24,11 @@ const app = express();
 
 passport.use(new Strategy(opts, jwtCallback));
 
-passport.serializeUser(function (user, done) {
+passport.serializeUser((user, done) => {
     done(null, user);
 });
 
-passport.deserializeUser(function (user, done) {
+passport.deserializeUser((user, done) => {
     done(null, user);
 });
 
@@ -60,4 +61,8 @@ app.use('/expenses', expenseRouter);
 
 app.use('/accounts', accountsRouter);
 
-app.listen(process.env.PORT);
+mongoose.connect(process.env.MONGODB_URL)
+    .then(() => {
+        app.listen(process.env.PORT);
+    })
+    .catch(err => new Error(err))
