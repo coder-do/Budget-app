@@ -1,12 +1,14 @@
 import passport from 'passport';
-import { getUserByEmail } from './loginHelpers.js';
+import User from '../models/user.js';
 
 export const jwtCallback = (jwt_payload, done) => {
-    const user = getUserByEmail(jwt_payload.email);
-    if (user) {
-        return done(null, user);
-    }
-    return done(null, false);
+    User.findOne({ email: jwt_payload.email })
+        .then((user) => {
+            if (user) {
+                return done(null, user);
+            }
+            return done(null, false);
+        })
 }
 
 export const auth = passport.authenticate('jwt', { session: true });

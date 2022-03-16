@@ -1,53 +1,40 @@
-import { users } from '../data/users.js';
+import User from '../models/user.js';
 
 const getUser = (req, res) => {
-    const user = users.filter(el => el._id === req.params.id);
-    res.json(user);
+    User.findById(req.session.passport.user._id)
+        .then(data => {
+            res.status(200).json(data);
+        })
 }
 
 const addUser = (req, res) => {
-    users.push(req.body);
-    res.status(200).json({ message: 'New user added succesfully' });
+    User.create(req.body)
+        .then(() => {
+            res.status(200).json({ message: 'New user added succesfully' });
+        })
+        .catch(err => {
+            res.status(500).json({ message: err.message });
+        })
 }
 
 const updateUser = (req, res) => {
-    try {
-        const id = req.params.id
-        const newUser = users.filter(user => user._id === id);
-
-        if (newUser.length === 0) {
-            throw new Error('User doesn`t exist');
-        }
-        users.map(user => {
-            if (user._id === id) {
-                for (let key in user) {
-                    if (req.body.hasOwnProperty(key)) {
-                        user[key] = req.body[key];
-                    }
-                }
-            }
-            return user;
+    User.findByIdAndUpdate(req.params.id, req.body)
+        .then(() => {
+            res.status(200).json({ message: 'User data updated succesfully' });
         })
-        res.status(200).json({ message: 'User data updated succesfully', newUser });
-    } catch (e) {
-        res.status(404).json({ message: 'Error!', err: e.message });
-    }
+        .catch(err => {
+            res.status(404).json({ message: err.message });
+        })
 }
 
 const deleteUser = (req, res) => {
-    try {
-        const id = req.params.id;
-        const newUser = users.filter(user => user._id === id);
-
-        if (newUser.length === 0) {
-            throw new Error('User doesn`t exist');
-        }
-        users.splice(users.indexOf(newUser[0]), 1);
-
-        res.status(200).json({ message: 'User removed succesfully', newUser });
-    } catch (e) {
-        res.status(404).json({ message: 'Error!', err: e.message });
-    }
+    User.findByIdAndDelete(req.params.id)
+        .then(() => {
+            res.status(200).json({ message: 'User data with transactions removed from database succesfully' });
+        })
+        .catch(err => {
+            res.status(404).json({ message: err.message });
+        })
 }
 
 export { addUser, getUser, deleteUser, updateUser }

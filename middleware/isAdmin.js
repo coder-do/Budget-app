@@ -1,5 +1,5 @@
 export const isAdmin = (req, res, next) => {
-    const role = req.session && req.session.role;
+    const role = req.session && req.session.passport.user.role;
     if (role !== 'admin' && role === 'user') {
         res.status(403).json({ message: 'User can not access admin resources' });
         return;

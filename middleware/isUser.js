@@ -1,5 +1,5 @@
 export const isUser = (req, res, next) => {
-    const role = req.session && req.session.role;
+    const role = req.session && req.session.passport.user.role;
     if (role === 'admin') {
         return next();
     }
