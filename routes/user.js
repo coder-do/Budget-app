@@ -1,14 +1,16 @@
 import express from 'express';
 import { addUser, getUser, updateUser, deleteUser } from '../controllers/user.js';
+import { isUser } from '../middleware/isUser.js';
+import { auth } from '../utils/passport.js';
 
 const router = express.Router();
 
-router.get('/:id', getUser)
+router.get('/:id', auth, isUser, getUser);
 
-router.post('/', addUser)
+router.post('/', auth, isUser, addUser);
 
-router.put('/:id', updateUser)
+router.put('/:id', auth, isUser, updateUser);
 
-router.delete('/:id', deleteUser)
+router.delete('/:id', auth, isUser, deleteUser);
 
 export default router;

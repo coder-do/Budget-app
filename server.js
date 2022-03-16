@@ -1,16 +1,68 @@
+import cors from 'cors';
 import express from 'express'
+import mongoose from 'mongoose';
+import passport from 'passport';
+import session from 'express-session';
+import faqRouter from './routes/faq.js';
 import userRouter from './routes/user.js';
 import authRouter from './routes/auth.js';
-import faqRouter from './routes/faq.js';
+import incomeRouter from './routes/income.js';
+import expenseRouter from './routes/expense.js';
+import accountsRouter from './routes/account.js';
+import { config } from 'dotenv';
+import { jwtCallback } from './utils/passport.js';
+import { ExtractJwt, Strategy } from 'passport-jwt';
 
-const app = express()
+config();
 
-app.use(express.json())
+const opts = {
+    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+    secretOrKey: process.env.JWT_SECRET,
+}
 
-app.use('/users', userRouter)
+const app = express();
 
-app.use('/auth', authRouter)
+passport.use(new Strategy(opts, jwtCallback));
 
-app.use('/faq', faqRouter)
+passport.serializeUser((user, done) => {
+    done(null, user);
+});
 
-app.listen(3000)
+passport.deserializeUser((user, done) => {
+    done(null, user);
+});
+
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        expires: 3600000
+    }
+}))
+
+app.use(cors());
+
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(passport.initialize());
+
+app.use('/faq', faqRouter);
+
+app.use('/auth', authRouter);
+
+app.use('/users', userRouter);
+
+app.use('/incomes', incomeRouter);
+
+app.use('/expenses', expenseRouter);
+
+app.use('/accounts', accountsRouter);
+
+mongoose.connect(process.env.MONGODB_URL)
+    .then(() => {
+        app.listen(process.env.PORT);
+    })
+    .catch(err => new Error(err))

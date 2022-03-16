@@ -1,7 +1,7 @@
 import { questions } from '../data/faq.js';
 
 const getFAQs = (req, res) => {
-    res.status(200).json(questions)
+    res.json(questions);
 }
 
 const updateFAQ = (req, res) => {
@@ -11,7 +11,7 @@ const updateFAQ = (req, res) => {
         const newData = questions.filter(el => el.id === id);
 
         if (newData.length === 0) {
-            throw new Error(`Question with ${id} id isn't in database`)
+            throw new Error(`Question with ${id} id isn't in database`);
         }
 
         questions.map(item => {
@@ -21,9 +21,9 @@ const updateFAQ = (req, res) => {
             }
         })
 
-        res.status(200).json({ message: 'FAQ was updated' })
+        res.status(200).json({ message: 'FAQ was updated' });
     } catch (e) {
-        res.status(404).json({ message: 'Error!', err: e.message })
+        res.status(404).json({ message: 'Error!', err: e.message });
     }
 }
 
