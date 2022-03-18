@@ -63,6 +63,10 @@ app.use('/accounts', accountsRouter);
 
 mongoose.connect(process.env.MONGODB_URL)
     .then(() => {
-        app.listen(process.env.PORT);
+        if (process.env.NODE_ENV !== 'test') {
+            app.listen(process.env.PORT);
+        }
     })
-    .catch(err => new Error(err))
+    .catch(err => new Error(err));
+
+export { app };
