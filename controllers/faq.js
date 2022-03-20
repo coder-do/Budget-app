@@ -1,30 +1,23 @@
-import { questions } from '../data/faq.js';
+import FAQ from '../models/faq.js';
 
 const getFAQs = (req, res) => {
-    res.json(questions);
+    FAQ.find()
+        .then(data => {
+            res.status(200).json(data);
+        })
+        .catch(err => {
+            res.status(404).json(err);
+        })
 }
 
 const updateFAQ = (req, res) => {
-    try {
-        const id = +req.params.id;
-        const faqData = req.body;
-        const newData = questions.filter(el => el.id === id);
-
-        if (newData.length === 0) {
-            throw new Error(`Question with ${id} id isn't in database`);
-        }
-
-        questions.map(item => {
-            if (item.id === id) {
-                item.question = faqData.question;
-                item.answer = faqData.answer;
-            }
+    FAQ.findByIdAndUpdate(req.params.id, req.body)
+        .then(() => {
+            res.status(200).json({ message: 'FAQ updated!' });
         })
-
-        res.status(200).json({ message: 'FAQ was updated' });
-    } catch (e) {
-        res.status(404).json({ message: 'Error!', err: e.message });
-    }
+        .catch(() => {
+            res.status(404).json({ message: 'Error occured' });
+        })
 }
 
 export { getFAQs, updateFAQ }

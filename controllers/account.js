@@ -1,61 +1,63 @@
-import { users } from "../data/users.js";
-import { findUser } from "../utils/findUser.js";
+import User from "../models/user.js";
 
 const getAllAccounts = (req, res) => {
-    const user = findUser(req);
-    res.status(200).json(user.accounts);
+    User.findOne({ email: req.session.passport.user.email })
+        .then(data => {
+            res.status(200).json(data.accounts);
+        })
 }
 
 const getAccount = (req, res) => {
     const id = req.params.id;
-    const user = findUser(req);
-    const account = user.accounts.filter(inc => inc.id === id);
-
-    if (account.length === 0) {
-        res.status(404).json({ message: 'Incorrect id of account!' });
-    } else {
-        res.status(200).json(account);
-    }
+    User.findOne({ email: req.session.passport.user.email })
+        .then(data => {
+            const account = data.accounts.filter(acc => acc.id === id);
+            if (account.length === 0) {
+                throw new Error();
+            }
+            res.status(200).json(account);
+        })
+        .catch(() => {
+            res.status(404).json({ message: 'Incorrect id of account!' });
+        })
 }
 
 const addAccount = (req, res) => {
-    const user = findUser(req);
-    users.map(us => {
-        if (us._id === user._id) {
-            us.accounts.push(req.body);
-        }
-        return us;
-    });
-
-    res.status(200).json({ message: 'New account added', data: users });
+    User.findOneAndUpdate(
+        { email: req.session.passport.user.email },
+        { $push: { "accounts": req.body } }
+    ).then(() => {
+        res.status(200).json({ message: 'New account added' });
+    }).catch(() => {
+        res.status(404).json({ message: 'Error occured' });
+    })
 }
 
 const updateAccount = (req, res) => {
-    const id = +req.params.id;
-    const user = findUser(req);
-    const index = users.indexOf(user);
-
-    if (index === -1) {
-        res.status(404).json({ message: 'Incorrect id of account!' });
-    }
-
-    users[index].accounts.splice(id, 1, req.body);
-
-    res.status(200).json({ message: 'Account updated!', data: users });
+    User.findOneAndUpdate(
+        {
+            email: req.session.passport.user.email,
+            "accounts.id": req.params.id
+        },
+        { $set: { "accounts.$": req.body } }
+    ).then(() => {
+        res.status(200).json({ message: 'Account updated!' });
+    }).catch(() => {
+        res.status(404).json({ message: 'Error occured' });
+    })
 }
 
 const deleteAccount = (req, res) => {
-    const id = +req.params.id;
-    const user = findUser(req);
-    const index = users.indexOf(user);
-
-    if (index === -1) {
-        res.status(404).json({ message: 'Incorrect id of account!' });
-    }
-
-    users[index].accounts.splice(id, 1);
-
-    res.status(200).json({ message: 'Account deleted!', data: users });
+    User.findOneAndUpdate(
+        {
+            email: req.session.passport.user.email
+        },
+        { $pull: { 'accounts': { id: req.params.id } } }
+    ).then(() => {
+        res.status(200).json({ message: 'Account deleted!' });
+    }).catch(() => {
+        res.status(404).json({ message: 'Error occured' });
+    })
 }
 
 export {
