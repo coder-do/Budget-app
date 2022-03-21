@@ -13,6 +13,7 @@ const User = new Schema({
     dateOfBirth: String,
     age: Number,
     role: String,
+    categories: Array,
     transactions: Object,
     accounts: Array
 }, {

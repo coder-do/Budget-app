@@ -9,6 +9,7 @@ import authRouter from './routes/auth.js';
 import incomeRouter from './routes/income.js';
 import expenseRouter from './routes/expense.js';
 import accountsRouter from './routes/account.js';
+import categoriesRouter from './routes/categories.js'
 import { config } from 'dotenv';
 import { jwtCallback } from './utils/passport.js';
 import { ExtractJwt, Strategy } from 'passport-jwt';
@@ -60,6 +61,8 @@ app.use('/incomes', incomeRouter);
 app.use('/expenses', expenseRouter);
 
 app.use('/accounts', accountsRouter);
+
+app.use('/categories', categoriesRouter);
 
 mongoose.connect(process.env.MONGODB_URL)
     .then(() => {

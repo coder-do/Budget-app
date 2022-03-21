@@ -214,7 +214,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3NzU5NTQzLCJleHAiOjE2NDc3NjMxNDN9.XC06CaCRPLi2sJAdc_q2aMhHHraWXCShmLFJNVI5vYc",
                                     "type": "string"
                                 }
                             ]
@@ -418,7 +418,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"email\": \"meruzh@gmail.com\",\r\n    \"password\": \"Meruzh_123\"\r\n}",
+                            "raw": "{\r\n    \"email\": \"meruzh@gmail.com\",\r\n    \"password\": \"Kiloyan_123\"\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -575,7 +575,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6Ik1lcnV6aF8xMjMiLCJpYXQiOjE2NDcwODgzNjcsImV4cCI6MTY0NzA5MTk2N30.ZDfDqLVOx85MngTS3qqh47zc81BOQgM_DXjNbCJ1MZU",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3NzU5NTQzLCJleHAiOjE2NDc3NjMxNDN9.XC06CaCRPLi2sJAdc_q2aMhHHraWXCShmLFJNVI5vYc",
                                     "type": "string"
                                 }
                             ]
@@ -669,7 +669,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzIyNjA3LCJleHAiOjE2NDczMjYyMDd9.kJ69bGPb7Z6Abt-7cwgLFrsvLMSM_GzmcsSWkouyrsg",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3ODYxOTk2LCJleHAiOjE2NDc4NjU1OTZ9.13kKAEdySsR9OZGAJJakk8UxJI_UqLLbOxvNN8WwHXU",
                                     "type": "string"
                                 }
                             ]
@@ -881,7 +881,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3NzU5NTQzLCJleHAiOjE2NDc3NjMxNDN9.XC06CaCRPLi2sJAdc_q2aMhHHraWXCShmLFJNVI5vYc",
                                             "type": "string"
                                         }
                                     ]
@@ -970,7 +970,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3NzU5NTQzLCJleHAiOjE2NDc3NjMxNDN9.XC06CaCRPLi2sJAdc_q2aMhHHraWXCShmLFJNVI5vYc",
                                             "type": "string"
                                         }
                                     ]
@@ -1061,7 +1061,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3NzU5NTQzLCJleHAiOjE2NDc3NjMxNDN9.XC06CaCRPLi2sJAdc_q2aMhHHraWXCShmLFJNVI5vYc",
                                             "type": "string"
                                         }
                                     ]
@@ -1867,7 +1867,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3ODYxOTk2LCJleHAiOjE2NDc4NjU1OTZ9.13kKAEdySsR9OZGAJJakk8UxJI_UqLLbOxvNN8WwHXU",
                                     "type": "string"
                                 }
                             ]
@@ -1956,7 +1956,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3NzU5NTQzLCJleHAiOjE2NDc3NjMxNDN9.XC06CaCRPLi2sJAdc_q2aMhHHraWXCShmLFJNVI5vYc",
                                     "type": "string"
                                 }
                             ]
@@ -2045,7 +2045,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3NzU5NTQzLCJleHAiOjE2NDc3NjMxNDN9.XC06CaCRPLi2sJAdc_q2aMhHHraWXCShmLFJNVI5vYc",
                                     "type": "string"
                                 }
                             ]
@@ -2054,7 +2054,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"id\": \"3\",\r\n    \"userId\": \"3\",\r\n    \"title\": \"titl 1e\",\r\n    \"description\": \"description 1\",\r\n    \"currency\": \"$ 11\",\r\n    \"createdAt\": \"Date now(11111111)\",\r\n    \"updatedAt\": \"Date now(11111111)\"\r\n}",
+                            "raw": "{\r\n    \"id\": \"0\",\r\n    \"userId\": \"9f15216b-44c2-40d4-b3fe-cfe26ffd4f9e\",\r\n    \"title\": \"Credit Card\",\r\n    \"description\": \"description\",\r\n    \"currency\": \"$\",\r\n    \"createdAt\": \"2022-03-15T06:05:01.374Z\",\r\n    \"updatedAt\": \"2022-03-15T06:05:01.374Z\",\r\n    \"transactions\": {\r\n        \"income\": [\r\n            {\r\n                \"id\": \"0\",\r\n                \"type\": \"22222222222\",\r\n                \"accountId\": \"id2222 1\",\r\n                \"title\": \"ti222tle\",\r\n                \"description\": \"descri22ption\",\r\n                \"dateOfOperation\": \"21.22212.2000\",\r\n                \"category\": \"222IT\",\r\n                \"currency\": \"222$\",\r\n                \"amount\": \"1022200\",\r\n                \"createdAt\": \"Da222te now()\",\r\n                \"updatedAt\": \"Da2222te now()\"\r\n            }\r\n        ],\r\n        \"expense\": [\r\n            {\r\n                \"id\": \"0\",\r\n                \"type\": \"type\",\r\n                \"accountId\": \"id 1\",\r\n                \"title\": \"title\",\r\n                \"description\": \"description\",\r\n                \"dateOfOperation\": \"21.12.2000\",\r\n                \"category\": \"IT\",\r\n                \"currency\": \"$\",\r\n                \"amount\": \"1000\",\r\n                \"createdAt\": \"2022-03-15T09:34:20.475+00:00\",\r\n                \"updatedAt\": \"2022-03-15T09:34:20.475+00:00\"\r\n            }\r\n        ]\r\n    }\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -2152,7 +2152,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3NzU5NTQzLCJleHAiOjE2NDc3NjMxNDN9.XC06CaCRPLi2sJAdc_q2aMhHHraWXCShmLFJNVI5vYc",
                                     "type": "string"
                                 }
                             ]
@@ -2161,7 +2161,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"id\": \"0\",\r\n    \"userId\": \"3333333333333\",\r\n    \"title\": \"title\",\r\n    \"description\": \"description\",\r\n    \"currency\": \"$\",\r\n    \"createdAt\": \"Date now()\",\r\n    \"updatedAt\": \"Date now()\"\r\n}",
+                            "raw": "{\r\n    \"id\": \"1\",\r\n    \"userId\": \"11111111111\",\r\n    \"title\": \"title\",\r\n    \"description\": \"description\",\r\n    \"currency\": \"$\",\r\n    \"createdAt\": \"2022-03-15T09:34:20.475+00:00\",\r\n    \"updatedAt\": \"2022-03-15T09:34:20.475+00:00\",\r\n    \"transactions\": {\r\n        \"income\": [],\r\n        \"expense\": []\r\n    }\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -2169,7 +2169,7 @@
                             }
                         },
                         "url": {
-                            "raw": "http://localhost:3000/accounts/account/0",
+                            "raw": "http://localhost:3000/accounts/account/1",
                             "protocol": "http",
                             "host": [
                                 "localhost"
@@ -2178,7 +2178,7 @@
                             "path": [
                                 "accounts",
                                 "account",
-                                "0"
+                                "1"
                             ]
                         }
                     },
@@ -2261,7 +2261,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3NzU5NTQzLCJleHAiOjE2NDc3NjMxNDN9.XC06CaCRPLi2sJAdc_q2aMhHHraWXCShmLFJNVI5vYc",
                                     "type": "string"
                                 }
                             ]
@@ -2269,7 +2269,7 @@
                         "method": "DELETE",
                         "header": [],
                         "url": {
-                            "raw": "http://localhost:3000/accounts/account/3",
+                            "raw": "http://localhost:3000/accounts/account/1",
                             "protocol": "http",
                             "host": [
                                 "localhost"
@@ -2278,7 +2278,7 @@
                             "path": [
                                 "accounts",
                                 "account",
-                                "3"
+                                "1"
                             ]
                         }
                     },
@@ -2341,6 +2341,224 @@
                             ],
                             "cookie": [],
                             "body": "{\n    \"message\": \"Account deleted!\"\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Categories API",
+            "item": [
+                {
+                    "name": "Get all categories",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3ODYxOTk2LCJleHAiOjE2NDc4NjU1OTZ9.13kKAEdySsR9OZGAJJakk8UxJI_UqLLbOxvNN8WwHXU",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/categories",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "categories"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "New Request",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": ""
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/categories",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "categories"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "220"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"dc-GLsIKa9ncmZj2d9KG/UQT2gIAbs\""
+                                },
+                                {
+                                    "key": "Set-Cookie",
+                                    "value": "connect.sid=s%3AgY_Ft1ou-YcLzGUS46mURTxl_FFsvXKs.6L4p1h54rnul129t%2FdYiib7VSYF%2FqpJeuvR%2BYniMcGA; Path=/; Expires=Mon, 21 Mar 2022 12:48:38 GMT; HttpOnly"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Mon, 21 Mar 2022 11:48:38 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "[\n    {\n        \"income\": [\n            \"salary\",\n            \"debt repayment\",\n            \"gifts\",\n            \"rental income\",\n            \"premium/bonuses\"\n        ],\n        \"expense\": [\n            \"Food\",\n            \"Transportation\",\n            \"Housing\",\n            \"Education\",\n            \"Shopping\",\n            \"Kids\",\n            \"Entertainment\",\n            \"Health and beauty\",\n            \"Pet\",\n            \"Internet\",\n            \"Mobile\"\n        ]\n    }\n]"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update categories",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3ODYxOTk2LCJleHAiOjE2NDc4NjU1OTZ9.13kKAEdySsR9OZGAJJakk8UxJI_UqLLbOxvNN8WwHXU",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"income\": [\r\n        \"salary\",\r\n        \"debt repayment\",\r\n        \"gifts\",\r\n        \"rental income\",\r\n        \"premium/bonuses\"\r\n    ],\r\n    \"expense\": [\r\n        \"Food\",\r\n        \"Transportation\",\r\n        \"Housing\",\r\n        \"Education\",\r\n        \"Shopping\",\r\n        \"Kids\",\r\n        \"Entertainment\",\r\n        \"Health and beauty\",\r\n        \"Pet\",\r\n        \"Internet\",\r\n        \"Mobile\"\r\n    ]\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/categories/update",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "categories",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "New Request",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"income\": [\r\n        \"salary\",\r\n        \"debt repayment\",\r\n        \"gifts\",\r\n        \"rental income\",\r\n        \"premium/bonuses\"\r\n    ],\r\n    \"expense\": [\r\n        \"Food\",\r\n        \"Transportation\",\r\n        \"Housing\",\r\n        \"Education\",\r\n        \"Shopping\",\r\n        \"Kids\",\r\n        \"Entertainment\",\r\n        \"Health and beauty\",\r\n        \"Pet\",\r\n        \"Internet\",\r\n        \"Mobile\"\r\n    ]\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/categories/update",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "categories",
+                                        "update"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "33"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"21-Cp7uIzk8D4s3WAlmZ1BVg9AJQe0\""
+                                },
+                                {
+                                    "key": "Set-Cookie",
+                                    "value": "connect.sid=s%3AtdVXLWZaM1CRNydoV5isiT_2IYOJQDOX.XjpU2sPDjW3UqaD5dFb09whMTdr9CJOMyoWlNFKquOk; Path=/; Expires=Mon, 21 Mar 2022 12:59:22 GMT; HttpOnly"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Mon, 21 Mar 2022 11:59:22 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Categories updated!\"\n}"
                         }
                     ]
                 }
