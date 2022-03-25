@@ -1,30 +1,41 @@
-import User from '../models/user.js';
+import Account from '../models/account.js';
 
 const getAllIncomes = (req, res) => {
-    User.findOne({ email: req.session.passport.user.email })
-        .then(data => {
-            res.status(200).json(data.transactions.income);
-        })
+    Account.findOne(
+        {
+            userId: req.session.passport.user._id,
+            _id: req.params.id
+        }
+    ).then(data => {
+        res.status(200).json(data.transactions.income);
+    }).catch(err => {
+        res.status(500).json(err)
+    })
 }
 
 const getIncome = (req, res) => {
-    const id = req.params.id;
-    User.findOne({ email: req.session.passport.user.email })
-        .then(data => {
-            const income = data.transactions.income.filter(inc => inc.id === id);
-            if (income.length === 0) {
-                throw new Error();
-            }
-            res.status(200).json(income);
-        })
-        .catch(() => {
-            res.status(404).json({ message: 'Incorrect id of income!' });
-        })
+    Account.findOne(
+        {
+            userId: req.session.passport.user._id,
+            _id: req.params.accountId
+        }
+    ).then(data => {
+        const income = data.transactions.income.filter(inc => inc._id === req.params.incomeId);
+        if (income.length === 0) {
+            throw new Error();
+        }
+        res.status(200).json(income);
+    }).catch(() => {
+        res.status(404).json({ message: 'Incorrect id of income!' });
+    })
 }
 
 const addIncome = (req, res) => {
-    User.findOneAndUpdate(
-        { email: req.session.passport.user.email },
+    Account.findOneAndUpdate(
+        {
+            userId: req.session.passport.user._id,
+            _id: req.params.accountId
+        },
         { $push: { "transactions.income": req.body } }
     ).then(() => {
         res.status(200).json({ message: 'New income added' });
@@ -34,10 +45,11 @@ const addIncome = (req, res) => {
 }
 
 const updateIncome = (req, res) => {
-    User.findOneAndUpdate(
+    Account.findOneAndUpdate(
         {
-            email: req.session.passport.user.email,
-            "transactions.income.id": req.params.id
+            userId: req.session.passport.user._id,
+            _id: req.params.accountId,
+            "transactions.income._id": req.params.incomeId
         },
         { $set: { "transactions.income.$": req.body } }
     ).then(() => {
@@ -48,11 +60,12 @@ const updateIncome = (req, res) => {
 }
 
 const deleteIncome = (req, res) => {
-    User.findOneAndUpdate(
+    Account.findOneAndUpdate(
         {
-            email: req.session.passport.user.email
+            userId: req.session.passport.user._id,
+            _id: req.params.accountId
         },
-        { $pull: { 'transactions.income': { id: req.params.id } } }
+        { $pull: { 'transactions.income': { _id: req.params.incomeId } } }
     ).then(() => {
         res.status(200).json({ message: 'Income deleted!' });
     }).catch(() => {

@@ -11,14 +11,14 @@ import { isUser } from '../middleware/isUser.js';
 
 const router = express.Router();
 
-router.get('/', auth, isUser, getAllIncomes);
+router.get('/:id', auth, isUser, getAllIncomes);
 
-router.get('/income/:id', auth, isUser, getIncome);
+router.get('/income/:accountId/:incomeId', auth, isUser, getIncome);
 
-router.post('/add', auth, isUser, addIncome);
+router.post('/add/:accountId', auth, isUser, addIncome);
 
-router.put('/income/:id', auth, isUser, updateIncome);
+router.put('/income/:accountId/:incomeId', auth, isUser, updateIncome);
 
-router.delete('/income/:id', auth, isUser, deleteIncome);
+router.delete('/income/:accountId/:incomeId', auth, isUser, deleteIncome);
 
 export default router;

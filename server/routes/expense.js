@@ -11,14 +11,14 @@ import { isUser } from '../middleware/isUser.js';
 
 const router = express.Router();
 
-router.get('/', auth, isUser, getAllExpenses);
+router.get('/:id', auth, isUser, getAllExpenses);
 
-router.get('/expense/:id', auth, isUser, getExpense);
+router.get('/expense/:accountId/:expenseId', auth, isUser, getExpense);
 
-router.post('/add', auth, isUser, addExpense);
+router.post('/add/:accountId', auth, isUser, addExpense);
 
-router.put('/expense/:id', auth, isUser, updateExpense);
+router.put('/expense/:accountId/:expenseId', auth, isUser, updateExpense);
 
-router.delete('/expense/:id', auth, isUser, deleteExpense);
+router.delete('/expense/:accountId/:expenseId', auth, isUser, deleteExpense);
 
 export default router;
