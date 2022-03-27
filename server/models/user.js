@@ -13,8 +13,7 @@ const User = new Schema({
     dateOfBirth: String,
     age: Number,
     role: String,
-    transactions: Object,
-    accounts: Array
+    categories: Array,
 }, {
     timestamps: true,
 });

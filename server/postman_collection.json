@@ -109,7 +109,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MTkyMDI2LCJleHAiOjE2NDgxOTU2MjZ9.fHTBlTZtTskdfIFLjJGKlXb8aheCW4gbsi88RgWbonQ",
                                     "type": "string"
                                 }
                             ]
@@ -118,7 +118,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"_id\": \"2erts56b-4e42-40d4-b3fe-c45566ffd4f9e\",\r\n    \"firstName\": \"Meruzh 2\",\r\n    \"lastName\": \"Kiloyan 2\",\r\n    \"password\": \"$2b$10$uDFJTcb0t.nvmEGNrJX9HO22OaoJiVUWMT1uHUyg94tQdswpm5tV6i2\",\r\n    \"email\": \"meruzh222@gmail.com\",\r\n    \"gender\": \"female\",\r\n    \"country\": \"Czech Republic\",\r\n    \"dateOfBirth\": \"13.06.1980\",\r\n    \"age\": 19,\r\n    \"role\": \"admin\",\r\n    \"transactions\": {\r\n        \"income\": [\r\n            {\r\n                \"id\": \"0\",\r\n                \"type\": \"type\",\r\n                \"accountId\": \"id 1\",\r\n                \"title\": \"title\",\r\n                \"description\": \"description\",\r\n                \"dateOfOperation\": \"21.12.2000\",\r\n                \"category\": \"IT\",\r\n                \"currency\": \"$\",\r\n                \"amount\": \"1000\",\r\n                \"createdAt\": \"Date now()\",\r\n                \"updatedAt\": \"Date now()\"\r\n            }\r\n        ],\r\n        \"expense\": [\r\n            {\r\n                \"id\": \"0\",\r\n                \"type\": \"type\",\r\n                \"accountId\": \"id 1\",\r\n                \"title\": \"title\",\r\n                \"description\": \"description\",\r\n                \"dateOfOperation\": \"21.12.2000\",\r\n                \"category\": \"IT\",\r\n                \"currency\": \"$\",\r\n                \"amount\": \"1000\",\r\n                \"createdAt\": \"Date now()\",\r\n                \"updatedAt\": \"Date now()\"\r\n            }\r\n        ]\r\n    },\r\n    \"accounts\": [\r\n        {\r\n            \"id\": \"0\",\r\n            \"userId\": \"0\",\r\n            \"title\": \"title\",\r\n            \"description\": \"description\",\r\n            \"currency\": \"$\",\r\n            \"createdAt\": \"Date now()\",\r\n            \"updatedAt\": \"Date now()\"\r\n        }\r\n    ]\r\n}",
+                            "raw": "{\r\n    \"_id\": \"2erts56b-4e42-40d4-b3fe-c45566ffd4f9e\",\r\n    \"firstName\": \"Meruzh 2\",\r\n    \"lastName\": \"Kiloyan 2\",\r\n    \"password\": \"$2b$10$uDFJTcb0t.nvmEGNrJX9HO22OaoJiVUWMT1uHUyg94tQdswpm5tV6i2\",\r\n    \"email\": \"meruzh222@gmail.com\",\r\n    \"gender\": \"female\",\r\n    \"country\": \"Czech Republic\",\r\n    \"dateOfBirth\": \"13.06.1980\",\r\n    \"age\": 19,\r\n    \"role\": \"admin\",\r\n    \"categories\": [],\r\n    \"transactions\": {\r\n        \"income\": [\r\n            {\r\n                \"id\": \"0\",\r\n                \"type\": \"type\",\r\n                \"accountId\": \"id 1\",\r\n                \"title\": \"title\",\r\n                \"description\": \"description\",\r\n                \"dateOfOperation\": \"21.12.2000\",\r\n                \"category\": \"IT\",\r\n                \"currency\": \"$\",\r\n                \"amount\": \"1000\",\r\n                \"createdAt\": \"Date now()\",\r\n                \"updatedAt\": \"Date now()\"\r\n            }\r\n        ],\r\n        \"expense\": [\r\n            {\r\n                \"id\": \"0\",\r\n                \"type\": \"type\",\r\n                \"accountId\": \"id 1\",\r\n                \"title\": \"title\",\r\n                \"description\": \"description\",\r\n                \"dateOfOperation\": \"21.12.2000\",\r\n                \"category\": \"IT\",\r\n                \"currency\": \"$\",\r\n                \"amount\": \"1000\",\r\n                \"createdAt\": \"Date now()\",\r\n                \"updatedAt\": \"Date now()\"\r\n            }\r\n        ]\r\n    },\r\n    \"accounts\": [\r\n        {\r\n            \"id\": \"0\",\r\n            \"userId\": \"0\",\r\n            \"title\": \"title\",\r\n            \"description\": \"description\",\r\n            \"currency\": \"$\",\r\n            \"createdAt\": \"Date now()\",\r\n            \"updatedAt\": \"Date now()\"\r\n        }\r\n    ]\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -214,7 +214,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvZGRAZ21haWwuY29tIiwicGFzc3dvcmQiOiJUb2RkXzEyMyIsImlhdCI6MTY0ODE5NTUyMCwiZXhwIjoxNjQ4MTk5MTIwfQ.htmqhNLAj5AdLsvL0treEXCSNDKo-FhsdVTyc_1S-t4",
                                     "type": "string"
                                 }
                             ]
@@ -223,7 +223,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"firstName\": \"Meruzh ddddddddddddddd\"\r\n}",
+                            "raw": "{\r\n    \"categories\": {\r\n        \"income\": [\r\n                \"salary\",\r\n                \"debt repayment\",\r\n                \"gifts\",\r\n                \"rental income\",\r\n                \"premium/bonuses\"\r\n            ],\r\n            \"expense\": [\r\n                \"Food\",\r\n                \"Transportation\",\r\n                \"Housing\",\r\n                \"Education\",\r\n                \"Shopping\",\r\n                \"Kids\",\r\n                \"Entertainment\",\r\n                \"Health and beauty\",\r\n                \"Pet\",\r\n                \"Internet\",\r\n                \"Mobile\"\r\n            ]\r\n    }\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -231,7 +231,7 @@
                             }
                         },
                         "url": {
-                            "raw": "http://localhost:3000/users/2erts56b-4e42-40d4-b3fe-c45566ffd4f9e",
+                            "raw": "http://localhost:3000/users/db818b29-750b-4acc-9f0e-b0a00f1a6eb4",
                             "protocol": "http",
                             "host": [
                                 "localhost"
@@ -239,7 +239,7 @@
                             "port": "3000",
                             "path": [
                                 "users",
-                                "2erts56b-4e42-40d4-b3fe-c45566ffd4f9e"
+                                "db818b29-750b-4acc-9f0e-b0a00f1a6eb4"
                             ]
                         }
                     },
@@ -325,7 +325,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MTkyMDI2LCJleHAiOjE2NDgxOTU2MjZ9.fHTBlTZtTskdfIFLjJGKlXb8aheCW4gbsi88RgWbonQ",
                                     "type": "string"
                                 }
                             ]
@@ -418,7 +418,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"email\": \"meruzh@gmail.com\",\r\n    \"password\": \"Meruzh_123\"\r\n}",
+                            "raw": "{\r\n    \"email\": \"meruzh@gmail.com\",\r\n    \"password\": \"Kiloyan_123\"\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -575,7 +575,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6Ik1lcnV6aF8xMjMiLCJpYXQiOjE2NDcwODgzNjcsImV4cCI6MTY0NzA5MTk2N30.ZDfDqLVOx85MngTS3qqh47zc81BOQgM_DXjNbCJ1MZU",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvZGRAZ21haWwuY29tIiwicGFzc3dvcmQiOiJUb2RkXzEyMyIsImlhdCI6MTY0ODE5NTUyMCwiZXhwIjoxNjQ4MTk5MTIwfQ.htmqhNLAj5AdLsvL0treEXCSNDKo-FhsdVTyc_1S-t4",
                                     "type": "string"
                                 }
                             ]
@@ -669,7 +669,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzIyNjA3LCJleHAiOjE2NDczMjYyMDd9.kJ69bGPb7Z6Abt-7cwgLFrsvLMSM_GzmcsSWkouyrsg",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MTkyMDI2LCJleHAiOjE2NDgxOTU2MjZ9.fHTBlTZtTskdfIFLjJGKlXb8aheCW4gbsi88RgWbonQ",
                                     "type": "string"
                                 }
                             ]
@@ -762,7 +762,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzIyNjA3LCJleHAiOjE2NDczMjYyMDd9.kJ69bGPb7Z6Abt-7cwgLFrsvLMSM_GzmcsSWkouyrsg",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MTkyMDI2LCJleHAiOjE2NDgxOTU2MjZ9.fHTBlTZtTskdfIFLjJGKlXb8aheCW4gbsi88RgWbonQ",
                                     "type": "string"
                                 }
                             ]
@@ -771,7 +771,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"answer\": \"Sorry, but I don't know\"\r\n}",
+                            "raw": "{\r\n    \"answer\": \"Yes, sure!\"\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -881,7 +881,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwMjQ1LCJleHAiOjE2NDgyMDM4NDV9.Frew4mYcc_Q2WppHZNz6SKKbNH0UJaGBimRyK5RpAew",
                                             "type": "string"
                                         }
                                     ]
@@ -889,7 +889,7 @@
                                 "method": "GET",
                                 "header": [],
                                 "url": {
-                                    "raw": "http://localhost:3000/incomes/",
+                                    "raw": "http://localhost:3000/incomes/124id",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -897,7 +897,7 @@
                                     "port": "3000",
                                     "path": [
                                         "incomes",
-                                        ""
+                                        "124id"
                                     ]
                                 }
                             },
@@ -908,7 +908,7 @@
                                         "method": "GET",
                                         "header": [],
                                         "url": {
-                                            "raw": "http://localhost:3000/incomes/",
+                                            "raw": "http://localhost:3000/incomes/124id",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -916,7 +916,7 @@
                                             "port": "3000",
                                             "path": [
                                                 "incomes",
-                                                ""
+                                                "124id"
                                             ]
                                         }
                                     },
@@ -938,15 +938,19 @@
                                         },
                                         {
                                             "key": "Content-Length",
-                                            "value": "255"
+                                            "value": "248"
                                         },
                                         {
                                             "key": "ETag",
-                                            "value": "W/\"ff-6QafCrKMZhesn5hBhrxqhOf4Gmo\""
+                                            "value": "W/\"f8-M397ajl4Z8suMNCjcFEQRO/zfho\""
+                                        },
+                                        {
+                                            "key": "Set-Cookie",
+                                            "value": "connect.sid=s%3AZvhGFv_7KS2mX0ohVoNe8Zq0JW_JH_tX.wnvMr5305MtGjjtTmqHjNt6EM6QPx1Q5a7AXF4lFK5I; Path=/; Expires=Fri, 25 Mar 2022 10:24:14 GMT; HttpOnly"
                                         },
                                         {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:09:02 GMT"
+                                            "value": "Fri, 25 Mar 2022 09:24:14 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -958,7 +962,7 @@
                                         }
                                     ],
                                     "cookie": [],
-                                    "body": "[\n    {\n        \"id\": \"0\",\n        \"type\": \"type\",\n        \"accountId\": \"id 1\",\n        \"title\": \"title\",\n        \"description\": \"description\",\n        \"dateOfOperation\": \"21.12.2000\",\n        \"category\": \"IT\",\n        \"currency\": \"$\",\n        \"amount\": \"1000\",\n        \"createdAt\": \"2022-03-15T09:34:20.475+00:00\",\n        \"updatedAt\": \"2022-03-15T09:34:20.475+00:00\"\n    }\n]"
+                                    "body": "[\n    {\n        \"_id\": \"1\",\n        \"category\": \"fun\",\n        \"description\": \"fun\",\n        \"amount\": 200,\n        \"payment_date\": \"ddd\",\n        \"createdAt\": \"ddd\",\n        \"updatedAt\": \"ddd\"\n    },\n    {\n        \"_id\": \"2\",\n        \"category\": \"home\",\n        \"description\": \"fun 2\",\n        \"amount\": 3500,\n        \"payment_date\": \"fff\",\n        \"createdAt\": \"now\",\n        \"updatedAt\": \"tommorow\"\n    }\n]"
                                 }
                             ]
                         },
@@ -970,7 +974,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwMjQ1LCJleHAiOjE2NDgyMDM4NDV9.Frew4mYcc_Q2WppHZNz6SKKbNH0UJaGBimRyK5RpAew",
                                             "type": "string"
                                         }
                                     ]
@@ -978,7 +982,7 @@
                                 "method": "GET",
                                 "header": [],
                                 "url": {
-                                    "raw": "http://localhost:3000/incomes/income/0",
+                                    "raw": "http://localhost:3000/incomes/income/124id/1",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -987,7 +991,8 @@
                                     "path": [
                                         "incomes",
                                         "income",
-                                        "0"
+                                        "124id",
+                                        "1"
                                     ]
                                 }
                             },
@@ -998,7 +1003,7 @@
                                         "method": "GET",
                                         "header": [],
                                         "url": {
-                                            "raw": "http://localhost:3000/incomes/income/0",
+                                            "raw": "http://localhost:3000/incomes/income/124id/1",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -1007,7 +1012,8 @@
                                             "path": [
                                                 "incomes",
                                                 "income",
-                                                "0"
+                                                "124id",
+                                                "1"
                                             ]
                                         }
                                     },
@@ -1029,15 +1035,15 @@
                                         },
                                         {
                                             "key": "Content-Length",
-                                            "value": "255"
+                                            "value": "120"
                                         },
                                         {
                                             "key": "ETag",
-                                            "value": "W/\"ff-6QafCrKMZhesn5hBhrxqhOf4Gmo\""
+                                            "value": "W/\"78-Xg53gb8Dybd2HCs0BdlXw4bhwKM\""
                                         },
                                         {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:09:15 GMT"
+                                            "value": "Fri, 25 Mar 2022 09:28:06 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -1049,7 +1055,7 @@
                                         }
                                     ],
                                     "cookie": [],
-                                    "body": "[\n    {\n        \"id\": \"0\",\n        \"type\": \"type\",\n        \"accountId\": \"id 1\",\n        \"title\": \"title\",\n        \"description\": \"description\",\n        \"dateOfOperation\": \"21.12.2000\",\n        \"category\": \"IT\",\n        \"currency\": \"$\",\n        \"amount\": \"1000\",\n        \"createdAt\": \"2022-03-15T09:34:20.475+00:00\",\n        \"updatedAt\": \"2022-03-15T09:34:20.475+00:00\"\n    }\n]"
+                                    "body": "[\n    {\n        \"_id\": \"1\",\n        \"category\": \"fun\",\n        \"description\": \"fun\",\n        \"amount\": 200,\n        \"payment_date\": \"ddd\",\n        \"createdAt\": \"ddd\",\n        \"updatedAt\": \"ddd\"\n    }\n]"
                                 }
                             ]
                         },
@@ -1061,7 +1067,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwMjQ1LCJleHAiOjE2NDgyMDM4NDV9.Frew4mYcc_Q2WppHZNz6SKKbNH0UJaGBimRyK5RpAew",
                                             "type": "string"
                                         }
                                     ]
@@ -1070,7 +1076,7 @@
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n        \"id\": \"1\",\r\n        \"type\": \"type 1\",\r\n        \"accountId\": \"id 2\",\r\n        \"title\": \"title 1\",\r\n        \"description\": \"description 1\",\r\n        \"dateOfOperation\": \"21.12.2010\",\r\n        \"category\": \"IT 1\",\r\n        \"currency\": \"$\",\r\n        \"amount\": \"11000\",\r\n        \"createdAt\": \"Date now() 1\",\r\n        \"updatedAt\": \"Date now() 1\"\r\n    }",
+                                    "raw": "{\r\n        \"_id\": \"3\",\r\n        \"category\": \"fun 3\",\r\n        \"description\": \"fun 3\",\r\n        \"amount\": 20000,\r\n        \"payment_date\": \"ddd\",\r\n        \"createdAt\": \"ddd 222\",\r\n        \"updatedAt\": \"ddd 222\"\r\n    }",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -1078,7 +1084,7 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "http://localhost:3000/incomes/add",
+                                    "raw": "http://localhost:3000/incomes/add/124id",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -1086,7 +1092,8 @@
                                     "port": "3000",
                                     "path": [
                                         "incomes",
-                                        "add"
+                                        "add",
+                                        "124id"
                                     ]
                                 }
                             },
@@ -1098,7 +1105,7 @@
                                         "header": [],
                                         "body": {
                                             "mode": "raw",
-                                            "raw": "{\r\n        \"id\": \"1\",\r\n        \"type\": \"type 1\",\r\n        \"accountId\": \"id 2\",\r\n        \"title\": \"title 1\",\r\n        \"description\": \"description 1\",\r\n        \"dateOfOperation\": \"21.12.2010\",\r\n        \"category\": \"IT 1\",\r\n        \"currency\": \"$\",\r\n        \"amount\": \"11000\",\r\n        \"createdAt\": \"Date now() 1\",\r\n        \"updatedAt\": \"Date now() 1\"\r\n    }",
+                                            "raw": "{\r\n        \"_id\": \"3\",\r\n        \"category\": \"fun 3\",\r\n        \"description\": \"fun 3\",\r\n        \"amount\": 20000,\r\n        \"payment_date\": \"ddd\",\r\n        \"createdAt\": \"ddd 222\",\r\n        \"updatedAt\": \"ddd 222\"\r\n    }",
                                             "options": {
                                                 "raw": {
                                                     "language": "json"
@@ -1106,7 +1113,7 @@
                                             }
                                         },
                                         "url": {
-                                            "raw": "http://localhost:3000/incomes/add",
+                                            "raw": "http://localhost:3000/incomes/add/124id",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -1114,7 +1121,8 @@
                                             "port": "3000",
                                             "path": [
                                                 "incomes",
-                                                "add"
+                                                "add",
+                                                "124id"
                                             ]
                                         }
                                     },
@@ -1143,8 +1151,12 @@
                                             "value": "W/\"1e-jQB8j6MKFzkPGbc7GCF1kNW+J08\""
                                         },
                                         {
+                                            "key": "Set-Cookie",
+                                            "value": "connect.sid=s%3A9FVl0y3XQnILUpC_v_DZ6atDTQHCjRfc.WFEO1%2BNvCdIAMe9ajJ5ayk6AUQ%2BYGYgp%2F3Hjuy3TeHs; Path=/; Expires=Fri, 25 Mar 2022 10:30:43 GMT; HttpOnly"
+                                        },
+                                        {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:09:29 GMT"
+                                            "value": "Fri, 25 Mar 2022 09:30:43 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -1168,7 +1180,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwODgyLCJleHAiOjE2NDgyMDQ0ODJ9.vUxpOBTRp7Mw-ixlXeXZ54ampq6lYfVQsL40feF06fs",
                                             "type": "string"
                                         }
                                     ]
@@ -1177,7 +1189,7 @@
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n        \"id\": \"0\",\r\n        \"type\": \"22222222222\",\r\n        \"accountId\": \"id2222 1\",\r\n        \"title\": \"ti222tle\",\r\n        \"description\": \"descri22ption\",\r\n        \"dateOfOperation\": \"21.22212.2000\",\r\n        \"category\": \"222IT\",\r\n        \"currency\": \"222$\",\r\n        \"amount\": \"1022200\",\r\n        \"createdAt\": \"Da222te now()\",\r\n        \"updatedAt\": \"Da2222te now()\"\r\n    }",
+                                    "raw": "{\r\n        \"_id\": \"2\",\r\n        \"category\": \"fun 2\",\r\n        \"description\": \"fun 2\",\r\n        \"amount\": 10030,\r\n        \"payment_date\": \"ddd\",\r\n        \"createdAt\": \"ddd 1\",\r\n        \"updatedAt\": \"ddd 1\"\r\n    }",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -1185,7 +1197,7 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "http://localhost:3000/incomes/income/0",
+                                    "raw": "http://localhost:3000/incomes/income/124id/3",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -1194,7 +1206,8 @@
                                     "path": [
                                         "incomes",
                                         "income",
-                                        "0"
+                                        "124id",
+                                        "3"
                                     ]
                                 }
                             },
@@ -1206,7 +1219,7 @@
                                         "header": [],
                                         "body": {
                                             "mode": "raw",
-                                            "raw": "{\r\n        \"id\": \"0\",\r\n        \"type\": \"22222222222\",\r\n        \"accountId\": \"id2222 1\",\r\n        \"title\": \"ti222tle\",\r\n        \"description\": \"descri22ption\",\r\n        \"dateOfOperation\": \"21.22212.2000\",\r\n        \"category\": \"222IT\",\r\n        \"currency\": \"222$\",\r\n        \"amount\": \"1022200\",\r\n        \"createdAt\": \"Da222te now()\",\r\n        \"updatedAt\": \"Da2222te now()\"\r\n    }",
+                                            "raw": "{\r\n        \"_id\": \"2\",\r\n        \"category\": \"fun 2\",\r\n        \"description\": \"fun 2\",\r\n        \"amount\": 10030,\r\n        \"payment_date\": \"ddd\",\r\n        \"createdAt\": \"ddd 1\",\r\n        \"updatedAt\": \"ddd 1\"\r\n    }",
                                             "options": {
                                                 "raw": {
                                                     "language": "json"
@@ -1214,7 +1227,7 @@
                                             }
                                         },
                                         "url": {
-                                            "raw": "http://localhost:3000/incomes/income/0",
+                                            "raw": "http://localhost:3000/incomes/income/124id/3",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -1223,7 +1236,8 @@
                                             "path": [
                                                 "incomes",
                                                 "income",
-                                                "0"
+                                                "124id",
+                                                "3"
                                             ]
                                         }
                                     },
@@ -1253,7 +1267,7 @@
                                         },
                                         {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:09:48 GMT"
+                                            "value": "Fri, 25 Mar 2022 09:38:39 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -1277,7 +1291,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwODgyLCJleHAiOjE2NDgyMDQ0ODJ9.vUxpOBTRp7Mw-ixlXeXZ54ampq6lYfVQsL40feF06fs",
                                             "type": "string"
                                         }
                                     ]
@@ -1285,7 +1299,7 @@
                                 "method": "DELETE",
                                 "header": [],
                                 "url": {
-                                    "raw": "http://localhost:3000/incomes/income/1",
+                                    "raw": "http://localhost:3000/incomes/income/123id/1",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -1294,6 +1308,7 @@
                                     "path": [
                                         "incomes",
                                         "income",
+                                        "123id",
                                         "1"
                                     ]
                                 }
@@ -1305,7 +1320,7 @@
                                         "method": "DELETE",
                                         "header": [],
                                         "url": {
-                                            "raw": "http://localhost:3000/incomes/income/1",
+                                            "raw": "http://localhost:3000/incomes/income/123id/1",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -1314,6 +1329,7 @@
                                             "path": [
                                                 "incomes",
                                                 "income",
+                                                "123id",
                                                 "1"
                                             ]
                                         }
@@ -1344,7 +1360,7 @@
                                         },
                                         {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:10:07 GMT"
+                                            "value": "Fri, 25 Mar 2022 09:50:45 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -1373,7 +1389,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwODgyLCJleHAiOjE2NDgyMDQ0ODJ9.vUxpOBTRp7Mw-ixlXeXZ54ampq6lYfVQsL40feF06fs",
                                             "type": "string"
                                         }
                                     ]
@@ -1381,7 +1397,7 @@
                                 "method": "GET",
                                 "header": [],
                                 "url": {
-                                    "raw": "http://localhost:3000/expenses/",
+                                    "raw": "http://localhost:3000/expenses/123id",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -1389,7 +1405,7 @@
                                     "port": "3000",
                                     "path": [
                                         "expenses",
-                                        ""
+                                        "123id"
                                     ]
                                 }
                             },
@@ -1400,7 +1416,7 @@
                                         "method": "GET",
                                         "header": [],
                                         "url": {
-                                            "raw": "http://localhost:3000/expenses/",
+                                            "raw": "http://localhost:3000/expenses/123id",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -1408,7 +1424,7 @@
                                             "port": "3000",
                                             "path": [
                                                 "expenses",
-                                                ""
+                                                "123id"
                                             ]
                                         }
                                     },
@@ -1430,15 +1446,15 @@
                                         },
                                         {
                                             "key": "Content-Length",
-                                            "value": "255"
+                                            "value": "519"
                                         },
                                         {
                                             "key": "ETag",
-                                            "value": "W/\"ff-6QafCrKMZhesn5hBhrxqhOf4Gmo\""
+                                            "value": "W/\"207-Qa7XFYwRlotk5BTHMX6Twp9tWLg\""
                                         },
                                         {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:10:32 GMT"
+                                            "value": "Fri, 25 Mar 2022 10:10:29 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -1450,7 +1466,7 @@
                                         }
                                     ],
                                     "cookie": [],
-                                    "body": "[\n    {\n        \"id\": \"0\",\n        \"type\": \"type\",\n        \"accountId\": \"id 1\",\n        \"title\": \"title\",\n        \"description\": \"description\",\n        \"dateOfOperation\": \"21.12.2000\",\n        \"category\": \"IT\",\n        \"currency\": \"$\",\n        \"amount\": \"1000\",\n        \"createdAt\": \"2022-03-15T09:34:20.475+00:00\",\n        \"updatedAt\": \"2022-03-15T09:34:20.475+00:00\"\n    }\n]"
+                                    "body": "[\n    {\n        \"_id\": \"1\",\n        \"category\": \"fun\",\n        \"description\": \"fun\",\n        \"amount\": 200,\n        \"payment_date\": \"ddd\",\n        \"createdAt\": \"ddd\",\n        \"updatedAt\": \"ddd\"\n    },\n    {\n        \"_id\": \"2\",\n        \"category\": \"fun 2\",\n        \"description\": \"fun 2\",\n        \"amount\": 20000,\n        \"payment_date\": \"ddd\",\n        \"createdAt\": \"ddd 222\",\n        \"updatedAt\": \"ddd 222\"\n    },\n    {\n        \"_id\": \"3\",\n        \"category\": \"fun 3\",\n        \"description\": \"fun 3\",\n        \"amount\": 20000,\n        \"payment_date\": \"ddd\",\n        \"createdAt\": \"ddd 222\",\n        \"updatedAt\": \"ddd 222\"\n    },\n    {\n        \"_id\": \"4\",\n        \"category\": \"fun 4\",\n        \"description\": \"fun 4\",\n        \"amount\": 20000,\n        \"payment_date\": \"ddd\",\n        \"createdAt\": \"ddd 222\",\n        \"updatedAt\": \"ddd 222\"\n    }\n]"
                                 }
                             ]
                         },
@@ -1462,7 +1478,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwODgyLCJleHAiOjE2NDgyMDQ0ODJ9.vUxpOBTRp7Mw-ixlXeXZ54ampq6lYfVQsL40feF06fs",
                                             "type": "string"
                                         }
                                     ]
@@ -1470,7 +1486,7 @@
                                 "method": "GET",
                                 "header": [],
                                 "url": {
-                                    "raw": "http://localhost:3000/expenses/expense/0",
+                                    "raw": "http://localhost:3000/expenses/expense/123id/2",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -1479,7 +1495,8 @@
                                     "path": [
                                         "expenses",
                                         "expense",
-                                        "0"
+                                        "123id",
+                                        "2"
                                     ]
                                 }
                             },
@@ -1490,7 +1507,7 @@
                                         "method": "GET",
                                         "header": [],
                                         "url": {
-                                            "raw": "http://localhost:3000/expenses/expense/0",
+                                            "raw": "http://localhost:3000/expenses/expense/123id/2",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -1499,7 +1516,8 @@
                                             "path": [
                                                 "expenses",
                                                 "expense",
-                                                "0"
+                                                "123id",
+                                                "2"
                                             ]
                                         }
                                     },
@@ -1521,15 +1539,15 @@
                                         },
                                         {
                                             "key": "Content-Length",
-                                            "value": "255"
+                                            "value": "134"
                                         },
                                         {
                                             "key": "ETag",
-                                            "value": "W/\"ff-6QafCrKMZhesn5hBhrxqhOf4Gmo\""
+                                            "value": "W/\"86-hY4E7zqoitiMFUAib248ETpXAzM\""
                                         },
                                         {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:10:41 GMT"
+                                            "value": "Fri, 25 Mar 2022 10:10:53 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -1541,7 +1559,7 @@
                                         }
                                     ],
                                     "cookie": [],
-                                    "body": "[\n    {\n        \"id\": \"0\",\n        \"type\": \"type\",\n        \"accountId\": \"id 1\",\n        \"title\": \"title\",\n        \"description\": \"description\",\n        \"dateOfOperation\": \"21.12.2000\",\n        \"category\": \"IT\",\n        \"currency\": \"$\",\n        \"amount\": \"1000\",\n        \"createdAt\": \"2022-03-15T09:34:20.475+00:00\",\n        \"updatedAt\": \"2022-03-15T09:34:20.475+00:00\"\n    }\n]"
+                                    "body": "[\n    {\n        \"_id\": \"2\",\n        \"category\": \"fun 2\",\n        \"description\": \"fun 2\",\n        \"amount\": 20000,\n        \"payment_date\": \"ddd\",\n        \"createdAt\": \"ddd 222\",\n        \"updatedAt\": \"ddd 222\"\n    }\n]"
                                 }
                             ]
                         },
@@ -1553,7 +1571,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwODgyLCJleHAiOjE2NDgyMDQ0ODJ9.vUxpOBTRp7Mw-ixlXeXZ54ampq6lYfVQsL40feF06fs",
                                             "type": "string"
                                         }
                                     ]
@@ -1562,7 +1580,7 @@
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n        \"id\": \"1\",\r\n        \"type\": \"type 1\",\r\n        \"accountId\": \"id 2\",\r\n        \"title\": \"title 1\",\r\n        \"description\": \"description 1\",\r\n        \"dateOfOperation\": \"21.12.2010\",\r\n        \"category\": \"IT 1\",\r\n        \"currency\": \"$\",\r\n        \"amount\": \"11000\",\r\n        \"createdAt\": \"Date now() 1\",\r\n        \"updatedAt\": \"Date now() 1\"\r\n    }",
+                                    "raw": "{\r\n        \"_id\": \"4\",\r\n        \"category\": \"fun 4\",\r\n        \"description\": \"fun 4\",\r\n        \"amount\": 20000,\r\n        \"payment_date\": \"ddd\",\r\n        \"createdAt\": \"ddd 222\",\r\n        \"updatedAt\": \"ddd 222\"\r\n    }",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -1570,7 +1588,7 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "http://localhost:3000/expenses/add",
+                                    "raw": "http://localhost:3000/expenses/add/123id",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -1578,7 +1596,8 @@
                                     "port": "3000",
                                     "path": [
                                         "expenses",
-                                        "add"
+                                        "add",
+                                        "123id"
                                     ]
                                 }
                             },
@@ -1590,7 +1609,7 @@
                                         "header": [],
                                         "body": {
                                             "mode": "raw",
-                                            "raw": "{\r\n        \"id\": \"1\",\r\n        \"type\": \"type 1\",\r\n        \"accountId\": \"id 2\",\r\n        \"title\": \"title 1\",\r\n        \"description\": \"description 1\",\r\n        \"dateOfOperation\": \"21.12.2010\",\r\n        \"category\": \"IT 1\",\r\n        \"currency\": \"$\",\r\n        \"amount\": \"11000\",\r\n        \"createdAt\": \"Date now() 1\",\r\n        \"updatedAt\": \"Date now() 1\"\r\n    }",
+                                            "raw": "{\r\n        \"_id\": \"4\",\r\n        \"category\": \"fun 4\",\r\n        \"description\": \"fun 4\",\r\n        \"amount\": 20000,\r\n        \"payment_date\": \"ddd\",\r\n        \"createdAt\": \"ddd 222\",\r\n        \"updatedAt\": \"ddd 222\"\r\n    }",
                                             "options": {
                                                 "raw": {
                                                     "language": "json"
@@ -1598,7 +1617,7 @@
                                             }
                                         },
                                         "url": {
-                                            "raw": "http://localhost:3000/expenses/add",
+                                            "raw": "http://localhost:3000/expenses/add/123id",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -1606,7 +1625,8 @@
                                             "port": "3000",
                                             "path": [
                                                 "expenses",
-                                                "add"
+                                                "add",
+                                                "123id"
                                             ]
                                         }
                                     },
@@ -1636,7 +1656,7 @@
                                         },
                                         {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:10:49 GMT"
+                                            "value": "Fri, 25 Mar 2022 10:06:51 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -1660,7 +1680,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwODgyLCJleHAiOjE2NDgyMDQ0ODJ9.vUxpOBTRp7Mw-ixlXeXZ54ampq6lYfVQsL40feF06fs",
                                             "type": "string"
                                         }
                                     ]
@@ -1669,7 +1689,7 @@
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n        \"id\": \"1\",\r\n        \"type\": \"22222222222\",\r\n        \"accountId\": \"id2222 1\",\r\n        \"title\": \"ti222tle\",\r\n        \"description\": \"descri22ption\",\r\n        \"dateOfOperation\": \"21.22212.2000\",\r\n        \"category\": \"222IT\",\r\n        \"currency\": \"222$\",\r\n        \"amount\": \"1022200\",\r\n        \"createdAt\": \"Da222te now()\",\r\n        \"updatedAt\": \"Da2222te now()\"\r\n    }",
+                                    "raw": "{\r\n        \"_id\": \"2\",\r\n        \"category\": \"fun 2\",\r\n        \"description\": \"fun 2\",\r\n        \"amount\": 10030,\r\n        \"payment_date\": \"ddd\",\r\n        \"createdAt\": \"ddd 1\",\r\n        \"updatedAt\": \"ddd 1\"\r\n    }",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -1677,7 +1697,7 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "http://localhost:3000/expenses/expense/1",
+                                    "raw": "http://localhost:3000/expenses/expense/123id/2",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -1686,7 +1706,8 @@
                                     "path": [
                                         "expenses",
                                         "expense",
-                                        "1"
+                                        "123id",
+                                        "2"
                                     ]
                                 }
                             },
@@ -1698,7 +1719,7 @@
                                         "header": [],
                                         "body": {
                                             "mode": "raw",
-                                            "raw": "{\r\n        \"id\": \"1\",\r\n        \"type\": \"22222222222\",\r\n        \"accountId\": \"id2222 1\",\r\n        \"title\": \"ti222tle\",\r\n        \"description\": \"descri22ption\",\r\n        \"dateOfOperation\": \"21.22212.2000\",\r\n        \"category\": \"222IT\",\r\n        \"currency\": \"222$\",\r\n        \"amount\": \"1022200\",\r\n        \"createdAt\": \"Da222te now()\",\r\n        \"updatedAt\": \"Da2222te now()\"\r\n    }",
+                                            "raw": "{\r\n        \"_id\": \"2\",\r\n        \"category\": \"fun 2\",\r\n        \"description\": \"fun 2\",\r\n        \"amount\": 10030,\r\n        \"payment_date\": \"ddd\",\r\n        \"createdAt\": \"ddd 1\",\r\n        \"updatedAt\": \"ddd 1\"\r\n    }",
                                             "options": {
                                                 "raw": {
                                                     "language": "json"
@@ -1706,7 +1727,7 @@
                                             }
                                         },
                                         "url": {
-                                            "raw": "http://localhost:3000/expenses/expense/1",
+                                            "raw": "http://localhost:3000/expenses/expense/123id/2",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -1715,7 +1736,8 @@
                                             "path": [
                                                 "expenses",
                                                 "expense",
-                                                "1"
+                                                "123id",
+                                                "2"
                                             ]
                                         }
                                     },
@@ -1745,7 +1767,7 @@
                                         },
                                         {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:11:04 GMT"
+                                            "value": "Fri, 25 Mar 2022 10:11:55 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -1769,7 +1791,7 @@
                                     "bearer": [
                                         {
                                             "key": "token",
-                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwODgyLCJleHAiOjE2NDgyMDQ0ODJ9.vUxpOBTRp7Mw-ixlXeXZ54ampq6lYfVQsL40feF06fs",
                                             "type": "string"
                                         }
                                     ]
@@ -1777,7 +1799,7 @@
                                 "method": "DELETE",
                                 "header": [],
                                 "url": {
-                                    "raw": "http://localhost:3000/expenses/expense/1",
+                                    "raw": "http://localhost:3000/expenses/expense/123id/4",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -1786,7 +1808,8 @@
                                     "path": [
                                         "expenses",
                                         "expense",
-                                        "1"
+                                        "123id",
+                                        "4"
                                     ]
                                 }
                             },
@@ -1797,7 +1820,7 @@
                                         "method": "DELETE",
                                         "header": [],
                                         "url": {
-                                            "raw": "http://localhost:3000/expenses/expense/1",
+                                            "raw": "http://localhost:3000/expenses/expense/123id/4",
                                             "protocol": "http",
                                             "host": [
                                                 "localhost"
@@ -1806,7 +1829,8 @@
                                             "path": [
                                                 "expenses",
                                                 "expense",
-                                                "1"
+                                                "123id",
+                                                "4"
                                             ]
                                         }
                                     },
@@ -1836,7 +1860,7 @@
                                         },
                                         {
                                             "key": "Date",
-                                            "value": "Tue, 15 Mar 2022 06:11:21 GMT"
+                                            "value": "Fri, 25 Mar 2022 10:12:39 GMT"
                                         },
                                         {
                                             "key": "Connection",
@@ -1867,7 +1891,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MTkzODI3LCJleHAiOjE2NDgxOTc0Mjd9.q_hR6HhWPgfRX8QN3JGWurrrLV7Zz7qVz7EV3AsyfsA",
                                     "type": "string"
                                 }
                             ]
@@ -1924,15 +1948,19 @@
                                 },
                                 {
                                     "key": "Content-Length",
-                                    "value": "172"
+                                    "value": "1310"
                                 },
                                 {
                                     "key": "ETag",
-                                    "value": "W/\"ac-JfeFWog4dnzxkulxgxVunGLCxYg\""
+                                    "value": "W/\"51e-Njs9M5csyMlcmKsyTTRkxGkOwOQ\""
+                                },
+                                {
+                                    "key": "Set-Cookie",
+                                    "value": "connect.sid=s%3AJ8wc52MUemrhSQIV26nj0Btov7nfqnkE.5KYat1CXMOL3IHQZkRVkGy5kdMlCqFOu4bxyBE7y%2Fxc; Path=/; Expires=Fri, 25 Mar 2022 08:38:11 GMT; HttpOnly"
                                 },
                                 {
                                     "key": "Date",
-                                    "value": "Tue, 15 Mar 2022 06:11:49 GMT"
+                                    "value": "Fri, 25 Mar 2022 07:38:11 GMT"
                                 },
                                 {
                                     "key": "Connection",
@@ -1944,7 +1972,7 @@
                                 }
                             ],
                             "cookie": [],
-                            "body": "[\n    {\n        \"id\": \"0\",\n        \"userId\": \"0\",\n        \"title\": \"title\",\n        \"description\": \"description\",\n        \"currency\": \"$\",\n        \"createdAt\": \"2022-03-15T09:34:20.475+00:00\",\n        \"updatedAt\": \"2022-03-15T09:34:20.475+00:00\"\n    }\n]"
+                            "body": "[\n    {\n        \"transactions\": {\n            \"income\": [],\n            \"expense\": []\n        },\n        \"_id\": \"123id\",\n        \"userId\": \"9f15216b-44c2-40d4-b3fe-cfe26ffd4f9e\",\n        \"title\": \"Credit Card\",\n        \"description\": \"Ctedit card for me\",\n        \"currency\": \"$\",\n        \"amount\": 1000,\n        \"createdAt\": \"2022-03-25T07:29:48.972Z\",\n        \"updatedAt\": \"2022-03-25T07:29:48.972Z\",\n        \"__v\": 0\n    },\n    {\n        \"transactions\": {\n            \"income\": [\n                {\n                    \"_id\": \"1\",\n                    \"category\": \"fun\",\n                    \"description\": \"fun\",\n                    \"amount\": 200,\n                    \"payment_date\": \"ddd\",\n                    \"createdAt\": \"ddd\",\n                    \"updatedAt\": \"ddd\"\n                }\n            ],\n            \"expense\": [\n                {\n                    \"_id\": \"1\",\n                    \"category\": \"fun\",\n                    \"description\": \"fun\",\n                    \"amount\": 200,\n                    \"payment_date\": \"ddd\",\n                    \"createdAt\": \"ddd\",\n                    \"updatedAt\": \"ddd\"\n                }\n            ]\n        },\n        \"_id\": \"124id\",\n        \"userId\": \"9f15216b-44c2-40d4-b3fe-cfe26ffd4f9e\",\n        \"title\": \"Credit Card\",\n        \"description\": \"Ctedit card for me\",\n        \"currency\": \"$\",\n        \"amount\": 5000,\n        \"createdAt\": \"2022-03-25T07:34:39.150Z\",\n        \"updatedAt\": \"2022-03-25T07:34:39.150Z\",\n        \"__v\": 0\n    },\n    {\n        \"transactions\": {\n            \"income\": [\n                {\n                    \"_id\": \"1\",\n                    \"category\": \"fun\",\n                    \"description\": \"fun\",\n                    \"amount\": 200,\n                    \"payment_date\": \"ddd\",\n                    \"createdAt\": \"ddd\",\n                    \"updatedAt\": \"ddd\"\n                }\n            ],\n            \"expense\": [\n                {\n                    \"_id\": \"1\",\n                    \"category\": \"fun\",\n                    \"description\": \"fun\",\n                    \"amount\": 200,\n                    \"payment_date\": \"ddd\",\n                    \"createdAt\": \"ddd\",\n                    \"updatedAt\": \"ddd\"\n                }\n            ]\n        },\n        \"_id\": \"125id\",\n        \"userId\": \"db818b29-750b-4acc-9f0e-b0a00f1a6eb4\",\n        \"title\": \"Credit Card 2\",\n        \"description\": \"Ctedit card for me\",\n        \"currency\": \"$\",\n        \"amount\": 15000,\n        \"createdAt\": \"2022-03-25T07:35:47.716Z\",\n        \"updatedAt\": \"2022-03-25T07:35:47.716Z\",\n        \"__v\": 0\n    }\n]"
                         }
                     ]
                 },
@@ -1956,7 +1984,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MTkzODI3LCJleHAiOjE2NDgxOTc0Mjd9.q_hR6HhWPgfRX8QN3JGWurrrLV7Zz7qVz7EV3AsyfsA",
                                     "type": "string"
                                 }
                             ]
@@ -1964,7 +1992,7 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "http://localhost:3000/accounts/0",
+                            "raw": "http://localhost:3000/accounts/123id",
                             "protocol": "http",
                             "host": [
                                 "localhost"
@@ -1972,7 +2000,7 @@
                             "port": "3000",
                             "path": [
                                 "accounts",
-                                "0"
+                                "123id"
                             ]
                         }
                     },
@@ -1983,7 +2011,7 @@
                                 "method": "GET",
                                 "header": [],
                                 "url": {
-                                    "raw": "http://localhost:3000/accounts/0",
+                                    "raw": "http://localhost:3000/accounts/123id",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -1991,7 +2019,7 @@
                                     "port": "3000",
                                     "path": [
                                         "accounts",
-                                        "0"
+                                        "123id"
                                     ]
                                 }
                             },
@@ -2013,15 +2041,15 @@
                                 },
                                 {
                                     "key": "Content-Length",
-                                    "value": "172"
+                                    "value": "279"
                                 },
                                 {
                                     "key": "ETag",
-                                    "value": "W/\"ac-JfeFWog4dnzxkulxgxVunGLCxYg\""
+                                    "value": "W/\"117-oN7E1EGf1WZrojDmwwNrBH5SwbI\""
                                 },
                                 {
                                     "key": "Date",
-                                    "value": "Tue, 15 Mar 2022 06:12:08 GMT"
+                                    "value": "Fri, 25 Mar 2022 07:43:48 GMT"
                                 },
                                 {
                                     "key": "Connection",
@@ -2033,7 +2061,7 @@
                                 }
                             ],
                             "cookie": [],
-                            "body": "[\n    {\n        \"id\": \"0\",\n        \"userId\": \"0\",\n        \"title\": \"title\",\n        \"description\": \"description\",\n        \"currency\": \"$\",\n        \"createdAt\": \"2022-03-15T09:34:20.475+00:00\",\n        \"updatedAt\": \"2022-03-15T09:34:20.475+00:00\"\n    }\n]"
+                            "body": "[\n    {\n        \"transactions\": {\n            \"income\": [],\n            \"expense\": []\n        },\n        \"_id\": \"123id\",\n        \"userId\": \"9f15216b-44c2-40d4-b3fe-cfe26ffd4f9e\",\n        \"title\": \"Credit Card\",\n        \"description\": \"Ctedit card for me\",\n        \"currency\": \"$\",\n        \"amount\": 1000,\n        \"createdAt\": \"2022-03-25T07:29:48.972Z\",\n        \"updatedAt\": \"2022-03-25T07:29:48.972Z\",\n        \"__v\": 0\n    }\n]"
                         }
                     ]
                 },
@@ -2045,7 +2073,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MjAwODgyLCJleHAiOjE2NDgyMDQ0ODJ9.vUxpOBTRp7Mw-ixlXeXZ54ampq6lYfVQsL40feF06fs",
                                     "type": "string"
                                 }
                             ]
@@ -2054,7 +2082,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"id\": \"3\",\r\n    \"userId\": \"3\",\r\n    \"title\": \"titl 1e\",\r\n    \"description\": \"description 1\",\r\n    \"currency\": \"$ 11\",\r\n    \"createdAt\": \"Date now(11111111)\",\r\n    \"updatedAt\": \"Date now(11111111)\"\r\n}",
+                            "raw": "{\r\n    \"_id\": \"123id\",\r\n    \"userId\": \"9f15216b-44c2-40d4-b3fe-cfe26ffd4f9e\",\r\n    \"title\": \"Credit Card 2\",\r\n    \"description\": \"Ctedit card for me\",\r\n    \"currency\": \"$\",\r\n    \"amount\": 15000,\r\n    \"transactions\": {\r\n        \"income\": [\r\n            {\r\n                \"_id\": \"1\",\r\n                \"category\": \"fun\",\r\n                \"description\": \"fun\",\r\n                \"amount\": 200,\r\n                \"payment_date\": \"ddd\",\r\n                \"createdAt\": \"ddd\",\r\n                \"updatedAt\": \"ddd\"\r\n            }\r\n        ],\r\n        \"expense\": [\r\n            {\r\n                \"_id\": \"1\",\r\n                \"category\": \"fun\",\r\n                \"description\": \"fun\",\r\n                \"amount\": 200,\r\n                \"payment_date\": \"ddd\",\r\n                \"createdAt\": \"ddd\",\r\n                \"updatedAt\": \"ddd\"\r\n            }\r\n        ]\r\n    }\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -2082,7 +2110,7 @@
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n    \"id\": \"3\",\r\n    \"userId\": \"3\",\r\n    \"title\": \"titl 1e\",\r\n    \"description\": \"description 1\",\r\n    \"currency\": \"$ 11\",\r\n    \"createdAt\": \"Date now(11111111)\",\r\n    \"updatedAt\": \"Date now(11111111)\"\r\n}",
+                                    "raw": "{\r\n    \"_id\": \"126id\",\r\n    \"userId\": \"db818b29-750b-4acc-9f0e-b0a00f1a6eb4\",\r\n    \"title\": \"Credit Card 2\",\r\n    \"description\": \"Ctedit card for me\",\r\n    \"currency\": \"$\",\r\n    \"amount\": 15000,\r\n    \"transactions\": {\r\n        \"income\": [\r\n            {\r\n                \"_id\": \"1\",\r\n                \"category\": \"fun\",\r\n                \"description\": \"fun\",\r\n                \"amount\": 200,\r\n                \"payment_date\": \"ddd\",\r\n                \"createdAt\": \"ddd\",\r\n                \"updatedAt\": \"ddd\"\r\n            }\r\n        ],\r\n        \"expense\": [\r\n            {\r\n                \"_id\": \"1\",\r\n                \"category\": \"fun\",\r\n                \"description\": \"fun\",\r\n                \"amount\": 200,\r\n                \"payment_date\": \"ddd\",\r\n                \"createdAt\": \"ddd\",\r\n                \"updatedAt\": \"ddd\"\r\n            }\r\n        ]\r\n    }\r\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -2127,8 +2155,12 @@
                                     "value": "W/\"1f-1zPGJlgEt+IQSOhoq94xBRUsURA\""
                                 },
                                 {
+                                    "key": "Set-Cookie",
+                                    "value": "connect.sid=s%3A0CBbXuSyn7-X82-1bsvJAUZhUP994Xeh.e8%2FdKGM7weT7RT6tzX%2BbuN8Y0B9jnigzXYjC2239PN0; Path=/; Expires=Fri, 25 Mar 2022 08:49:18 GMT; HttpOnly"
+                                },
+                                {
                                     "key": "Date",
-                                    "value": "Tue, 15 Mar 2022 06:12:24 GMT"
+                                    "value": "Fri, 25 Mar 2022 07:49:18 GMT"
                                 },
                                 {
                                     "key": "Connection",
@@ -2152,7 +2184,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MTkzODI3LCJleHAiOjE2NDgxOTc0Mjd9.q_hR6HhWPgfRX8QN3JGWurrrLV7Zz7qVz7EV3AsyfsA",
                                     "type": "string"
                                 }
                             ]
@@ -2161,7 +2193,7 @@
                         "header": [],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\r\n    \"id\": \"0\",\r\n    \"userId\": \"3333333333333\",\r\n    \"title\": \"title\",\r\n    \"description\": \"description\",\r\n    \"currency\": \"$\",\r\n    \"createdAt\": \"Date now()\",\r\n    \"updatedAt\": \"Date now()\"\r\n}",
+                            "raw": "{\r\n    \"amount\": 30000\r\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -2169,7 +2201,7 @@
                             }
                         },
                         "url": {
-                            "raw": "http://localhost:3000/accounts/account/0",
+                            "raw": "http://localhost:3000/accounts/account/123id",
                             "protocol": "http",
                             "host": [
                                 "localhost"
@@ -2178,7 +2210,7 @@
                             "path": [
                                 "accounts",
                                 "account",
-                                "0"
+                                "123id"
                             ]
                         }
                     },
@@ -2190,7 +2222,7 @@
                                 "header": [],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\r\n    \"id\": \"0\",\r\n    \"userId\": \"3333333333333\",\r\n    \"title\": \"title\",\r\n    \"description\": \"description\",\r\n    \"currency\": \"$\",\r\n    \"createdAt\": \"Date now()\",\r\n    \"updatedAt\": \"Date now()\"\r\n}",
+                                    "raw": "{\r\n    \"amount\": 30000\r\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -2198,7 +2230,7 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "http://localhost:3000/accounts/account/0",
+                                    "raw": "http://localhost:3000/accounts/account/123id",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -2207,7 +2239,7 @@
                                     "path": [
                                         "accounts",
                                         "account",
-                                        "0"
+                                        "123id"
                                     ]
                                 }
                             },
@@ -2237,7 +2269,7 @@
                                 },
                                 {
                                     "key": "Date",
-                                    "value": "Tue, 15 Mar 2022 06:12:47 GMT"
+                                    "value": "Fri, 25 Mar 2022 07:51:57 GMT"
                                 },
                                 {
                                     "key": "Connection",
@@ -2261,7 +2293,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ3MzI0MTEwLCJleHAiOjE2NDczMjc3MTB9.KsrmTOPtKrwsdxmSt42ZgoCSKPNwKXMpz69ey86O2-A",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnV6aEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IktpbG95YW5fMTIzIiwiaWF0IjoxNjQ4MTkzODI3LCJleHAiOjE2NDgxOTc0Mjd9.q_hR6HhWPgfRX8QN3JGWurrrLV7Zz7qVz7EV3AsyfsA",
                                     "type": "string"
                                 }
                             ]
@@ -2269,7 +2301,7 @@
                         "method": "DELETE",
                         "header": [],
                         "url": {
-                            "raw": "http://localhost:3000/accounts/account/3",
+                            "raw": "http://localhost:3000/accounts/account/123id",
                             "protocol": "http",
                             "host": [
                                 "localhost"
@@ -2278,7 +2310,7 @@
                             "path": [
                                 "accounts",
                                 "account",
-                                "3"
+                                "123id"
                             ]
                         }
                     },
@@ -2289,7 +2321,7 @@
                                 "method": "DELETE",
                                 "header": [],
                                 "url": {
-                                    "raw": "http://localhost:3000/accounts/account/3",
+                                    "raw": "http://localhost:3000/accounts/account/123id",
                                     "protocol": "http",
                                     "host": [
                                         "localhost"
@@ -2298,7 +2330,7 @@
                                     "path": [
                                         "accounts",
                                         "account",
-                                        "3"
+                                        "123id"
                                     ]
                                 }
                             },
@@ -2327,8 +2359,12 @@
                                     "value": "W/\"1e-+jmFbrJS38uUfgr6SSNrNQ0+/Ww\""
                                 },
                                 {
+                                    "key": "Set-Cookie",
+                                    "value": "connect.sid=s%3AOQaKXQx5FhEQVW1CSwaq6CpIFzpZtzRp.gfKs3Tc0TR1ADNPPZvugsjilfVtMkQ1bg8JtejvjV2U; Path=/; Expires=Fri, 25 Mar 2022 08:54:07 GMT; HttpOnly"
+                                },
+                                {
                                     "key": "Date",
-                                    "value": "Tue, 15 Mar 2022 06:13:07 GMT"
+                                    "value": "Fri, 25 Mar 2022 07:54:07 GMT"
                                 },
                                 {
                                     "key": "Connection",
@@ -2341,6 +2377,113 @@
                             ],
                             "cookie": [],
                             "body": "{\n    \"message\": \"Account deleted!\"\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Categories API",
+            "item": [
+                {
+                    "name": "Get all categories",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvZGRAZ21haWwuY29tIiwicGFzc3dvcmQiOiJUb2RkXzEyMyIsImlhdCI6MTY0ODE5NTUyMCwiZXhwIjoxNjQ4MTk5MTIwfQ.htmqhNLAj5AdLsvL0treEXCSNDKo-FhsdVTyc_1S-t4",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/categories",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "categories"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get all categories",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": ""
+                                },
+                                "url": {
+                                    "raw": "http://localhost:3000/categories",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "3000",
+                                    "path": [
+                                        "categories"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Express"
+                                },
+                                {
+                                    "key": "Access-Control-Allow-Origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "220"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"dc-GLsIKa9ncmZj2d9KG/UQT2gIAbs\""
+                                },
+                                {
+                                    "key": "Set-Cookie",
+                                    "value": "connect.sid=s%3AE4JD6V_ZLf57I8c_dXlbBVQfHXJ0DqDU.ArQuR9smZ1JgNNOT3Qt4%2BaxbLXVAEConqexPLNZkcZI; Path=/; Expires=Fri, 25 Mar 2022 09:09:54 GMT; HttpOnly"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Fri, 25 Mar 2022 08:09:54 GMT"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Keep-Alive",
+                                    "value": "timeout=5"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "[\n    {\n        \"income\": [\n            \"salary\",\n            \"debt repayment\",\n            \"gifts\",\n            \"rental income\",\n            \"premium/bonuses\"\n        ],\n        \"expense\": [\n            \"Food\",\n            \"Transportation\",\n            \"Housing\",\n            \"Education\",\n            \"Shopping\",\n            \"Kids\",\n            \"Entertainment\",\n            \"Health and beauty\",\n            \"Pet\",\n            \"Internet\",\n            \"Mobile\"\n        ]\n    }\n]"
                         }
                     ]
                 }
