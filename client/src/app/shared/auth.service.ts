@@ -24,7 +24,7 @@ export class AuthService {
     }
 
     isLoggedIn(): boolean {
-        const expiresIn = this.userService.expiresIn;
+        const expiresIn = localStorage.getItem('expiresIn');
         if (expiresIn) {
             if (Date.now() > Number(expiresIn)) {
                 this.logout();
