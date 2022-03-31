@@ -1,0 +1,25 @@
+<div class="form-wrapper">
+    <div class="form-block">
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h1>Budgetify</h1>
+            <mat-form-field appearance="outline" hideRequiredMarker>
+                <mat-label>Email</mat-label>
+                <input matInput type="text" formControlName="email">
+                <mat-error *ngIf="!loginForm.value.email.valid">Email is invalid</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" hideRequiredMarker>
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                <mat-error *ngIf="!loginForm.value.password.valid">Password is required</mat-error>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide" type="button">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <div class="error" *ngIf="error.length > 0">
+                {{ error }}!
+            </div>
+            <button [disabled]="!loginForm.valid" mat-raised-button color="primary" type="submit">Login</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<nav class="nav container">
+    <div class="nav__logo">
+        <a routerLink="/">Budgetify</a>
+    </div>
+    <ul class="nav__links">
+        <li class="nav__links-item">
+            <a routerLink="/categories" routerLinkActive="active">Categories</a>
+        </li>
+        <li class="nav__links-item">
+            <a routerLink="/statistic" routerLinkActive="active">Statistic</a>
+        </li>
+        <li class="nav__links-item" *ngIf="isAdmin">
+            <a routerLink="/admin" routerLinkActive="active">Admin</a>
+        </li>
+        <li class="nav__links-item">
+            <a routerLink="/faq" routerLinkActive="active">FAQ</a>
+        </li>
+    </ul>
+    <div class="nav__user" [matMenuTriggerFor]="menu">
+        <span class="nav__user-rounded">
+            <mat-icon class="mat-icon">person_outline</mat-icon>
+        </span>{{ user }}
+    </div>
+
+    <mat-menu #menu="matMenu" xPosition="after">
+        <button mat-menu-item (click)="onClickProfile()">
+            <mat-icon class="menu-item">person_outline</mat-icon> Profile
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item (click)="onLogout()">
+            <mat-icon class="menu-item">logout</mat-icon> Log out
+        </button>
+    </mat-menu>
+</nav>
