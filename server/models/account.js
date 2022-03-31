@@ -16,7 +16,7 @@ const Account = new Schema({
         income: [
             {
                 _id: String,
-                category: String,
+                category: Array,
                 description: String,
                 amount: Number,
                 payment_date: String,
@@ -27,7 +27,7 @@ const Account = new Schema({
         expense: [
             {
                 _id: String,
-                category: String,
+                category: Array,
                 description: String,
                 amount: Number,
                 payment_date: String,
