@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-main',
-    templateUrl: './main.component.html',
-    styleUrls: ['./main.component.sass']
+    selector: 'app-cards',
+    templateUrl: './cards.component.html',
+    styleUrls: ['./cards.component.sass']
 })
-export class MainComponent implements OnInit {
+export class CardsComponent implements OnInit {
     cards: any[] = [
         {
             _id: '63c8f9c8f9c8f9c8f9c67scad',
@@ -16,16 +15,16 @@ export class MainComponent implements OnInit {
             disabled: false,
         },
         {
-            _id: '5e9f9c8f9c8f9c8f9c8f9c8f',
+            _id: '5e9f9c8f9c8f9c8f9c8f9c8f2',
             name: 'Карта для покупок',
             amount: 1000.23,
             currency: '₽',
             disabled: true,
         }
     ]
-    constructor(private router: Router) { }
+    constructor() { }
 
     ngOnInit(): void {
-        this.router.navigate(['/home', this.cards[0]._id]);
+
     }
 }

@@ -14,6 +14,7 @@ import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
     { path: 'home', component: MainComponent, canActivate: [AuthGuard] },
+    { path: 'home/:accoutId', component: MainComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
     { path: 'categories', component: CategoriesComponent, canActivate: [AuthGuard] },

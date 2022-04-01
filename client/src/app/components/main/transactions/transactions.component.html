@@ -1,0 +1,16 @@
+<div class="search">
+    <mat-form-field class="search__field" appearance="outline">
+        <mat-label>Search</mat-label>
+        <span matPrefix>
+            <mat-icon class="search-icon">search</mat-icon>
+        </span>
+        <input matInput type="text" #message maxlength="256">
+        <button *ngIf="message.value.length > 0" matSuffix mat-icon-button aria-label="Clear"
+            (click)="message.value=''">
+            <mat-icon class="close">close</mat-icon>
+        </button>
+    </mat-form-field>
+    <app-transactions-sort></app-transactions-sort>
+    <app-transaction-item *ngFor="let transaction of transactions" [transaction]="transaction">
+    </app-transaction-item>
+</div>

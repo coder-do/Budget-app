@@ -1,0 +1,31 @@
+<div class="transaction">
+    <div class="transaction__type">
+        {{ transaction.category[0] }}
+    </div>
+    <div class="transaction__wrapper">
+        <p class="transaction__title">{{ transaction.title }}</p>
+        <div class="transaction__descr">
+            <p class="label" *ngIf="transaction.type === 'income'">
+                <span class="label__item label__item-green">
+                    <mat-icon>arrow_downward</mat-icon>
+                </span> Income
+            </p>
+            <p class="label" *ngIf="transaction.type === 'expenses'">
+                <span class="label__item label__item-red">
+                    <mat-icon>arrow_upward</mat-icon>
+                </span> Expenses
+            </p>
+            <mat-icon class="dot">fiber_manual_record</mat-icon>
+            <p>
+                {{ transaction.payment_date | date: "dd.MM.YYYY" }}
+            </p>
+            <mat-icon class="dot">fiber_manual_record</mat-icon>
+            <p>
+                {{ transaction.payee }}
+            </p>
+        </div>
+    </div>
+    <div class="transaction__amount" [ngClass]="transaction.type === 'expenses' ? 'expense' : 'income'">
+        <span>{{ transaction.type === 'expenses' ? '-' : null }}</span>{{ transaction.amount | currency:'':'' }}$
+    </div>
+</div>

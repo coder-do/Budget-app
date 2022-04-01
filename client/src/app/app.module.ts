@@ -17,6 +17,12 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { StatisticComponent } from './components/statistic/statistic.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { CardsComponent } from './components/main/cards/cards.component';
+import { CardComponent } from './components/main/cards/card/card.component';
+import { TransactionsComponent } from './components/main/transactions/transactions.component';
+import { ButtonsGroupComponent } from './components/main/buttons-group/buttons-group.component';
+import { TransactionsSortComponent } from './components/main/transactions/transactions-sort/transactions-sort.component';
+import { TransactionItemComponent } from './components/main/transactions/transaction-item/transaction-item.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +35,13 @@ import { FaqComponent } from './components/faq/faq.component';
         CategoriesComponent,
         StatisticComponent,
         AdminComponent,
-        FaqComponent
+        FaqComponent,
+        CardsComponent,
+        CardComponent,
+        TransactionsComponent,
+        ButtonsGroupComponent,
+        TransactionsSortComponent,
+        TransactionItemComponent,
     ],
     imports: [
         BrowserModule,

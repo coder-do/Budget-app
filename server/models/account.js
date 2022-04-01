@@ -16,10 +16,13 @@ const Account = new Schema({
         income: [
             {
                 _id: String,
+                title: String,
                 category: Array,
                 description: String,
                 amount: Number,
                 payment_date: String,
+                payee: String,
+                type: String,
                 createdAt: String,
                 updatedAt: String,
             }
@@ -27,10 +30,13 @@ const Account = new Schema({
         expense: [
             {
                 _id: String,
+                title: String,
                 category: Array,
                 description: String,
                 amount: Number,
                 payment_date: String,
+                payee: String,
+                type: String,
                 createdAt: String,
                 updatedAt: String,
             }
