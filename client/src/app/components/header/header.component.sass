@@ -1,0 +1,55 @@
+.nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    min-height: 80px
+    max-width: 1470px
+    margin: 0 auto
+    margin-bottom: 50px
+    color: #373737
+
+    .active
+        border-bottom: 1px solid #000
+        padding-bottom: 3px
+
+    &__logo a
+        font-family: 'Alata'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 28px
+        color: #000000
+        text-decoration: none
+
+    &__links
+        display: flex
+        justify-content: space-between
+        align-items: center
+        min-width: 400px
+        list-style: none
+
+        &-item
+
+            a
+                font-weight: 400
+                font-size: 20px
+                text-decoration: none
+                color: #373737
+
+    &__user
+        display: flex
+        align-items: center
+        font-size: 20px
+        line-height: 26px
+        user-select: none
+        cursor: pointer
+
+    .mat-icon
+        margin-top: 5px
+        margin-right: 7px
+
+.mat-menu-item .mat-icon
+    margin-right: 7px
+
+.mat-menu-panel
+    min-width: 300px
