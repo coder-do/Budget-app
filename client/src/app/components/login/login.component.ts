@@ -1,7 +1,8 @@
+import { HttpErrorResponse, HttpResponse, HttpResponseBase } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../shared/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-login',
@@ -13,27 +14,25 @@ export class LoginComponent {
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required]]
     });
-    hide = true;
+    hide: boolean = true;
     error: string = '';
 
     constructor(private formBuilder: FormBuilder,
         private authService: AuthService,
         private router: Router) { }
 
-    onSubmit() {
+    onSubmit(): void {
         const { email, password } = this.loginForm.value;
-        console.log(email, password);
         this.authService.login(email, password)
             .subscribe(
                 {
-                    next: (res) => {
+                    next: (res: HttpResponseBase) => {
                         if (res.status === 200) {
                             this.router.navigate(['/home']);
                         }
                     },
-                    error: (err) => {
+                    error: (err: HttpErrorResponse) => {
                         this.error = err.error.message;
-                        console.log(this.error);
                     }
                 }
             );

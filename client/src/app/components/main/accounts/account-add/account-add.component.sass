@@ -1,0 +1,53 @@
+@use "src/app/shared/sass/variables.sass" as var
+
+.add
+    width: 590px
+    padding: 40px 35px 28px
+    color: var.$text-base-color
+    display: flex
+    flex-direction: column
+    height: 100%
+
+    .icons
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 34px
+
+        &__header
+            font-weight: 400
+            font-size: 32px
+            line-height: 41px
+
+    .buttons
+        display: flex
+        align-items: center
+        justify-content: flex-end
+
+    .form
+        display: flex
+        flex-direction: column
+        margin-bottom: auto
+
+.save
+    width: 100px
+    height: 49px
+    background: var.$bg-color-btn
+    border-radius: 10px
+    font-size: 20px
+    line-height: 26px
+    color: var.$text-base-color
+    margin-left: 30px
+
+.clear
+    cursor: pointer
+    font-size: 35px
+    line-height: 23px
+    margin-right: 5px
+
+.close
+    height: 50px
+    width: 100px
+    font-size: 20px
+    line-height: 26px

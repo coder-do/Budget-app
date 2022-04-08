@@ -1,5 +1,7 @@
+@use "src/app/shared/sass/variables.sass" as var
+
 .search
-    min-width: 617px
+    width: 658px
     margin-left: 75px
 
     &__field
@@ -9,9 +11,19 @@
         margin-right: 8px
 
     ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline
-        background-color: #F9F9F9
+        background-color: var.$bg-color-base
         border-radius: 10px
         padding-bottom: 0
 
     ::ng-deep .mat-form-field-wrapper
         padding-bottom: 0
+
+.loading
+    margin: 0 auto
+
+.transactions
+    overflow-y: auto
+    max-height: 660px
+
+::-webkit-scrollbar
+    display: none !important

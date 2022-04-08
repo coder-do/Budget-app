@@ -1,3 +1,5 @@
+@use "src/app/shared/sass/variables.sass" as var
+
 a
     text-decoration: none
     color: #051d6b
@@ -32,8 +34,8 @@ a
 .button
     display: inline-flex
     align-items: center
-    background: #B9E2E6
-    color: #000
+    background: var.$bg-color-btn
+    color: var.$black
     text-transform: uppercase
     height: 48px
     padding: 1.5rem

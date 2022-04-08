@@ -1,0 +1,60 @@
+<div class="detail">
+    <div class="icons">
+        <p class="icons__header">Transaction Information</p>
+        <mat-icon class="icon edit" (click)="onEdit(drawer2)">edit</mat-icon>
+        <mat-icon class="icon delete" (click)="onDelete()">delete</mat-icon>
+        <mat-icon class="icon clear" (click)="drawer.close()">clear</mat-icon>
+    </div>
+    <div class="amount">
+        <p class="label" *ngIf="transaction.type === 'income'">
+            <span class="label__item label__item-green">
+                <mat-icon>arrow_downward</mat-icon>
+            </span> Income
+        </p>
+        <p class="label" *ngIf="transaction.type === 'expense'">
+            <span class="label__item label__item-red">
+                <mat-icon>arrow_upward</mat-icon>
+            </span> Expenses
+        </p>
+        <div class="transaction__amount" [ngClass]="transaction.type === 'expense' ? 'expense' : 'income'">
+            <span>{{ transaction.type === 'expense' ? '-' : null }}</span>{{ transaction.amount | currency:'':'' }}
+            {{ currency }}
+        </div>
+    </div>
+    <div class="category">
+        <p class="title">{{ transaction.title }}</p>
+        <div class="type__wrapper">
+            <div class="transaction__type" *ngFor="let category of transaction.category">
+                {{ category }}
+            </div>
+        </div>
+    </div>
+    <div class="descr">
+        <div class="descr__item">
+            <div class="descr__item-title">Payment Date:</div>
+            <div class="descr__item-text">{{ transaction.payment_date | date:"dd.MM.YYYY" }}</div>
+        </div>
+        <mat-divider class="divider"></mat-divider>
+        <div class="descr__item">
+            <div class="descr__item-title">Payee:</div>
+            <div class="descr__item-text">
+                {{ transaction.payee.length > 0 ? transaction.payee : 'Without payee' }}
+            </div>
+        </div>
+        <mat-divider class="divider"></mat-divider>
+        <div class="descr__item">
+            <div class="descr__item-title">Description:</div>
+            <div class="descr__item-text">
+                {{ transaction.description.length > 0 ? transaction.description : 'Without description' }}
+            </div>
+        </div>
+    </div>
+    <button mat-button class="close" (click)="drawer.close()">Close</button>
+</div>
+<mat-drawer-container class="example-container" [ngClass]="drawer2.opened ? 'drawer-active' : ''" fullscreen
+    [hasBackdrop]="true" (backdropClick)="drawer2.close()">
+    <mat-drawer #drawer2 class="example-sidenav" mode="over" position="end">
+        <app-transaction-edit [drawer]="drawer2" [transaction]="transaction" [currency]="currency">
+        </app-transaction-edit>
+    </mat-drawer>
+</mat-drawer-container>

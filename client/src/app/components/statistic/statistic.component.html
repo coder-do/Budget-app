@@ -1,4 +1,5 @@
 <app-header></app-header>
 <div class="container">
-    <app-cards></app-cards>
+    <app-cards [cards]="cards" [activated]="activatedCardId"></app-cards>
+    <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
 </div>

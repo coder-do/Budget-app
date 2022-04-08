@@ -1,19 +1,19 @@
 <nav class="nav container">
     <div class="nav__logo">
-        <a routerLink="/">Budgetify</a>
+        <a [routerLink]="['/home', url]">Budgetify</a>
     </div>
     <ul class="nav__links">
         <li class="nav__links-item">
-            <a routerLink="/categories" routerLinkActive="active">Categories</a>
+            <a [routerLink]="['/categories', url]" routerLinkActive="active">Categories</a>
         </li>
         <li class="nav__links-item">
-            <a routerLink="/statistic" routerLinkActive="active">Statistic</a>
+            <a [routerLink]="['/statistic', url]" routerLinkActive="active">Statistic</a>
         </li>
         <li class="nav__links-item" *ngIf="isAdmin">
-            <a routerLink="/admin" routerLinkActive="active">Admin</a>
+            <a [routerLink]="['/admin', url]" routerLinkActive="active">Admin</a>
         </li>
         <li class="nav__links-item">
-            <a routerLink="/faq" routerLinkActive="active">FAQ</a>
+            <a [routerLink]="['/faq', url]" routerLinkActive="active">FAQ</a>
         </li>
     </ul>
     <div class="nav__user" [matMenuTriggerFor]="menu">

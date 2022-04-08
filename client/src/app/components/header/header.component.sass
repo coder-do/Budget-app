@@ -1,3 +1,5 @@
+@use "src/app/shared/sass/variables.sass" as var
+
 .nav
     display: flex
     justify-content: space-between
@@ -6,10 +8,10 @@
     max-width: 1470px
     margin: 0 auto
     margin-bottom: 50px
-    color: #373737
+    color: var.$text-base-color
 
     .active
-        border-bottom: 1px solid #000
+        border-bottom: 1px solid var.$black
         padding-bottom: 3px
 
     &__logo a
@@ -18,7 +20,7 @@
         font-weight: 400
         font-size: 20px
         line-height: 28px
-        color: #000000
+        color: var.$black
         text-decoration: none
 
     &__links
@@ -34,7 +36,7 @@
                 font-weight: 400
                 font-size: 20px
                 text-decoration: none
-                color: #373737
+                color: var.$text-base-color
 
     &__user
         display: flex

@@ -1,18 +1,32 @@
 <div class="buttons">
-    <p class="label">
+    <p class="label" [ngClass]="selectedValue === 'income' ? 'label-active' : 'label-inactive'"
+        (click)="onSelect('income')">
         <span class="label__item label__item-green">
             <mat-icon>arrow_downward</mat-icon>
         </span> Income
     </p>
-    <p class="label">
+    <p class="label" [ngClass]="selectedValue === 'expense' ? 'label-active' : 'label-inactive'"
+        (click)="onSelect('expense')">
         <span class="label__item label__item-red">
             <mat-icon>arrow_upward</mat-icon>
         </span> Expenses
     </p>
-    <div class="btn">
+    <div class="btn" (click)="onAddTransaction(drawer)">
         <span class="add-icon">+</span> Add Transaction
     </div>
-    <div class="btn">
+    <div class="btn" (click)="onAddAccount(drawer2)">
         <span class="add-icon">+</span> Add Account
     </div>
 </div>
+<mat-drawer-container class="example-container" [ngClass]="drawer.opened ? 'drawer-active' : ''" fullscreen
+    [hasBackdrop]="true" (backdropClick)="drawer.close()">
+    <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
+        <app-transaction-add [drawer]="drawer" [currency]="currency"></app-transaction-add>
+    </mat-drawer>
+</mat-drawer-container>
+<mat-drawer-container class="example-container" [ngClass]="drawer2.opened ? 'drawer-active' : ''" fullscreen
+    [hasBackdrop]="true" (backdropClick)="drawer2.close()">
+    <mat-drawer #drawer2 class="example-sidenav" mode="over" position="end">
+        <app-account-add [drawer]="drawer2"></app-account-add>
+    </mat-drawer>
+</mat-drawer-container>
