@@ -39,7 +39,6 @@ export class TransactionDetailsComponent implements OnInit, OnDestroy {
     }
 
     openDialog() {
-        console.log('account', this.account);
         this.dialog.open(TransactionModalComponent, {
             data: {
                 account: this.account,

@@ -30,11 +30,6 @@ export class TransactionModalComponent implements OnInit, OnDestroy {
 
     onDelete(): void {
         const { drawer, accountId, transaction_id, transaction_type, amount, account } = this.data;
-        console.log(accountId);
-        console.log(amount);
-        console.log(account.amount);
-        console.log(transaction_id);
-        console.log(transaction_type);
         this.transactionService.deleteTransaction(accountId, transaction_id, transaction_type);
         if (this.sum === 0) {
             if (transaction_type === 'expense') {
@@ -43,7 +38,6 @@ export class TransactionModalComponent implements OnInit, OnDestroy {
                 this.sum = account.amount - amount;
             }
         }
-        console.log(this.sum);
         this.accountsService.updateAccount({
             _id: accountId,
             amount: this.sum
