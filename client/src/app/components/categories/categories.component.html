@@ -1,5 +1,27 @@
 <app-header></app-header>
 <div class="container">
-    <app-cards [cards]="cards" [activated]="activatedCardId"></app-cards>
-    <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
+    <div class="wrapper">
+        <mat-form-field class="search__field" appearance="outline">
+            <mat-label>Search</mat-label>
+            <span matPrefix>
+                <mat-icon class="search-icon">search</mat-icon>
+            </span>
+            <input matInput type="text" maxlength="256" [(ngModel)]="searchText" (ngModelChange)="onSort(searchText)">
+            <button *ngIf="searchText.length > 0" matSuffix mat-icon-button aria-label="Clear" (click)="clearText()"
+                matSuffix mat-icon-button aria-label="Clear">
+                <mat-icon class="close">close</mat-icon>
+            </button>
+        </mat-form-field>
+        <div class="categories">
+            <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
+            <app-category-item *ngFor="let category of sortedIncomes" [item]="category" [categories]="allCategories"
+                type="income">
+            </app-category-item>
+            <app-category-item *ngFor="let category of sortedExpenses" [item]="category" [categories]="allCategories"
+                type="expense">
+            </app-category-item>
+            <p class="not-found" *ngIf="sortedExpenses?.length === 0 && sortedIncomes?.length === 0">No result</p>
+        </div>
+    </div>
+    <app-buttons-group></app-buttons-group>
 </div>

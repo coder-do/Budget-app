@@ -1,3 +1,4 @@
+import { IAccount } from './../../../../shared/interfaces/account';
 import { AccountsService } from '../../../../services/accounts.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ITransaction } from '../../../../shared/interfaces/account';
@@ -15,21 +16,20 @@ import { TransactionService } from '../../../../services/transaction.service';
 })
 export class TransactionDetailsComponent implements OnInit, OnDestroy {
     @Input() transaction!: ITransaction;
+    @Input() account!: any;
     @Input() drawer!: MatDrawer;
     @Input() currency!: string;
     accountId!: string;
     paramsSub: Subscription = new Subscription();
+    accountsSub: Subscription = new Subscription();
+    transactionsSub: Subscription = new Subscription();
+    accountsChangeSub: Subscription = new Subscription();
 
-    constructor(private router: Router,
-        private route: ActivatedRoute,
-        private dialog: MatDialog,
+    constructor(private dialog: MatDialog,
         private transactionsService: TransactionService) { }
 
     ngOnInit(): void {
-        this.paramsSub = this.route.params.subscribe(params => {
-            this.accountId = params['accountId'];
-        });
-        this.transactionsService.transactionsChanged.subscribe(() => {
+        this.transactionsSub = this.transactionsService.transactionsChanged.subscribe(() => {
             this.drawer.close();
         })
     }
@@ -39,9 +39,12 @@ export class TransactionDetailsComponent implements OnInit, OnDestroy {
     }
 
     openDialog() {
+        console.log('account', this.account);
         this.dialog.open(TransactionModalComponent, {
             data: {
-                accountId: this.accountId,
+                account: this.account,
+                accountId: this.account._id,
+                amount: this.transaction.amount,
                 transaction_id: this.transaction._id,
                 transaction_type: this.transaction.type,
                 drawer: this.drawer
@@ -55,5 +58,7 @@ export class TransactionDetailsComponent implements OnInit, OnDestroy {
 
     ngOnDestroy(): void {
         this.paramsSub.unsubscribe();
+        this.transactionsSub.unsubscribe();
+        this.accountsChangeSub.unsubscribe();
     }
 }

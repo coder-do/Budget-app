@@ -1,0 +1,39 @@
+@use "src/app/shared/sass/variables.sass" as var
+
+.wrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    .categories
+        display: flex
+        flex-wrap: wrap
+        margin-top: 60px
+
+.search
+    &__field
+        width: 600px
+        height: 40px
+
+    &-icon
+        margin-right: 8px
+
+::ng-deep
+    .mat-form-field-appearance-outline .mat-form-field-outline
+        background-color: var.$bg-color-base
+        border-radius: 10px
+        padding-bottom: 0
+    .mat-form-field-wrapper
+        padding-bottom: 0
+
+.loading
+    margin: 0 auto
+    margin-top: 70px
+
+.container
+    display: flex
+    justify-content: space-between
+
+.not-found
+    font-size: 25px
+    margin-top: -70px

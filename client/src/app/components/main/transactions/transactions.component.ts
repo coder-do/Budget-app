@@ -17,6 +17,7 @@ export class TransactionsComponent implements OnInit, OnDestroy {
     searchText: string = '';
     sortBy: string = '';
     loading: boolean = false;
+    accountTemp: any;
     account: ITransaction[] = [];
     paramSub: Subscription = new Subscription();
     timeout!: ReturnType<typeof setTimeout>;
@@ -52,6 +53,7 @@ export class TransactionsComponent implements OnInit, OnDestroy {
 
     getTransactions(): void {
         this.accountSub = this.accountsService.getAccount(this.id).subscribe((account: IAccount[]) => {
+            this.accountTemp = account[0];
             const transformed = [...account[0].transactions.income, ...account[0].transactions.expense];
             this.currency = account[0].currency.split(' ')[1];
             this.account = transformed;

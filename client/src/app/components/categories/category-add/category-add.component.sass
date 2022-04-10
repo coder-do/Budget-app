@@ -53,8 +53,9 @@
         input
             font-weight: 500
 
-    .form-field
-        margin-bottom: 10px
+    .error-m
+        margin-top: 5
+        font-size: 15px
 
     .toggle-group
         border: none
@@ -71,14 +72,17 @@
             &:last-child
                 margin-left: -3px
 
-::ng-deep
-    .mat-button-toggle-checked
-        padding: 0
-        background-color: green
-        border: 2px solid var.$text-base-color
-        opacity: 1 !important
-    .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle
-        border-left: 2px solid var.$text-base-color !important
+    ::ng-deep
+        .mat-button-toggle-checked
+            padding: 0
+            background-color: green
+            border: 2px solid var.$text-base-color
+            opacity: 1 !important
+        .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle
+            border-left: 2px solid var.$text-base-color !important
+
+        .mat-error
+            margin-top: 20px
 
 .save
     width: 100px

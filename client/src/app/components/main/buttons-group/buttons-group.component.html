@@ -11,11 +11,14 @@
             <mat-icon>arrow_upward</mat-icon>
         </span> Expenses
     </p>
-    <div class="btn" (click)="onAddTransaction(drawer)">
+    <div class="btn" (click)="onAddTransaction(drawer)" *ngIf="!disableBtns">
         <span class="add-icon">+</span> Add Transaction
     </div>
-    <div class="btn" (click)="onAddAccount(drawer2)">
+    <div class="btn" (click)="onAddAccount(drawer2)" *ngIf="!disableBtns">
         <span class="add-icon">+</span> Add Account
+    </div>
+    <div class="btn" (click)="onAddCategory(drawer3)" *ngIf="disableBtns">
+        <span class="add-icon">+</span> Add Category
     </div>
 </div>
 <mat-drawer-container class="example-container" [ngClass]="drawer.opened ? 'drawer-active' : ''" fullscreen
@@ -28,5 +31,11 @@
     [hasBackdrop]="true" (backdropClick)="drawer2.close()">
     <mat-drawer #drawer2 class="example-sidenav" mode="over" position="end">
         <app-account-add [drawer]="drawer2"></app-account-add>
+    </mat-drawer>
+</mat-drawer-container>
+<mat-drawer-container class="example-container" [ngClass]="drawer3.opened ? 'drawer-active' : ''" fullscreen
+    [hasBackdrop]="true" (backdropClick)="drawer3.close()">
+    <mat-drawer #drawer3 class="example-sidenav" mode="over" position="end">
+        <app-category-add [drawer]="drawer3"></app-category-add>
     </mat-drawer>
 </mat-drawer-container>

@@ -1,0 +1,9 @@
+<div class="item" [ngClass]="type === 'income' ? 'green' : 'red'">
+    <div class="item-name" [attr.contenteditable]="isEditable" #changed>
+        {{ item.split(' ')[0] }}
+    </div>
+    <mat-icon class="icon" (click)="onEdit()" *ngIf="!isEditable">edit</mat-icon>
+    <mat-icon class="icon" (click)="onSave()" *ngIf="isEditable">check</mat-icon>
+    <mat-icon class="icon" (click)="onClear()" *ngIf="isEditable">clear</mat-icon>
+    <mat-icon class="icon" (click)="onDelete()" *ngIf="!isEditable">delete</mat-icon>
+</div>

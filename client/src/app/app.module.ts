@@ -34,6 +34,9 @@ import { NotificationComponent } from './components/main/notification/notificati
 import { AccountModalComponent } from './components/main/modals/account-modal/account-modal.component';
 import { TransactionModalComponent } from './components/main/modals/transaction-modal/transaction-modal.component';
 import { AccountDeleteComponent } from './components/main/modals/account-delete/account-delete.component';
+import { CategoryItemComponent } from './components/categories/category-item/category-item.component';
+import { CategoryAddComponent } from './components/categories/category-add/category-add.component';
+import { CategoryDeleteComponent } from './components/main/modals/category-delete/category-delete.component';
 
 @NgModule({
     declarations: [
@@ -62,7 +65,10 @@ import { AccountDeleteComponent } from './components/main/modals/account-delete/
         NotificationComponent,
         AccountModalComponent,
         TransactionModalComponent,
-        AccountDeleteComponent
+        AccountDeleteComponent,
+        CategoryItemComponent,
+        CategoryAddComponent,
+        CategoryDeleteComponent
     ],
     imports: [
         FormsModule,

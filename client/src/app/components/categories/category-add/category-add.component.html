@@ -1,0 +1,34 @@
+<div class="add">
+    <div class="icons">
+        <p class="icons__header">Add Category</p>
+        <mat-icon class="clear" (click)="drawer.close()">clear</mat-icon>
+    </div>
+
+    <form class="form" [formGroup]="addForm" #submit="ngForm" (ngSubmit)="onSubmit()">
+        <mat-button-toggle-group formControlName="type" class="toggle-group" name="fontStyle" aria-label="Font Style"
+            value="expense">
+            <mat-button-toggle class="btn" value="expense">
+                <span class="label__item label__item-red">
+                    <mat-icon class="icon">arrow_upward</mat-icon>
+                </span>Expense
+            </mat-button-toggle>
+            <mat-button-toggle class="btn" value="income">
+                <span class="label__item label__item-green">
+                    <mat-icon class="icon">arrow_downward</mat-icon>
+                </span>Income
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+        <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input matInput type="text" formControlName="title">
+            <mat-error *ngIf="addForm.value.title.trim().length === 0">Title is required</mat-error>
+        </mat-form-field>
+        <mat-error *ngIf="isDuplicate" class="error-m">Duplicate categories are not allowed!</mat-error>
+    </form>
+
+    <div class="buttons">
+        <button mat-button class="close" (click)="drawer.close()">Cancel</button>
+        <button mat-raised-button class="save" color="primary" type="submit" [disabled]="!addForm.valid || isDuplicate"
+            (click)="submit.ngSubmit.emit()">Save</button>
+    </div>
+</div>

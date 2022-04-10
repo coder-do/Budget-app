@@ -33,7 +33,8 @@
 <mat-drawer-container class="example-container" [ngClass]="drawer.opened ? 'drawer-active' : ''" fullscreen
     [hasBackdrop]="true" (backdropClick)="drawer.close()">
     <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
-        <app-transaction-details [transaction]="transaction" [drawer]="drawer" [currency]="currency">
+        <app-transaction-details [transaction]="transaction" [drawer]="drawer" [currency]="currency"
+            [account]="account">
         </app-transaction-details>
     </mat-drawer>
 </mat-drawer-container>

@@ -50,6 +50,7 @@ export class AccountsService {
         this.http.delete(`${environment.API_URL}/accounts/account/${id}`)
             .subscribe(() => {
                 this.accountsChanged.next('delete');
+                this.transactionService.transactionsChanged.next('update');
                 this.notificationService.notification.next('Account was successfully deleted!');
             });
     }

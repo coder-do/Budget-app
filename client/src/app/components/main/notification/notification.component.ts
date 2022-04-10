@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class NotificationComponent implements OnInit, OnDestroy {
     message = '';
-    timeOut: any;
+    timeOut!: ReturnType<typeof setTimeout>;
     notificationSub: Subscription = new Subscription();
 
     constructor(private notificationService: NotificationService) { }

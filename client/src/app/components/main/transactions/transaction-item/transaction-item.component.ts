@@ -1,3 +1,4 @@
+import { IAccount } from './../../../../shared/interfaces/account';
 import { MatDrawer } from '@angular/material/sidenav';
 import { ITransaction } from '../../../../shared/interfaces/account';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -10,6 +11,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TransactionItemComponent implements OnInit {
     @Input() transaction!: ITransaction;
+    @Input() account!: any;
     @Input() currency!: string;
 
     constructor(private route: ActivatedRoute,

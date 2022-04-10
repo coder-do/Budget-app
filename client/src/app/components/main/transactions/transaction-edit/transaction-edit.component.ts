@@ -1,5 +1,6 @@
+import { IAccount } from './../../../../shared/interfaces/account';
 import { Subscription } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDrawer } from '@angular/material/sidenav';
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
@@ -21,6 +22,7 @@ export class TransactionEditComponent implements OnInit, OnDestroy {
     @Input() drawer!: MatDrawer;
     @Input() currency!: string;
     selectedCategories: string[] = [];
+    account!: IAccount
     allCategories: string[] = [];
     addForm: FormGroup = this.formBuilder.group({
         type: ['expense', Validators.required],
@@ -31,10 +33,13 @@ export class TransactionEditComponent implements OnInit, OnDestroy {
         payee: [''],
         description: ['', [Validators.maxLength(256)]],
     });
+    sum: number = 0;
     userId: string = localStorage.getItem('userId') as string;
     accountId!: string;
     userSub: Subscription = new Subscription();
     paramsSub: Subscription = new Subscription();
+    accountsSub: Subscription = new Subscription();
+    accountsChangeSub: Subscription = new Subscription();
 
     constructor(private formBuilder: FormBuilder,
         private route: ActivatedRoute,
@@ -47,10 +52,20 @@ export class TransactionEditComponent implements OnInit, OnDestroy {
             this.allCategories = user.categories[0][this.transaction.type];
             this.allCategories.filter(category => this.selectedCategories.indexOf(category) === -1);
         });
-        this.paramsSub = this.route.params.subscribe(params => {
+        this.paramsSub = this.route.params.subscribe((params: Params) => {
             this.accountId = params['accountId'];
+            this.getAccount();
+        });
+        this.accountsChangeSub = this.accountsService.accountsChanged.subscribe(() => {
+            this.getAccount();
         });
         this.setFormValues();
+    }
+
+    getAccount() {
+        this.accountsSub = this.accountsService.getAccount(this.accountId).subscribe((account: IAccount[]) => {
+            this.account = account[0];
+        })
     }
 
     setFormValues(): void {
@@ -77,8 +92,19 @@ export class TransactionEditComponent implements OnInit, OnDestroy {
             createdAt: new Date().toString(),
             updatedAt: new Date().toString(),
         }
-
+        if (this.sum === 0) {
+            if (type === 'expense') {
+                this.sum = this.account.amount + (this.transaction.amount - amount);
+            } else {
+                this.sum = this.account.amount - (this.transaction.amount - amount);
+            }
+        }
         this.transactionService.updateTransaction(this.accountId, finalData, type);
+        this.accountsService.updateAccount({
+            _id: this.accountId,
+            amount: this.sum
+        });
+        this.sum = 0;
         this.clearForm();
         this.selectedCategories = [];
         this.drawer.close();
@@ -113,5 +139,7 @@ export class TransactionEditComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
         this.userSub.unsubscribe();
         this.paramsSub.unsubscribe();
+        this.accountsSub.unsubscribe();
+        this.accountsChangeSub.unsubscribe();
     }
 }
