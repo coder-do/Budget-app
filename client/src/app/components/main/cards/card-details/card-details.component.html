@@ -1,0 +1,38 @@
+<div class="details">
+    <div class="icons">
+        <p class="icons__header">Account Information</p>
+        <mat-icon class="icon edit" (click)="onEdit(drawer2)">edit</mat-icon>
+        <mat-icon class="icon delete" (click)="onDelete()">delete</mat-icon>
+        <mat-icon class="icon clear" (click)="drawer.close()">clear</mat-icon>
+    </div>
+    <div class="descr">
+        <div class="descr__item">
+            <div class="descr__item-title">Title:</div>
+            <div class="descr__item-text">{{ account.title }}</div>
+        </div>
+        <mat-divider class="divider"></mat-divider>
+        <div class="descr__item">
+            <div class="descr__item-title">Balance:</div>
+            <div class="descr__item-text">{{ account.amount }}</div>
+        </div>
+        <mat-divider class="divider"></mat-divider>
+        <div class="descr__item">
+            <div class="descr__item-title">Currency:</div>
+            <div class="descr__item-text">
+                {{ account.currency.split(' ')[0] }} ({{ account.currency.split(' ')[1] }})
+            </div>
+        </div>
+        <mat-divider class="divider"></mat-divider>
+        <div class="descr__item">
+            <div class="descr__item-title">Description:</div>
+            <div class="descr__item-text">{{ account.description }}</div>
+        </div>
+    </div>
+    <button mat-button class="close" (click)="drawer.close()">Close</button>
+</div>
+<mat-drawer-container class="example-container" [ngClass]="drawer2.opened ? 'drawer-active' : ''" fullscreen
+    [hasBackdrop]="true" (backdropClick)="drawer2.close()">
+    <mat-drawer #drawer2 class="example-sidenav" mode="over" position="end">
+        <app-account-edit [drawer]="drawer2" [account]="account"></app-account-edit>
+    </mat-drawer>
+</mat-drawer-container>

@@ -14,13 +14,13 @@ import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
     { path: 'home', component: MainComponent, canActivate: [AuthGuard] },
-    { path: 'home/:accoutId', component: MainComponent, canActivate: [AuthGuard] },
+    { path: 'home/:accountId', component: MainComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
-    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
-    { path: 'categories', component: CategoriesComponent, canActivate: [AuthGuard] },
-    { path: 'statistic', component: StatisticComponent, canActivate: [AuthGuard] },
-    { path: 'faq', component: FaqComponent, canActivate: [AuthGuard] },
-    { path: 'admin', component: AdminComponent, canActivate: [AuthGuard, AdminGuard] },
+    { path: 'profile/:accountId', component: ProfileComponent, canActivate: [AuthGuard] },
+    { path: 'categories/:accountId', component: CategoriesComponent, canActivate: [AuthGuard] },
+    { path: 'statistic/:accountId', component: StatisticComponent, canActivate: [AuthGuard] },
+    { path: 'faq/:accountId', component: FaqComponent, canActivate: [AuthGuard] },
+    { path: 'admin/:accountId', component: AdminComponent, canActivate: [AuthGuard, AdminGuard] },
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: '**', component: NotFoundComponent }
 ];

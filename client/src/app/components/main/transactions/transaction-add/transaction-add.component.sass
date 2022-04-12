@@ -1,0 +1,100 @@
+@use "src/app/shared/sass/variables.sass" as var
+
+.add
+    width: 590px
+    padding: 40px 35px 28px
+    color: var.$text-base-color
+    display: flex
+    flex-direction: column
+    height: 100%
+
+    .label__item
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        background: var.$bg-color-base
+        color: var.$white
+        text-align: center
+        padding-left: 1px
+        margin-right: 5px
+        margin-bottom: 3px
+
+        &-green
+            background: var.$green
+
+        &-red
+            background: var.$red
+
+    .icons
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 34px
+
+        &__header
+            font-weight: 400
+            font-size: 32px
+            line-height: 41px
+
+    .buttons
+        display: flex
+        align-items: center
+        justify-content: flex-end
+
+    .form
+        display: flex
+        flex-direction: column
+        margin-bottom: auto
+
+        input
+            font-weight: 500
+
+    .toggle-group
+        border: none
+        margin-bottom: 30px
+        padding-top: 5px !important
+
+        .btn
+            width: 140px
+            height: 52px
+            background: var.$bg-color-base
+            border-radius: 10px
+            opacity: 0.7
+
+            &:last-child
+                margin-left: -3px
+
+::ng-deep
+    .mat-button-toggle-checked
+        padding: 0
+        background-color: green
+        border: 2px solid var.$text-base-color
+        opacity: 1 !important
+    .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle
+        border-left: 2px solid var.$text-base-color !important
+
+.save
+    width: 100px
+    height: 49px
+    background: var.$bg-color-btn
+    border-radius: 10px
+    font-size: 20px
+    line-height: 26px
+    color: var.$text-base-color
+    margin-left: 30px
+
+.clear
+    cursor: pointer
+    font-size: 35px
+    line-height: 23px
+    margin-right: 5px
+
+.close
+    height: 50px
+    width: 100px
+    font-size: 20px
+    line-height: 26px

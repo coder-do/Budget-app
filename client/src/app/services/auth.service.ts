@@ -1,11 +1,10 @@
 import { environment } from 'src/environments/environment';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpResponse, HttpResponseBase } from '@angular/common/http';
 import { Injectable, Pipe } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { UserData } from '../auth/auth';
+import { UserData } from '../shared/interfaces/auth';
 import { Router } from '@angular/router';
 import { UserService } from './user.service';
-import { TapObserver } from 'rxjs/internal/operators/tap';
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +16,8 @@ export class AuthService {
         private http: HttpClient,
         private router: Router) { }
 
-    login(email: string, password: string): Observable<HttpResponse<UserData | any>> {
+
+    login(email: string, password: string): Observable<HttpResponse<Object> | HttpResponse<Response>> {
         return this.http
             .post(`${environment.API_URL}/auth/login`, { email, password }, { observe: 'response' })
             .pipe(tap((res) => this.setSession(res)));

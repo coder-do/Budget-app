@@ -1,7 +1,14 @@
-<a [routerLink]="['/home', card._id]" routerLinkActive="enabled" class="card">
+<a [routerLink]="['/home', card._id]" routerLinkActive="enabled" class="card" (click)="onCardClick(drawer)"
+    [ngClass]="activated === card._id ? 'enabled ' : ''">
     <div class="card__descr">
-        <h3 class="card__title">{{ card.name }}</h3>
+        <h3 class="card__title">{{ card.title }}</h3>
         <p class="card__amount">{{ card.amount | currency:'':'' }}</p>
     </div>
-    <div class="card__currency">{{ card.currency }}</div>
+    <div class="card__currency">{{ card.currency.split(' ')[1] }}</div>
 </a>
+<mat-drawer-container class="example-container" [ngClass]="drawer.opened ? 'drawer-active' : ''" fullscreen
+    [hasBackdrop]="true" (backdropClick)="drawer.close()">
+    <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
+        <app-card-details [drawer]="drawer" [account]="card"></app-card-details>
+    </mat-drawer>
+</mat-drawer-container>

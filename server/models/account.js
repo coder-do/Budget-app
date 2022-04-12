@@ -12,36 +12,7 @@ const Account = new Schema({
     description: String,
     currency: String,
     amount: Number,
-    transactions: {
-        income: [
-            {
-                _id: String,
-                title: String,
-                category: Array,
-                description: String,
-                amount: Number,
-                payment_date: String,
-                payee: String,
-                type: String,
-                createdAt: String,
-                updatedAt: String,
-            }
-        ],
-        expense: [
-            {
-                _id: String,
-                title: String,
-                category: Array,
-                description: String,
-                amount: Number,
-                payment_date: String,
-                payee: String,
-                type: String,
-                createdAt: String,
-                updatedAt: String,
-            }
-        ],
-    }
+    transactions: Object
 }, {
     timestamps: true,
 });

@@ -1,4 +1,15 @@
 <app-header></app-header>
 <div class="container">
-    <app-cards></app-cards>
+    <h1 class="faq-title">Frequently Asked Questions (FAQ's)</h1>
+    <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
+    <mat-accordion *ngFor="let faq of faqs; let i = index">
+        <mat-expansion-panel hideToggle class="panel">
+            <mat-expansion-panel-header>
+                <mat-panel-title class="panel__title">
+                    Q{{ i + 1 }}. {{ faq.question }}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="panel__descr">{{ faq.answer }}</p>
+        </mat-expansion-panel>
+    </mat-accordion>
 </div>

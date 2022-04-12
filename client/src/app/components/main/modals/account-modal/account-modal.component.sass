@@ -1,0 +1,54 @@
+@use "src/app/shared/sass/variables.sass" as var
+
+.modal
+    width: 625px
+    height: 238px
+    border-radius: 10px
+
+    &__title
+        font-weight: 400
+        font-size: 32px
+        line-height: 41px
+        color: var.$text-base-color
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__body
+        font-weight: 400
+        font-size: 24px
+        line-height: 31px
+        color: var.$text-base-color
+
+    span
+        padding-top: 5px
+
+    .icon
+        width: 35px
+        height: 35px
+        font-size: 35px
+        cursor: pointer
+        margin-right: 55px
+
+    .buttons
+        display: flex
+        justify-content: flex-end
+        margin-top: 28px
+
+        .btn
+            width: 100px
+            height: 49px
+            font-size: 20px
+            line-height: 26px
+
+    .close
+        background: var.$bg-color-btn
+        border-radius: 10px
+        margin-right: 50px
+
+::ng-deep .mat-dialog-container
+    background: var.$bg-color-base
+    padding: 24px
+    overflow: hidden
+    width: 625px
+    height: 238px

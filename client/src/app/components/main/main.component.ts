@@ -1,31 +1,55 @@
-import { Component, OnInit } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+import { Component, OnInit, OnDestroy, ViewChild, OnChanges, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { IAccount } from 'src/app/shared/interfaces/account';
+import { AccountsService } from '../../services/accounts.service';
 
 @Component({
     selector: 'app-main',
     templateUrl: './main.component.html',
     styleUrls: ['./main.component.sass']
 })
-export class MainComponent implements OnInit {
-    cards: any[] = [
-        {
-            _id: '63c8f9c8f9c8f9c8f9c67scad',
-            name: 'Debit card',
-            amount: 10000.50,
-            currency: '$',
-            disabled: false,
-        },
-        {
-            _id: '5e9f9c8f9c8f9c8f9c8f9c8f',
-            name: 'Карта для покупок',
-            amount: 1000.23,
-            currency: '₽',
-            disabled: true,
-        }
-    ]
-    constructor(private router: Router) { }
+export class MainComponent implements OnInit, OnDestroy {
+    @ViewChild('sidenav') sidenav!: MatSidenav;
+    loading = false;
+    cards: IAccount[] = [];
+    sub: Subscription = new Subscription();
+    accountsSub: Subscription = new Subscription();
+
+    constructor(private router: Router,
+        private accountsService: AccountsService) { }
 
     ngOnInit(): void {
-        this.router.navigate(['/home', this.cards[0]._id]);
+        this.loading = true;
+        this.getAccounts();
+        this.accountsSub = this.accountsService.accountsChanged.subscribe(() => {
+            this.accountsService.getAccounts();
+            this.getAccounts();
+        });
+        this.loading = false;
+    }
+
+    getAccounts(): void {
+        this.sub = this.accountsService.accounts.subscribe((accounts: IAccount[]) => {
+            this.loading = false;
+            if (accounts.length > 0) {
+                this.cards = accounts;
+
+                // when we get the accounts, we navigate to the first one by default
+                if (this.router.url === '/home' && this.router.url !== `/home/${this.cards[0]._id}`) {
+                    this.router.navigate(['/home', this.cards[0]._id]);
+                }
+            }
+        });
+    }
+
+    close(): void {
+        this.sidenav.close();
+    }
+
+    ngOnDestroy(): void {
+        this.sub.unsubscribe();
+        this.accountsSub.unsubscribe();
     }
 }

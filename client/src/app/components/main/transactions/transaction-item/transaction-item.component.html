@@ -1,4 +1,4 @@
-<div class="transaction">
+<div class="transaction" (click)="onClick(drawer)">
     <div class="transaction__type">
         {{ transaction.category[0] }}
     </div>
@@ -10,7 +10,7 @@
                     <mat-icon>arrow_downward</mat-icon>
                 </span> Income
             </p>
-            <p class="label" *ngIf="transaction.type === 'expenses'">
+            <p class="label" *ngIf="transaction.type === 'expense'">
                 <span class="label__item label__item-red">
                     <mat-icon>arrow_upward</mat-icon>
                 </span> Expenses
@@ -21,11 +21,19 @@
             </p>
             <mat-icon class="dot">fiber_manual_record</mat-icon>
             <p>
-                {{ transaction.payee }}
+                {{ transaction.payee.length > 0 ? transaction.payee : 'No Payee' }}
             </p>
         </div>
     </div>
-    <div class="transaction__amount" [ngClass]="transaction.type === 'expenses' ? 'expense' : 'income'">
-        <span>{{ transaction.type === 'expenses' ? '-' : null }}</span>{{ transaction.amount | currency:'':'' }}$
+    <div class="transaction__amount" [ngClass]="transaction.type === 'expense' ? 'expense' : 'income'">
+        <span>{{ transaction.type === 'expense' ? '-' : null }}</span>{{ transaction.amount | currency:'':'' }}
+        {{ currency }}
     </div>
 </div>
+<mat-drawer-container class="example-container" [ngClass]="drawer.opened ? 'drawer-active' : ''" fullscreen
+    [hasBackdrop]="true" (backdropClick)="drawer.close()">
+    <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
+        <app-transaction-details [transaction]="transaction" [drawer]="drawer" [currency]="currency">
+        </app-transaction-details>
+    </mat-drawer>
+</mat-drawer-container>

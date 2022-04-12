@@ -1,0 +1,6 @@
+<div class="notification" *ngIf="message.length > 0">
+    <div class="message">
+        {{ message }}
+    </div>
+    <button class="btn" mat-button (click)="onClose()">Close</button>
+</div>
