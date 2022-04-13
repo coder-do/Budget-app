@@ -1,13 +1,11 @@
-import { IAccount } from './../../../../shared/interfaces/account';
-import { AccountsService } from '../../../../services/accounts.service';
-import { MatDialog } from '@angular/material/dialog';
-import { ITransaction } from '../../../../shared/interfaces/account';
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatDrawer } from '@angular/material/sidenav';
-import { NavigationExtras, Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ITransaction } from 'src/app/shared/interfaces/account';
+import { TransactionService } from 'src/app/services/transaction.service';
 import { TransactionModalComponent } from '../../modals/transaction-modal/transaction-modal.component';
-import { TransactionService } from '../../../../services/transaction.service';
+import { IAccount } from 'src/app/shared/interfaces/account';
 
 @Component({
     selector: 'app-transaction-details',
@@ -16,7 +14,7 @@ import { TransactionService } from '../../../../services/transaction.service';
 })
 export class TransactionDetailsComponent implements OnInit, OnDestroy {
     @Input() transaction!: ITransaction;
-    @Input() account!: any;
+    @Input() account!: IAccount;
     @Input() drawer!: MatDrawer;
     @Input() currency!: string;
     accountId!: string;

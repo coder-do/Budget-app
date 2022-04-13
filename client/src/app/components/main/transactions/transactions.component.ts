@@ -17,7 +17,7 @@ export class TransactionsComponent implements OnInit, OnDestroy {
     searchText: string = '';
     sortBy: string = '';
     loading: boolean = false;
-    accountTemp: any;
+    accountTemp!: IAccount;
     account: ITransaction[] = [];
     paramSub: Subscription = new Subscription();
     timeout!: ReturnType<typeof setTimeout>;

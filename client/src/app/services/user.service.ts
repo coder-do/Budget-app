@@ -23,8 +23,8 @@ export class UserService {
         return this.http.get<UserData>(`${environment.API_URL}/users/${id}`);
     }
 
-    updateUser(id: string, data: { categories: any }): void {
-        this.http.put<{ categories: any }>(`${environment.API_URL}/users/${id}`, data)
+    updateUser(id: string, data: { categories: ICategory[] }): void {
+        this.http.put<{ categories: ICategory[] }>(`${environment.API_URL}/users/${id}`, data)
             .subscribe(() => {
                 this.categoriesService.categoriesChanged.next('change');
             })

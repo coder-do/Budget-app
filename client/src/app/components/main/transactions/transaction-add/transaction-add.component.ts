@@ -10,6 +10,7 @@ import { currency_list } from '../../../../shared/currency-list';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { TransactionService } from 'src/app/services/transaction.service';
 import { IAccount } from 'src/app/shared/interfaces/account';
+import { UserData } from 'src/app/shared/interfaces/auth';
 
 @Component({
     selector: 'app-transaction-add',
@@ -50,7 +51,7 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
         private transactionService: TransactionService) { }
 
     ngOnInit(): void {
-        this.userSub = this.userService.getUser(this.userId).subscribe((user: any) => {
+        this.userSub = this.userService.getUser(this.userId).subscribe((user: UserData | any) => {
             this.currencies.forEach(currency => {
                 if (currency.country === user.country) {
                     this.addForm.controls['categories'].setValue(currency);

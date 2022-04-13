@@ -37,6 +37,8 @@ import { AccountDeleteComponent } from './components/main/modals/account-delete/
 import { CategoryItemComponent } from './components/categories/category-item/category-item.component';
 import { CategoryAddComponent } from './components/categories/category-add/category-add.component';
 import { CategoryDeleteComponent } from './components/main/modals/category-delete/category-delete.component';
+import { CategoryStatisticComponent } from './components/statistic/category-statistic/category-statistic.component';
+import { MonthlyStatisticComponent } from './components/statistic/monthly-statistic/monthly-statistic.component';
 
 @NgModule({
     declarations: [
@@ -68,7 +70,9 @@ import { CategoryDeleteComponent } from './components/main/modals/category-delet
         AccountDeleteComponent,
         CategoryItemComponent,
         CategoryAddComponent,
-        CategoryDeleteComponent
+        CategoryDeleteComponent,
+        CategoryStatisticComponent,
+        MonthlyStatisticComponent
     ],
     imports: [
         FormsModule,

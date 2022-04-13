@@ -14,6 +14,6 @@ export interface UserData {
     categories: [
         income: string[],
         expense: string[],
-    ]
+    ],
     __v: number
 }

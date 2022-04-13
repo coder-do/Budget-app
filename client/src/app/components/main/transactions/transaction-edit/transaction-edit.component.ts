@@ -10,6 +10,7 @@ import { ITransaction } from '../../../../shared/interfaces/account';
 import { AccountsService } from '../../../../services/accounts.service';
 import { UserService } from '../../../../services/user.service';
 import { TransactionService } from 'src/app/services/transaction.service';
+import { UserData } from 'src/app/shared/interfaces/auth';
 
 @Component({
     selector: 'app-transaction-edit',
@@ -48,19 +49,17 @@ export class TransactionEditComponent implements OnInit, OnDestroy {
         private transactionService: TransactionService) { }
 
     ngOnInit(): void {
-        this.userSub = this.userService.getUser(this.userId).subscribe((user: any) => {
+        this.userSub = this.userService.getUser(this.userId).subscribe((user: UserData | any) => {
             this.allCategories = user.categories[0][this.transaction.type];
             this.allCategories.filter(category => this.selectedCategories.indexOf(category) === -1);
         });
         this.paramsSub = this.route.params.subscribe((params: Params) => {
             this.accountId = params['accountId'];
-            this.getAccount();
         });
-        this.accountsChangeSub = this.accountsService.accountsChanged.subscribe(() => {
-            this.getAccount();
-        });
+        this.getAccount();
         this.setFormValues();
     }
+
 
     getAccount() {
         this.accountsSub = this.accountsService.getAccount(this.accountId).subscribe((account: IAccount[]) => {

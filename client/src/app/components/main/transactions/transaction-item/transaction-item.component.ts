@@ -11,7 +11,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TransactionItemComponent implements OnInit {
     @Input() transaction!: ITransaction;
-    @Input() account!: any;
+    @Input() account!: IAccount;
     @Input() currency!: string;
 
     constructor(private route: ActivatedRoute,
