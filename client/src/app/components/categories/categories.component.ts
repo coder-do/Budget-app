@@ -1,8 +1,6 @@
 import { Subscription } from 'rxjs';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ICategory } from 'src/app/shared/interfaces/categories';
-import { AccountsService } from 'src/app/services/accounts.service';
 import { CategoriesService } from 'src/app/services/categories.service';
 
 @Component({
@@ -22,8 +20,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     sortCategriesSub: Subscription = new Subscription();
     categoriesChangeSub: Subscription = new Subscription();
 
-    constructor(private accountsService: AccountsService,
-        private categoriesService: CategoriesService) { }
+    constructor(private categoriesService: CategoriesService) { }
 
     ngOnInit(): void {
         this.loading = true;
@@ -34,7 +31,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     }
 
     getCategories(): void {
-        this.categoriesSub = this.categoriesService.getCategories().subscribe((categories: any[]) => {
+        this.categoriesSub = this.categoriesService.getCategories().subscribe((categories: ICategory[] | any) => {
             this.loading = false;
             this.allCategories = categories[0];
             this.incomes = [...categories[0].income];

@@ -5,6 +5,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ICategory } from 'src/app/shared/interfaces/categories';
 
 @Component({
     selector: 'app-category-add',

@@ -8,6 +8,8 @@ import { IAccount } from 'src/app/shared/interfaces/account';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { CategoryDeleteComponent } from '../../main/modals/category-delete/category-delete.component';
+import { ITransaction } from '../../../shared/interfaces/account';
+import { ICategory } from 'src/app/shared/interfaces/categories';
 
 @Component({
     selector: 'app-category-item',
@@ -17,7 +19,7 @@ import { CategoryDeleteComponent } from '../../main/modals/category-delete/categ
 export class CategoryItemComponent implements OnInit, OnDestroy {
     @ViewChild('changed') inp!: ElementRef<HTMLDivElement>;
     @Input() drawer!: MatDrawer;
-    @Input() categories!: any;
+    @Input() categories!: ICategory;
     @Input() item!: string;
     @Input() type!: string;
     temp: any;
@@ -61,8 +63,8 @@ export class CategoryItemComponent implements OnInit, OnDestroy {
     }
 
     getAllCategories(): void {
-        let temp: any[] = [];
-        this.allCategories.map((c: any) => {
+        let temp: string[] = [];
+        this.allCategories.map((c: ITransaction) => {
             temp.push(...c.category);
         })
         this.allCategories = temp;
@@ -88,17 +90,16 @@ export class CategoryItemComponent implements OnInit, OnDestroy {
     onSave(): void {
         this.isEditable = false;
         if (this.item.toLowerCase() !== this.inp.nativeElement.textContent!.toLowerCase()) {
-            this.temp.income.map((inc: any, ind: number) => {
+            this.temp.income.map((inc: string, ind: number) => {
                 if (inc.toLowerCase() === this.item.toLowerCase()) {
                     this.temp.income[ind] = this.inp.nativeElement.textContent;
                 }
             })
-            this.temp.expense.map((exp: any, ind: number) => {
+            this.temp.expense.map((exp: string, ind: number) => {
                 if (exp.toLowerCase() === this.item.toLowerCase()) {
                     this.temp.expense[ind] = this.inp.nativeElement.textContent;
                 }
             });
-            console.log(this.temp);
             this.userService.updateUser(this.userId, { categories: this.temp });
             this.openSnackBar('Category has been updated!');
         } else {
