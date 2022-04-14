@@ -1,0 +1,12 @@
+<div class="modal">
+    <p mat-dialog-title class="modal__title">Delete Category
+        <span mat-dialog-close>
+            <mat-icon class="icon">close</mat-icon>
+        </span>
+    </p>
+    <div mat-dialog-content class="modal__body">Are you sure you want to delete category?</div>
+    <div mat-dialog-actions class="buttons">
+        <button mat-button class="btn" (click)="onDelete()">Yes</button>
+        <button mat-button mat-dialog-close class="close btn">No</button>
+    </div>
+</div>

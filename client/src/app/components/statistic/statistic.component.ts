@@ -1,6 +1,6 @@
 import { OnDestroy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AccountsService } from 'src/app/services/accounts.service';
 import { IAccount } from 'src/app/shared/interfaces/account';
@@ -11,9 +11,10 @@ import { IAccount } from 'src/app/shared/interfaces/account';
     styleUrls: ['./statistic.component.sass']
 })
 export class StatisticComponent implements OnInit, OnDestroy {
+    selectedAccount: IAccount | undefined;
     cards: IAccount[] = [];
+    activatedCardId!: string;
     loading: boolean = false;
-    activatedCardId: string = '';
     sub: Subscription = new Subscription();
     paramsSub: Subscription = new Subscription();
 
@@ -22,14 +23,19 @@ export class StatisticComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.loading = true;
+        this.paramsSub = this.route.params.subscribe((params: Params) => {
+            this.activatedCardId = params['accountId'];
+            this.getAccounts();
+        })
+    }
+
+    getAccounts(): void {
         this.accountsService.getAccounts();
         this.sub = this.accountsService.accounts.subscribe((accounts: IAccount[]) => {
             this.loading = false;
             this.cards = accounts;
+            this.selectedAccount = accounts.find((account: IAccount) => account._id === this.activatedCardId);
         });
-        this.paramsSub = this.route.params.subscribe(params => {
-            this.activatedCardId = params['accountId'];
-        })
     }
 
     ngOnDestroy(): void {

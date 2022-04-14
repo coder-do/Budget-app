@@ -15,11 +15,16 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
     exports: [
+        MatTabsModule,
         MatIconModule,
         MatMenuModule,
+        MatTableModule,
         MatInputModule,
         MatChipsModule,
         MatSelectModule,
@@ -27,6 +32,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
         MatButtonModule,
         MatDividerModule,
         MatSidenavModule,
+        MatSnackBarModule,
         MatFormFieldModule,
         MatExpansionModule,
         MatNativeDateModule,

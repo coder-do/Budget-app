@@ -5,20 +5,20 @@
     </div>
 
     <form class="form" [formGroup]="addForm" #submit="ngForm" (ngSubmit)="onSubmit()">
-        <mat-form-field appearance="outline">
+        <mat-form-field class="form-field" appearance="outline">
             <mat-label>Title</mat-label>
             <input matInput type="text" formControlName="title">
             <mat-error *ngIf="addForm.value.title.trim().length === 0">Title is required</mat-error>
             <mat-error *ngIf="addForm.value.title.length >= 128">Maximum number of characters reached</mat-error>
         </mat-form-field>
-        <mat-form-field appearance="outline">
+        <mat-form-field class="form-field" appearance="outline">
             <mat-label>Currency</mat-label>
             <mat-select disableRipple formControlName="currency">
                 <mat-option [value]="currency" *ngFor="let currency of currencies">
                     {{ currency.country }} {{ currency.code }}({{ currency.symbol }})</mat-option>
             </mat-select>
         </mat-form-field>
-        <mat-form-field appearance="outline">
+        <mat-form-field class="form-field" appearance="outline">
             <mat-label>Description</mat-label>
             <input matInput type="text" formControlName="description">
             <mat-error *ngIf="addForm.value.description.length >= 256">Maximum number of characters reached</mat-error>

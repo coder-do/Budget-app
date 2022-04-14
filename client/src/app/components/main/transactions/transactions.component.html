@@ -15,7 +15,9 @@
     <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
     <div class="transactions" *ngIf="!loading">
         <app-transaction-item *ngFor="let transaction of account | filter:searchText | filter:sortBy"
-            [transaction]="transaction" [currency]="currency">
+            [transaction]="transaction" [currency]="currency" [account]="accountTemp">
         </app-transaction-item>
+        <p class="empty" *ngIf="account.length === 0">You do not have any transactions. Please add a new
+            one</p>
     </div>
 </div>

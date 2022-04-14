@@ -13,6 +13,7 @@ import { IAccount } from '../../shared/interfaces/account';
 export class HeaderComponent implements OnInit, OnDestroy {
     user: string | undefined;
     isAdmin: boolean = false;
+    isDisabled: boolean = false;
     url: string = '';
     accountsSub: Subscription = new Subscription();
     paramsSub: Subscription = new Subscription();
@@ -30,6 +31,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
             this.url = params['accountId'];
         });
         this.accountsSub = this.accountsService.accounts.subscribe((accounts: IAccount[]) => {
+            if (accounts.length === 0) {
+                this.isDisabled = true;
+            }
             if (this.url === '') {
                 this.url = accounts[0]._id;
             }

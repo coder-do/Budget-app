@@ -1,8 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { AccountsService } from 'src/app/services/accounts.service';
-import { IAccount } from 'src/app/shared/interfaces/account';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ICategory } from 'src/app/shared/interfaces/categories';
+import { CategoriesService } from 'src/app/services/categories.service';
 
 @Component({
     selector: 'app-categories',
@@ -10,29 +9,62 @@ import { IAccount } from 'src/app/shared/interfaces/account';
     styleUrls: ['./categories.component.sass']
 })
 export class CategoriesComponent implements OnInit, OnDestroy {
-    cards: IAccount[] = [];
+    searchText: string = '';
     loading: boolean = false;
-    activatedCardId: string = '';
-    sub: Subscription = new Subscription();
-    paramsSub: Subscription = new Subscription();
+    incomes!: string[];
+    expenses!: string[];
+    sortedIncomes!: string[];
+    sortedExpenses!: string[];
+    allCategories!: ICategory;
+    categoriesSub: Subscription = new Subscription();
+    sortCategriesSub: Subscription = new Subscription();
+    categoriesChangeSub: Subscription = new Subscription();
 
-    constructor(private accountsService: AccountsService,
-        private route: ActivatedRoute) { }
+    constructor(private categoriesService: CategoriesService) { }
 
     ngOnInit(): void {
         this.loading = true;
-        this.accountsService.getAccounts();
-        this.sub = this.accountsService.accounts.subscribe((accounts: IAccount[]) => {
+        this.getCategories();
+        this.categoriesChangeSub = this.categoriesService.categoriesChanged.subscribe(() => {
+            this.getCategories();
+        })
+    }
+
+    getCategories(): void {
+        this.categoriesSub = this.categoriesService.getCategories().subscribe((categories: ICategory[] | any) => {
             this.loading = false;
-            this.cards = accounts;
-        });
-        this.paramsSub = this.route.params.subscribe(params => {
-            this.activatedCardId = params['accountId'];
+            this.allCategories = categories[0];
+            this.incomes = [...categories[0].income];
+            this.expenses = [...categories[0].expense];
+            this.onSort(this.searchText);;
+            this.sortCategriesSub = this.categoriesService.sortByCategoriesType.subscribe((type: string) => {
+                if (type === 'income') {
+                    this.sortedIncomes = this.incomes.slice();
+                    this.sortedExpenses = [];
+                } else if (type === 'expense') {
+                    this.sortedIncomes = [];
+                    this.sortedExpenses = this.expenses.slice();
+                } else {
+                    this.sortedIncomes = this.incomes.slice();
+                    this.sortedExpenses = this.expenses.slice();
+                }
+            })
         });
     }
 
+    onSort(text: string): void {
+        this.sortedIncomes = this.incomes.slice().filter((item: string) => item.toLowerCase().includes(text));
+        this.sortedExpenses = this.expenses.slice().filter((item: string) => item.toLowerCase().includes(text));
+    }
+
+    clearText(): void {
+        this.searchText = '';
+        this.onSort(this.searchText);
+    }
+
     ngOnDestroy(): void {
-        this.sub.unsubscribe();
-        this.paramsSub.unsubscribe();
+        this.categoriesSub.unsubscribe();
+        this.sortCategriesSub.unsubscribe();
+        this.categoriesChangeSub.unsubscribe();
     }
 }

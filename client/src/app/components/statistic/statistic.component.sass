@@ -1,0 +1,47 @@
+@use "src/app/shared/sass/variables.sass" as var
+
+.container
+    display: flex
+
+    .remove-border-bottom ::ng-deep .mat-tab-header
+        border-bottom: none
+
+    .tabs
+        margin-left: 80px
+
+        .tab
+            background: var.$white
+
+        .second
+            margin-left: -10px !important
+
+        ::ng-deep
+            .mat-tab-label-content
+                font-weight: 400
+                font-size: 20px
+                line-height: 26px
+                color: var.$text-base-color
+
+            .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar
+                display: none !important
+                background-color: transparent
+
+            .mat-tab-label
+                border: 1px solid rgba(55, 55, 55, 0.5)
+                border-radius: 10px
+                background: var.$white
+
+                &:nth-child(2)
+                    margin-left: -10px !important
+                    z-index: 1
+
+                &:nth-child(2)
+                    margin-left: -10px !important
+                    z-index: 0
+
+            .mat-tab-label-active
+                opacity: 1
+                z-index: 2
+                border: 2px solid var.$black
+                border-radius: 10px
+                background: var.$white

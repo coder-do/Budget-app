@@ -1,10 +1,9 @@
 import { environment } from 'src/environments/environment';
-import { HttpClient, HttpResponse, HttpResponseBase } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable, Pipe } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { UserData } from '../shared/interfaces/auth';
 import { Router } from '@angular/router';
-import { UserService } from './user.service';
 
 @Injectable({
     providedIn: 'root'
@@ -12,8 +11,7 @@ import { UserService } from './user.service';
 export class AuthService {
     user: UserData | undefined;
 
-    constructor(private userService: UserService,
-        private http: HttpClient,
+    constructor(private http: HttpClient,
         private router: Router) { }
 
 
