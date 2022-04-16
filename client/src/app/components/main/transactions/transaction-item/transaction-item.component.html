@@ -1,6 +1,6 @@
 <div class="transaction" (click)="onClick(drawer)">
     <div class="transaction__type">
-        {{ transaction.category[0] }}
+        {{ category }}
     </div>
     <div class="transaction__wrapper">
         <p class="transaction__title">{{ transaction.title }}</p>
@@ -16,11 +16,11 @@
                 </span> Expenses
             </p>
             <mat-icon class="dot">fiber_manual_record</mat-icon>
-            <p>
+            <p class="transaction__date">
                 {{ transaction.payment_date | date: "dd.MM.YYYY" }}
             </p>
             <mat-icon class="dot">fiber_manual_record</mat-icon>
-            <p>
+            <p class="transaction__payee">
                 {{ transaction.payee.length > 0 ? transaction.payee : 'No Payee' }}
             </p>
         </div>

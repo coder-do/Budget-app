@@ -5,7 +5,6 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginGuard } from './guards/login.guard';
 import { MainComponent } from './components/main/main.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { ProfileComponent } from './components/profile/profile.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { AdminGuard } from './guards/admin.guard';
 import { StatisticComponent } from './components/statistic/statistic.component';
@@ -16,7 +15,6 @@ const routes: Routes = [
     { path: 'home', component: MainComponent, canActivate: [AuthGuard] },
     { path: 'home/:accountId', component: MainComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
-    { path: 'profile/:accountId', component: ProfileComponent, canActivate: [AuthGuard] },
     { path: 'categories/:accountId', component: CategoriesComponent, canActivate: [AuthGuard] },
     { path: 'statistic/:accountId', component: StatisticComponent, canActivate: [AuthGuard] },
     { path: 'faq/:accountId', component: FaqComponent, canActivate: [AuthGuard] },

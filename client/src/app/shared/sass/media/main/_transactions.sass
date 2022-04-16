@@ -1,0 +1,203 @@
+@mixin _1440
+    @media screen and (max-width: 1399.98px)
+        .main
+            justify-content: space-between
+        .transactions
+            max-width: 32em
+
+        .search
+            width: 32em
+            margin-left: 20px
+
+@mixin _1024
+    @media screen and (max-width: 1199.98px)
+        .main
+            justify-content: space-between
+
+        .add
+            width: 30em
+
+        .edit
+            width: 30em
+
+        .detail
+            max-width: 30em
+
+            .title
+                font-size: 22px
+
+            .descr
+                &__item
+                    &-title
+                        font-size: 18px
+                        line-height: 26px
+
+                    &-text
+                        font-size: 18px
+                        line-height: 26px
+
+            .type__wrapper
+                .transaction__type
+                    font-size: 18px
+
+            .amount
+                .income, .expense
+                    font-size: 30px
+
+            .label
+                font-size: 18px
+
+            .icons
+                &__header
+                    font-size: 26px
+
+        .transactions
+            max-width: 25em
+
+        .transaction
+            display: flex
+            justify-content: space-between
+            min-width: 10em
+            padding: 12px 6px 14px 9px
+
+            .label
+                font-size: 14px
+
+                &__item
+                    ::ng-deep
+                        .mat-icon
+                            font-size: 25px
+
+            &__wrapper
+                margin-left: 10px
+
+            .dot
+                &:nth-of-type(2)
+                    display: none
+
+            &__date
+                font-size: 14px
+
+            &__title
+                font-size: 16px
+
+            &__payee
+                display: none
+
+            &__type
+                width: 6em
+                height: 65px
+                font-size: 17px
+                text-align: center
+
+            &__amount
+                display: flex
+                max-width: 180px
+                font-size: 15.5px
+                line-height: 24px
+                margin-left: 0
+                white-space: nowrap
+                text-align: right
+
+        .search
+            width: 25em
+            margin-left: 10px
+
+@mixin _991
+    // @media (max-width: 991.98px)
+
+@mixin _767
+    @media screen and (max-width: 771.98px)
+        .search
+            width: 22em
+            margin-left: 10px
+
+        .transactions
+            max-width: 22em
+            max-height: 500px
+
+        .transaction
+            display: flex
+            justify-content: space-between
+            min-width: 10em
+            padding: 12px 6px 14px 9px
+
+            .label
+                font-size: 12px
+
+                &__item
+                    width: 25px
+                    height: 25px
+
+                    ::ng-deep
+                        .mat-icon
+                            font-size: 20px
+
+            &__wrapper
+                margin-left: 10px
+
+            .dot
+                &:nth-of-type(2)
+                    display: none
+
+            &__date
+                font-size: 12px
+
+            &__title
+                font-size: 14px
+
+            &__type
+                min-width: 6em
+                height: 65px
+                font-size: 13px
+                text-align: center
+
+            &__amount
+                display: flex
+                max-width: 180px
+                font-size: 13.5px
+                line-height: 24px
+                margin-left: 0
+                white-space: nowrap
+                text-align: right
+
+        .add
+            width: 25em
+
+        .edit
+            width: 25em
+
+        .detail
+            width: 25em
+
+            .title
+                font-size: 20px
+
+            .descr
+                &__item
+                    &-title
+                        font-size: 15px
+                        line-height: 26px
+
+                    &-text
+                        font-size: 15px
+                        line-height: 26px
+
+            .type__wrapper
+                .transaction__type
+                    font-size: 16px
+
+            .amount
+                .income, .expense
+                    font-size: 28px
+
+            .label
+                font-size: 16px
+
+            .icons
+                &__header
+                    font-size: 20px
+
+        .search
+            width: 20em
+            margin-left: 10px

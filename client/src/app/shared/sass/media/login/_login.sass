@@ -1,0 +1,51 @@
+
+@mixin _1024
+    @media screen and (max-width: 1024px)
+        .form-wrapper
+            padding-top: 13em
+
+            .form-block
+                max-width: 25em
+                max-height: 25em
+                padding: 3em
+
+            h1
+                font-size: 30px
+                line-height: 40px
+                margin-bottom: 20px
+
+            .form
+                max-width: 17em
+                margin: 0 auto
+
+            ::ng-deep
+                .mat-form-field-flex
+                    .mat-form-field-infix
+                        padding: 0.6em 0px !important
+                .mat-form-field-label-wrapper
+                    top: -1.2em
+                .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label
+                    transform: translateY(-1.5em) scale(.75)
+                    width: 133.33333%
+
+            button
+                height: 40px
+
+@mixin _575
+    @media screen and (max-width: 575.98px)
+        .form-wrapper
+            padding-top: 9em
+
+            .form-block
+                max-width: 20em
+                max-height: 20em
+                padding: 3em
+
+                h1
+                    font-size: 30px
+                    line-height: 40px
+                    margin-bottom: 20px
+
+                .form
+                    max-width: 17em
+                    margin: 0 auto

@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AccountsService } from 'src/app/services/accounts.service';
 import { AuthService } from '../../services/auth.service';
@@ -20,7 +20,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     constructor(private accountsService: AccountsService,
         private authService: AuthService,
-        private router: Router,
         private route: ActivatedRoute) { }
 
     ngOnInit(): void {
@@ -38,10 +37,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
                 this.url = accounts[0]._id;
             }
         });
-    }
-
-    onClickProfile(): void {
-        this.router.navigate(['/profile/' + this.url]);
     }
 
     onLogout(): void {

@@ -1,11 +1,12 @@
 @use "src/app/shared/sass/variables.sass" as var
+@import "src/app/shared/sass/media/main/_cards.sass"
 
 .card
     display: flex
     justify-content: space-between
     text-decoration: none
-    width: 430px
-    height: 184.57px
+    width: 25em
+    height: 12em
     background: rgb(254,145,137)
     background: linear-gradient(155deg, rgba(254,145,137,1) 0%, rgba(237,151,211,1) 50%, rgba(133,170,223,1) 100%)
     margin-bottom: 50px
@@ -26,7 +27,7 @@
         font-size: 50px
         line-height: 68px
         color: #F8F8F8
-        margin-top: 17px
+        margin-top: 25px
 
     &__currency
         width: 90px
@@ -57,3 +58,8 @@
 
 ::ng-deep .mat-drawer-transition .mat-drawer-backdrop
     transition-duration: 0ms !important
+
+@include _1440
+@include _1024
+@include _991
+@include _767

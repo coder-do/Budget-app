@@ -1,7 +1,8 @@
+@import "src/app/shared/sass/media/main/_cards.sass"
+
 .cards
     overflow-y: auto
     max-height: 730px
-    // width: 450px
 
     .no
         width: 430px
@@ -10,3 +11,8 @@
 
 ::-webkit-scrollbar
     display: none !important
+
+@include _1440
+@include _1024
+@include _991
+@include _767

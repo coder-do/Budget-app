@@ -1,7 +1,8 @@
 @use "src/app/shared/sass/variables.sass" as var
+@import "src/app/shared/sass/media/main/_transactions.sass"
 
 .search
-    width: 658px
+    width: 40em
     margin-left: 75px
 
     &__field
@@ -32,3 +33,8 @@
 
 ::-webkit-scrollbar
     display: none !important
+
+@include _1440
+@include _1024
+@include _991
+@include _767
