@@ -1,7 +1,8 @@
 @use "src/app/shared/sass/variables.sass" as var
+@import "src/app/shared/sass/media/categories/_categories.sass"
 
 .add
-    width: 590px
+    width: 40em
     padding: 40px 35px 28px
     color: var.$text-base-color
     display: flex
@@ -105,3 +106,8 @@
     width: 100px
     font-size: 20px
     line-height: 26px
+
+@include _1440
+@include _1024
+@include _991
+@include _767

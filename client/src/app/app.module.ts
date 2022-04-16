@@ -12,7 +12,6 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
-import { ProfileComponent } from './components/profile/profile.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { StatisticComponent } from './components/statistic/statistic.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -47,7 +46,6 @@ import { MonthlyStatisticComponent } from './components/statistic/monthly-statis
         LoginComponent,
         HeaderComponent,
         NotFoundComponent,
-        ProfileComponent,
         CategoriesComponent,
         StatisticComponent,
         AdminComponent,

@@ -1,9 +1,10 @@
 @use "src/app/shared/sass/variables.sass" as var
+@import "src/app/shared/sass/media/main/_transactions.sass"
 
 .transaction
     display: flex
-    min-width: 617px
-    height: 91px
+    min-width: 30em
+    height: 5.5em
     background: var.$bg-color-base
     cursor: pointer
     user-select: none
@@ -88,3 +89,8 @@
 
 ::ng-deep .mat-drawer-transition .mat-drawer-backdrop
     transition-duration: 0ms !important
+
+@include _1440
+@include _1024
+@include _991
+@include _767

@@ -13,12 +13,12 @@ export class TransactionItemComponent implements OnInit {
     @Input() transaction!: ITransaction;
     @Input() account!: IAccount;
     @Input() currency!: string;
+    category: string = '';
 
-    constructor(private route: ActivatedRoute,
-        private router: Router) { }
+    constructor() { }
 
     ngOnInit(): void {
-
+        this.category = this.transaction.category[0].split(/\/| /)[0];
     }
 
     onClick(drawer: MatDrawer): void {

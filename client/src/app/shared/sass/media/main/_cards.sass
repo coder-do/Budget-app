@@ -1,0 +1,74 @@
+@mixin _1440
+    @media screen and (max-width: 1399.98px)
+        .cards
+            overflow-y: auto
+            max-height: 530px
+
+            .no
+                width: 250px
+                text-align: center
+                font-size: 40px
+
+        .card
+            width: 20em
+            height: 10em
+
+            &__title
+                font-size: 30px
+                line-height: 38px
+
+            &__amount
+                font-size: 45px
+                line-height: 55px
+
+            &__currency
+                width: 80px
+                height: 80px
+                border-radius: 50%
+                padding-top: 2px
+                padding-right: 1px
+                font-size: 60px
+                margin-top: 11px
+
+@mixin _1024
+    // @media screen and (max-width: 1199.98px)
+    //     @content
+
+@mixin _991
+    @media screen and (max-width: 991.98px)
+        .cards
+            overflow-y: auto
+            max-height: 400px
+
+            .no
+                width: 150px
+                text-align: center
+                font-size: 30px
+
+        .card
+            width: 15em
+            height: 8em
+            margin-bottom: 30px
+
+            &__title
+                font-size: 25px
+                line-height: 30px
+
+            &__amount
+                font-size: 28px
+                line-height: 42px
+
+            &__currency
+                width: 55px
+                height: 55px
+                border-radius: 50%
+                padding-top: 2px
+                padding-right: 1px
+                font-size: 40px
+                margin-top: 15px
+
+@mixin _767
+    @media screen and (max-width: 771.98px)
+        .card
+            &__amount
+                line-height: 25px

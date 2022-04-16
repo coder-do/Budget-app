@@ -1,0 +1,44 @@
+@mixin _1440
+    @media screen and (max-width: 1399.98px)
+
+@mixin _1024
+    @media screen and (max-width: 1199.98px)
+        .add
+            width: 30em
+        .edit
+            width: 30em
+        .details
+            width: 30em
+            .descr
+                &__item
+                    &-title
+                        font-size: 18px
+                        line-height: 26px
+
+                    &-text
+                        font-size: 18px
+                        line-height: 26px
+
+@mixin _991
+    // @media (max-width: 991.98px)
+
+@mixin _767
+    @media (max-width: 771.98px)
+        .add
+            width: 25em
+        .edit
+            width: 25em
+        .details
+            width: 25em
+            .icons
+                &__header
+                    font-size: 22px
+            .descr
+                &__item
+                    &-title
+                        font-size: 16px
+                        line-height: 26px
+
+                    &-text
+                        font-size: 16px
+                        line-height: 26px
