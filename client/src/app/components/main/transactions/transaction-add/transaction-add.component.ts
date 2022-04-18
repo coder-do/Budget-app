@@ -126,6 +126,7 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
         });
         this.sum = 0;
         this.clearForm();
+        this.clearFormErrors();
         this.selectedCategories = [];
         this.drawer.close();
     }
@@ -138,6 +139,12 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
         this.addForm.controls['description'].setValue('');
         this.addForm.controls['payment_date'].setValue(new Date());
         this.allCategories.push(...this.selectedCategories);
+    }
+
+    clearFormErrors(): void {
+        for (let name in this.addForm.controls) {
+            this.addForm.controls[name].setErrors(null);
+        }
     }
 
     ngOnDestroy(): void {
