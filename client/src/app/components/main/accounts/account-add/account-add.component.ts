@@ -54,6 +54,7 @@ export class AccountAddComponent implements OnInit {
         }
         this.accountsService.addAccount(finalData);
         this.clearForm();
+        this.clearFormErrors();
         this.drawer.close();
     }
 
@@ -62,12 +63,10 @@ export class AccountAddComponent implements OnInit {
         this.addForm.controls['description'].setValue('');
     }
 
-    onEdit(): void {
-
-    }
-
-    onDelete(): void {
-
+    clearFormErrors(): void {
+        for (let name in this.addForm.controls) {
+            this.addForm.controls[name].setErrors(null);
+        }
     }
 
     ngOnDestroy(): void {
