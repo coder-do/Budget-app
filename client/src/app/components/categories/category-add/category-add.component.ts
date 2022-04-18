@@ -69,7 +69,14 @@ export class CategoryAddComponent implements OnInit, OnDestroy {
             this.userService.updateUser(this.userId, { categories: this.allCategories });
             this.openSnackBar('Category was successfully added!');
             this.clearForm();
+            this.clearFormErrors();
             this.drawer.close();
+        }
+    }
+
+    clearFormErrors(): void {
+        for (let name in this.addForm.controls) {
+            this.addForm.controls[name].setErrors(null);
         }
     }
 
