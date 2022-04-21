@@ -25,7 +25,6 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
     account!: IAccount;
     allCategories!: string[];
     selectedCategories: string[] = [];
-    defaultCurrency!: string;
     addForm: FormGroup = this.formBuilder.group({
         type: ['expense', Validators.required],
         title: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(128)]],
@@ -55,7 +54,6 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
             this.currencies.forEach(currency => {
                 if (currency.country === user.country) {
                     this.addForm.controls['categories'].setValue(currency);
-                    this.defaultCurrency = currency.symbol;
                 }
             })
             this.allCategories = user.categories[0].expense;
@@ -123,7 +121,7 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
         this.accountsService.updateAccount({
             _id: this.accountId,
             amount: this.sum
-        });
+        }, false);
         this.sum = 0;
         this.clearForm();
         this.clearFormErrors();

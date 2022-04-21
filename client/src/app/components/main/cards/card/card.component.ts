@@ -15,8 +15,7 @@ export class CardComponent implements OnInit {
     @Input() activated!: string;
 
     constructor(private router: Router,
-        private route: ActivatedRoute,
-        private accountsService: AccountsService) { }
+        private route: ActivatedRoute) { }
 
     ngOnInit(): void {
 

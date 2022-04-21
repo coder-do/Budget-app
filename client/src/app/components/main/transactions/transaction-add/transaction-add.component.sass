@@ -72,16 +72,18 @@
             &:last-child
                 margin-left: -3px
 
-::ng-deep
-    .mat-button-toggle-checked
-        padding: 0
-        background-color: green
-        border: 2px solid var.$text-base-color
-        opacity: 1 !important
-    .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle
-        border-left: 2px solid var.$text-base-color !important
-    .mat-error
-        margin-top: 5px
+    ::ng-deep
+        .mat-button-toggle-checked
+            padding: 0
+            background-color: green
+            border: 2px solid var.$text-base-color
+            border-left: 2px solid var.$text-base-color !important
+            opacity: 1 !important
+            z-index: 2
+        .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle
+            border-left: none
+        .mat-error
+            margin-top: 5px
 
 .save
     width: 100px

@@ -11,22 +11,6 @@
         flex-wrap: wrap
         margin-top: 60px
 
-.search
-    &__field
-        width: 36em
-        height: 40px
-
-    &-icon
-        margin-right: 8px
-
-::ng-deep
-    .mat-form-field-appearance-outline .mat-form-field-outline
-        background-color: var.$bg-color-base
-        border-radius: 10px
-        padding-bottom: 0
-    .mat-form-field-wrapper
-        padding-bottom: 0
-
 .loading
     margin: 0 auto
     margin-top: 70px
@@ -34,6 +18,22 @@
 .container
     display: flex
     justify-content: space-between
+
+    .search
+        &__field
+            width: 36em
+            height: 40px
+
+        &-icon
+            margin-right: 8px
+
+    ::ng-deep
+        .mat-form-field-appearance-outline .mat-form-field-outline
+            background-color: var.$bg-color-base
+            border-radius: 10px
+            padding-bottom: 0
+        .mat-form-field-wrapper
+            padding-bottom: 0
 
 .not-found
     font-size: 25px

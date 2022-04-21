@@ -26,6 +26,9 @@
     </div>
 
     <mat-menu #menu="matMenu" xPosition="after">
+        <button mat-menu-item (click)="onAccounts()">
+            <mat-icon class="menu-item">credit_card</mat-icon> Accounts
+        </button>
         <button mat-menu-item (click)="onLogout()">
             <mat-icon class="menu-item">logout</mat-icon> Log out
         </button>

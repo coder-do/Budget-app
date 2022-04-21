@@ -102,7 +102,7 @@ export class TransactionEditComponent implements OnInit, OnDestroy {
         this.accountsService.updateAccount({
             _id: this.accountId,
             amount: this.sum
-        });
+        }, false);
         this.sum = 0;
         this.clearForm();
         this.selectedCategories = [];

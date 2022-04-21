@@ -37,12 +37,12 @@ export class AccountsService {
             });
     }
 
-    updateAccount(account: any): void {
+    updateAccount(account: any, callNotification: boolean = true): void {
         this.http.put(`${environment.API_URL}/accounts/account/${account._id}`, account)
             .subscribe(() => {
                 this.accountsChanged.next('update');
                 this.transactionService.transactionsChanged.next('update');
-                this.notificationService.notification.next('Account was successfully updated!');
+                callNotification && this.notificationService.notification.next('Account was successfully updated!');
             });
     }
 
