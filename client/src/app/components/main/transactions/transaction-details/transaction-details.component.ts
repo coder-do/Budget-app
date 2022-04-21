@@ -38,6 +38,8 @@ export class TransactionDetailsComponent implements OnInit, OnDestroy {
 
     openDialog() {
         this.dialog.open(TransactionModalComponent, {
+            width: '625px',
+            height: '238px',
             data: {
                 account: this.account,
                 accountId: this.account._id,

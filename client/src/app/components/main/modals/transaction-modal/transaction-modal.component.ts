@@ -48,7 +48,7 @@ export class TransactionModalComponent implements OnInit, OnDestroy {
         this.accountsService.updateAccount({
             _id: accountId,
             amount: this.sum
-        });
+        }, false);
         drawer.close();
         this.dialogRef.close();
     }

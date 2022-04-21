@@ -26,9 +26,12 @@ export class CardDetailsComponent implements OnInit {
 
     openDialog() {
         this.dialog.open(AccountModalComponent, {
+            width: '625px',
+            height: '238px',
             data: {
                 accountId: this.account._id,
-                drawer: this.drawer
+                drawer: this.drawer,
+                cards: this.cards
             }
         });
     }

@@ -110,6 +110,8 @@ export class CategoryItemComponent implements OnInit, OnDestroy {
 
     openDialog() {
         this.dialog.open(CategoryDeleteComponent, {
+            width: '620px',
+            height: '238px',
             data: {
                 id: this.userId,
                 temp: this.temp,

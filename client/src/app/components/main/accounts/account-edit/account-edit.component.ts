@@ -81,6 +81,8 @@ export class AccountEditComponent implements OnInit {
 
     openDialog(data: FinalData) {
         this.dialog.open(AccountDeleteComponent, {
+            width: '625px',
+            height: '265px',
             data: {
                 account: data,
                 drawer: this.drawer,
