@@ -28,7 +28,7 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
     addForm: FormGroup = this.formBuilder.group({
         type: ['expense', Validators.required],
         title: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(128)]],
-        amount: ['', [Validators.required, Validators.min(1)]],
+        amount: [0, [Validators.required, Validators.min(1)]],
         payment_date: [new Date(), [Validators.required]],
         categories: [''],
         payee: [''],
