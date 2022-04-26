@@ -15,10 +15,10 @@
         <div class="categories">
             <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
             <app-category-item *ngFor="let category of sortedIncomes" [item]="category" [categories]="allCategories"
-                type="income">
+                type="income" [allAccounts]="allAccounts">
             </app-category-item>
             <app-category-item *ngFor="let category of sortedExpenses" [item]="category" [categories]="allCategories"
-                type="expense">
+                type="expense" [allAccounts]="allAccounts">
             </app-category-item>
             <p class="not-found" *ngIf="sortedExpenses?.length === 0 && sortedIncomes?.length === 0">No result</p>
         </div>

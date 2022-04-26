@@ -1,13 +1,14 @@
 <app-header></app-header>
 <div class="container">
-    <app-cards [cards]="cards" [activated]="activatedCardId"></app-cards>
+    <app-cards [cards]="cards" [activated]="activatedCardId" [loading]="loading"></app-cards>
+    <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
     <mat-tab-group class="tabs remove-border-bottom" animationDuration="0ms">
         <mat-tab class="tab" label="Categories Statistic">
-            <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
+            <mat-spinner *ngIf="loading" class="loading mt"></mat-spinner>
             <app-category-statistic *ngIf="selectedAccount" [account]="selectedAccount"></app-category-statistic>
         </mat-tab>
         <mat-tab class="tab second" label="Monthly Statistic">
-            <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
+            <mat-spinner *ngIf="loading" class="loading mt"></mat-spinner>
             <app-monthly-statistic *ngIf="selectedAccount" [account]="selectedAccount"></app-monthly-statistic>
         </mat-tab>
     </mat-tab-group>

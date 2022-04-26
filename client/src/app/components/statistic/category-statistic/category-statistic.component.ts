@@ -21,6 +21,7 @@ export class CategoryStatisticComponent implements OnInit, OnChanges, OnDestroy 
         start: new FormControl(),
         end: new FormControl(),
     });
+    maxDate!: Date;
     sum: number = 0;
     transactions!: TransFormedData[];
     allCategories!: string[];
@@ -38,7 +39,23 @@ export class CategoryStatisticComponent implements OnInit, OnChanges, OnDestroy 
             if (this.range.value.start && this.range.value.end) {
                 this.filterByDate();
             }
-        })
+        });
+        this.setMaxDate();
+    }
+
+    setMaxDate(): void {
+        const currentDay = new Date().getDate();
+        const currentMonth = new Date().getMonth();
+        const currentYear = new Date().getFullYear();
+        this.maxDate = new Date(currentYear, currentMonth, currentDay);
+    }
+
+    onResetDate(): void {
+        this.range.reset();
+        this.updatedAccount = this.account.transactions.expense;
+        this.allCategories = this.getAllCategories();
+        this.transactions = this.transformData(this.updatedAccount);
+        this.sum = this.getSum(this.updatedAccount);
     }
 
     getAllCategories(): string[] {

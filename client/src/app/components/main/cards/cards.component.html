@@ -1,4 +1,4 @@
 <div class="cards">
-    <p class="no" *ngIf="cards.length === 0">No account</p>
+    <p class="no" *ngIf="cards.length === 0 && !loading">No account</p>
     <app-card *ngFor="let card of cards" [card]="card" [cards]="cards" [activated]="activated"></app-card>
 </div>

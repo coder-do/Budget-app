@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="main container">
-    <app-cards [cards]="cards"></app-cards>
+    <app-cards [cards]="cards" [loading]="loading"></app-cards>
     <mat-spinner *ngIf="loading" class="loading"></mat-spinner>
     <app-transactions></app-transactions>
     <app-buttons-group></app-buttons-group>
