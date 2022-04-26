@@ -2,7 +2,13 @@ import { UserService } from 'src/app/services/user.service';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-type MatDialogData = { id: string, temp: any, item: string, openSnackBar: (text: string) => void };
+type MatDialogData = {
+    temp: any,
+    id: string,
+    item: string,
+    type: 'income' | 'expense',
+    openSnackBar: (text: string) => void
+};
 
 @Component({
     selector: 'app-category-delete',
@@ -17,10 +23,10 @@ export class CategoryDeleteComponent implements OnInit {
     ngOnInit(): void { }
 
     onDelete(): void {
-        const { id, temp, item, openSnackBar } = this.data;
-        if (temp.income.includes(item)) {
+        const { id, temp, item, openSnackBar, type } = this.data;
+        if (temp.income.includes(item) && type === 'income') {
             temp.income.splice(temp.income.indexOf(item), 1);
-        } if (temp.expense.includes(item)) {
+        } if (temp.expense.includes(item) && type === 'expense') {
             temp.expense.splice(temp.expense.indexOf(item), 1);
         }
         this.userService.updateUser(id, { categories: temp });

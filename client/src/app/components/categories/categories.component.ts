@@ -1,3 +1,5 @@
+import { IAccount } from 'src/app/shared/interfaces/account';
+import { AccountsService } from 'src/app/services/accounts.service';
 import { Subscription } from 'rxjs';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ICategory } from 'src/app/shared/interfaces/categories';
@@ -16,17 +18,24 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     sortedIncomes!: string[];
     sortedExpenses!: string[];
     allCategories!: ICategory;
+    allAccounts!: Array<IAccount>;
     categoriesSub: Subscription = new Subscription();
+    accountsSub: Subscription = new Subscription();
     sortCategriesSub: Subscription = new Subscription();
     categoriesChangeSub: Subscription = new Subscription();
 
-    constructor(private categoriesService: CategoriesService) { }
+    constructor(private categoriesService: CategoriesService,
+        private accountsService: AccountsService) { }
 
     ngOnInit(): void {
         this.loading = true;
         this.getCategories();
         this.categoriesChangeSub = this.categoriesService.categoriesChanged.subscribe(() => {
             this.getCategories();
+        });
+        this.accountsService.getAccounts();
+        this.accountsService.accounts.subscribe((accounts: IAccount[]) => {
+            this.allAccounts = accounts;
         })
     }
 
@@ -63,6 +72,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
+        this.accountsSub.unsubscribe();
         this.categoriesSub.unsubscribe();
         this.sortCategriesSub.unsubscribe();
         this.categoriesChangeSub.unsubscribe();

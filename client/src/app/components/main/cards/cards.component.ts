@@ -9,10 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CardsComponent implements OnInit {
     @Input() cards: IAccount[] = [];
     @Input() activated!: string;
+    @Input() loading!: boolean;
 
     constructor() { }
 
-    ngOnInit(): void {
-
-    }
+    ngOnInit(): void { }
 }

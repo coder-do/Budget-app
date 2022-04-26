@@ -1,3 +1,4 @@
+import { TransactionService } from 'src/app/services/transaction.service';
 import { UserService } from 'src/app/services/user.service';
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
@@ -19,6 +20,7 @@ import { ICategory } from 'src/app/shared/interfaces/categories';
 export class CategoryItemComponent implements OnInit, OnDestroy {
     @ViewChild('changed') inp!: ElementRef<HTMLDivElement>;
     @Input() drawer!: MatDrawer;
+    @Input() allAccounts!: Array<IAccount>;
     @Input() categories!: ICategory;
     @Input() item!: string;
     @Input() type!: string;
@@ -36,6 +38,7 @@ export class CategoryItemComponent implements OnInit, OnDestroy {
     constructor(private _snackBar: MatSnackBar,
         public dialog: MatDialog,
         private userService: UserService,
+        private transactionService: TransactionService,
         private categoriesService: CategoriesService,
         private accountsService: AccountsService) { }
 
@@ -89,23 +92,52 @@ export class CategoryItemComponent implements OnInit, OnDestroy {
 
     onSave(): void {
         this.isEditable = false;
-        if (this.item.toLowerCase() !== this.inp.nativeElement.textContent!.toLowerCase()) {
+        if (this.item.toLowerCase() !== this.inp.nativeElement.textContent!.toLowerCase().trim()) {
+            if (this.inp.nativeElement.textContent?.match(/[$&+,:/;=?@#|'<>.^*()%!-]/)) {
+                this.openSnackBar('Category name can only contain letters and numbers!');
+                this.onClear();
+                return;
+            }
+            if (this.inp.nativeElement.textContent?.trim() === '') {
+                this.openSnackBar('Category name can not be empty!');
+                this.onClear();
+                return;
+            }
             this.temp.income.map((inc: string, ind: number) => {
                 if (inc.toLowerCase() === this.item.toLowerCase()) {
+                    this.updateTransactionCategories(this.item, 'income', this.inp.nativeElement.textContent!.trim());
                     this.temp.income[ind] = this.inp.nativeElement.textContent;
                 }
             })
             this.temp.expense.map((exp: string, ind: number) => {
                 if (exp.toLowerCase() === this.item.toLowerCase()) {
+                    this.updateTransactionCategories(this.item, 'expense', this.inp.nativeElement.textContent!.trim());
                     this.temp.expense[ind] = this.inp.nativeElement.textContent;
                 }
             });
             this.userService.updateUser(this.userId, { categories: this.temp });
             this.openSnackBar('Category has been updated!');
+            this.onClear();
         } else {
             this.openSnackBar('Category already exists, update rejected!');
+            this.onClear();
             return;
         }
+    }
+
+    updateTransactionCategories(item: string, type: string, newItem: string): void {
+        this.allAccounts.map((account: IAccount) => {
+            (account.transactions as any)[type].map((transaction: ITransaction) => {
+                if (transaction.category.includes(item)) {
+                    transaction.category.map((category: string, ind: number) => {
+                        if (category === item) {
+                            transaction.category[ind] = newItem;
+                            this.transactionService.updateTransaction(account._id, transaction, type);
+                        }
+                    })
+                }
+            })
+        })
     }
 
     openDialog() {
@@ -115,6 +147,7 @@ export class CategoryItemComponent implements OnInit, OnDestroy {
             data: {
                 id: this.userId,
                 temp: this.temp,
+                type: this.type,
                 item: this.item,
                 openSnackBar: this.openSnackBar.bind(this),
             },

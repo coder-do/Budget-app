@@ -26,8 +26,8 @@ export class MainComponent implements OnInit, OnDestroy {
         this.accountsSub = this.accountsService.accountsChanged.subscribe(() => {
             this.accountsService.getAccounts();
             this.getAccounts();
+            this.loading = false;
         });
-        this.loading = false;
     }
 
     getAccounts(): void {
@@ -35,11 +35,12 @@ export class MainComponent implements OnInit, OnDestroy {
             this.loading = false;
             if (accounts.length > 0) {
                 this.cards = accounts;
-
                 // when we get the accounts, we navigate to the first one by default
                 if (this.router.url === '/home' && this.router.url !== `/home/${this.cards[0]._id}`) {
                     this.router.navigate(['/home', this.cards[0]._id]);
                 }
+            } else {
+                this.router.navigate(['/home']);
             }
         });
     }

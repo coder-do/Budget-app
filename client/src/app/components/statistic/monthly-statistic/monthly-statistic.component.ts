@@ -23,6 +23,7 @@ export class MonthlyStatisticComponent implements OnInit, OnChanges, OnDestroy {
         start: new FormControl(),
         end: new FormControl(),
     });
+    maxDate!: Date;
     sum: number = 0;
     transactions!: TransFormedData[];
     allMonths: string[] = [];
@@ -64,7 +65,25 @@ export class MonthlyStatisticComponent implements OnInit, OnChanges, OnDestroy {
                 this.countTotal();
                 this.countAverage();
             }
-        })
+        });
+        this.setMaxDate();
+    }
+
+    setMaxDate(): void {
+        const currentDay = new Date().getDate();
+        const currentMonth = new Date().getMonth();
+        const currentYear = new Date().getFullYear();
+        this.maxDate = new Date(currentYear, currentMonth, currentDay);
+    }
+
+    onResetDate(): void {
+        this.range.reset();
+        const temp: ITransaction[] = [...this.account.transactions.income, ...this.account.transactions.expense];
+        this.updatedAccount = temp;
+        this.allMonths = this.getAllMonths();
+        this.transactions = this.transformData(this.updatedAccount);
+        this.countTotal();
+        this.countAverage();
     }
 
     transformData(data: ITransaction[]): TransFormedData[] {

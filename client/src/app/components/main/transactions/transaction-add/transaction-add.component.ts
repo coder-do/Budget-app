@@ -34,6 +34,7 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
         payee: [''],
         description: ['', [Validators.maxLength(256)]],
     });
+    maxDate!: Date;
     sum: number = 0;
     accountId!: string;
     userId: string = localStorage.getItem('userId') as string;
@@ -70,6 +71,14 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
         this.accountsChangeSub = this.accountsService.accountsChanged.subscribe(() => {
             this.getAccount();
         });
+        this.setMaxDate();
+    }
+
+    setMaxDate(): void {
+        const currentDay = new Date().getDate();
+        const currentMonth = new Date().getMonth();
+        const currentYear = new Date().getFullYear();
+        this.maxDate = new Date(currentYear, currentMonth, currentDay);
     }
 
     getAccount() {
@@ -133,7 +142,7 @@ export class TransactionAddComponent implements OnInit, OnDestroy {
         this.sum = 0;
         this.addForm.controls['title'].setValue('');
         this.addForm.controls['payee'].setValue('');
-        this.addForm.controls['amount'].setValue('');
+        this.addForm.controls['amount'].setValue(0);
         this.addForm.controls['description'].setValue('');
         this.addForm.controls['payment_date'].setValue(new Date());
         this.allCategories.push(...this.selectedCategories);

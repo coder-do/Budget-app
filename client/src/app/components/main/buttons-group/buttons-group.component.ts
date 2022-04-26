@@ -36,6 +36,7 @@ export class ButtonsGroupComponent implements OnInit, OnDestroy {
             id && this.accountsService.getAccount(id).subscribe((account: IAccount[]) => {
                 this.currency = account[0].currency;
             })
+            this.checkForDisable();
         });
         this.checkForDisable();
     }

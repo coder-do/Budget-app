@@ -34,6 +34,7 @@ export class TransactionEditComponent implements OnInit, OnDestroy {
         payee: [''],
         description: ['', [Validators.maxLength(256)]],
     });
+    maxDate!: Date;
     sum: number = 0;
     userId: string = localStorage.getItem('userId') as string;
     accountId!: string;
@@ -51,15 +52,22 @@ export class TransactionEditComponent implements OnInit, OnDestroy {
     ngOnInit(): void {
         this.userSub = this.userService.getUser(this.userId).subscribe((user: UserData | any) => {
             this.allCategories = user.categories[0][this.transaction.type];
-            this.allCategories.filter(category => this.selectedCategories.indexOf(category) === -1);
+            this.allCategories = this.allCategories.filter(category => this.selectedCategories.indexOf(category) === -1);
         });
         this.paramsSub = this.route.params.subscribe((params: Params) => {
             this.accountId = params['accountId'];
         });
         this.getAccount();
         this.setFormValues();
+        this.setMaxDate();
     }
 
+    setMaxDate(): void {
+        const currentDay = new Date().getDate();
+        const currentMonth = new Date().getMonth();
+        const currentYear = new Date().getFullYear();
+        this.maxDate = new Date(currentYear, currentMonth, currentDay);
+    }
 
     getAccount() {
         this.accountsSub = this.accountsService.getAccount(this.accountId).subscribe((account: IAccount[]) => {
